@@ -1,0 +1,2830 @@
+aprendiendo;embezando
+judeoespañol;judeo-espanyol
+levanto;alevanto
+gusta;plaze
+bebo;bevo
+café;kafe
+turco;turko
+almuerzo;komida de midi
+sed;ser
+vaso;kupa
+telefono;telefon
+mucho;muncho
+enfermo;hazino
+embarasada;prenyada
+vecina;vizina
+vive;bive
+pelicula;filmo
+maleta;validja
+pesada;pezgada
+estudiante;elevo
+lejos;leshos
+cocina;giza
+vendran;van a vinir
+debo;devo
+mercado;charsi
+tienda;botika
+cierra;serra
+mejor;mijor
+mejor amiga;amiga intima
+conozco;konosko
+conoces;konoses
+aquella;akeya
+hace;ay
+años;anyos
+empieza;empesa
+pesaj;pesah
+que;ke
+cocina;mupak
+cenar;kome
+bebe;beve
+albondiga;koftika
+puerro;prasa
+pastel;gato
+aqui;aki
+arbol;arvol
+jardin;guerta
+abril;avril
+verde;vedre
+flor;roza
+lluvia;luvya
+brilla;briya
+felices;felizes
+estacion;sezon
+parque;parko
+bicicleta;bisikleta
+sentada;asentada
+esperando;asperando
+charlando;aziendo muabbet
+mediodia;midi
+cumpleaños;aniversario
+comprar;markar
+dificil;difisil
+encontrar;topar
+ahora;agora
+camisa;kamiza
+corbata;kravata;
+chaqueta;djaketa
+reloj;ora
+unos;un
+escoger;eskojer
+oscuros;kuyi
+fiesta;parti
+mañana;amanyana
+escuela;eskola
+alegria;alegriya
+clase;klasa
+bosforo;bosfor
+chica;ija
+chico;ijo
+vestido;fostano
+barco;vapor
+estambul;estambol
+ciudad;sivdad
+magica;majika
+turista;turisto
+etc;ets
+puente;ponte
+deliciosa;savroza
+creer;kreer
+libro;livro
+nuevo;muevo
+venid;veni
+casamentera;kazamentera
+metrimonio;kazamiento
+hechicera;ichizera
+hechizos;ichizos
+rabino;haham
+religioso;relijiozo
+sastre;shastre
+coce;kuze
+saliendo;flörtando
+trae;traye
+rosa;roza
+cine;sinema
+borde;bodre
+preparando;aparejando
+ajuar;ashugar
+dote;dota
+casarse;kazar
+terminar;eskapar
+abogada;avokata
+medico;doktor
+trabaja;lavora
+comprar;merkar
+casa;kaza
+fuera;afuera
+quieren;keren
+verano;enverano
+pequeña;chika
+cuando;kuando
+trabajo;echo
+fuera;afuera
+ellos;eyos
+frase;fraza
+descansar;deskansar
+aire;aver
+mosquito;moshko
+cosa;koza
+cocinar;gizar
+quema;kema
+bien;bueno
+rollito;ruliko
+berenjena;berendjena
+tomate;tomat
+mesa;meza
+pone;mete
+encaje;dantela
+noticia;nuvela
+leer;meldar
+llena;yena
+aventura;aventuras
+dejar;deshar
+medicina;medisina
+porque;por ke
+preparan;aparejan
+juegan;djugan
+piscina;pisina
+jugar;djugar
+musica;muzika
+clasica;klasika
+jazz;djaz
+acompaña;akompanya
+clase;leson
+bosque;shara
+museo;muzeo
+domingos;alhades
+tasas;kaves
+corazon;korason
+dice;dize
+estres;stres
+pero;ma
+meditación;meditasyon
+encuentra;topa
+contento;orozo
+paciente;hazino
+familia;famiya
+llevarlo;yevarlo
+felicidad;felisidad
+facilmente;kolay
+decimos;dezimos
+ultimo;dalkavo
+escribiendo;eskrivyendo
+obra;piesa
+aficionados;amatores
+ensayos;provas
+animan;arebiven
+teatro;teatral
+os;vos
+celebrar;selebrar
+jefe;shefe
+importante;valutoza
+dichos;dichas
+suegras;eshuegras
+internacional;internasyonal
+debemos;kale
+protegernos;protejarmos
+microbios;mikropes
+vitaminas;vitamines
+abringandonos;abrigandomos
+calle;kaye
+debemos;devemos
+hubo;uvo
+muchos;muchas
+daños;danyos
+al final;a la fin
+al final;a la fin
+a rajatabla;a la letra
+a escondidas;a las eskondidas
+a partir de;a partir de
+a pie;a pie
+estofado;abafado 
+abandonar;abandonar
+cuesta abajo;abashada
+resfrýado, influenza, gripe;abashada
+bajar;abashar
+bajar;abashar
+bastar;abastar
+afligido;abatido 
+habitual, normal;abitual
+habituar;abituar
+girar, volver;aboltar
+odiar, aborrecer;aborreser
+abrazar;abrasar
+abarcar;abrasar
+abrigarse;abrigarse
+absoluto;absoluto
+culpa de;achakes de, por modo de
+agachado;achunkado
+adelantar;adelantar
+adelante;adelantre
+agencia;adjensia
+juntar, unir;adjuntar
+ajustar, añadir;adjustar
+administrar;administrar
+admirar;admirar
+admiración;admirasion
+adolescencia;adolesensia
+reparar;adovar
+dirección;adreso
+anciano;aedado
+aficionado;aferrado 
+sujetar;aferrar
+resfriarse;aferrar abashada
+afligir;aflijar
+afligirse;aflijarse; tener pena
+privación;afrision
+afuera, fuera;afuera
+ahora;agora
+gustar a;agradar a..., plazer a...
+gustar;agradar, plazer
+agradecer;agradeser
+agradecimiento;agradesimiento
+afilado;aguzado
+afilador;aguzador
+afilar;aguzar
+averiar;aharientar
+averiarse;aharientarse
+lacrar;aharvar
+afuera, fuera;ahuera
+adjetivo;ajektivo
+extranjero;ajeno
+caoba;akaju
+acacia;akasia
+acabar;akavar
+aquello;akeyo
+aquí;aki
+despejar;aklarar
+recuerdo;akodransa
+recordar;akodrar
+recordar;akodrar
+acomodar;akomodar
+acompañar;akompanyar
+ocurrir;akonteser
+acordar;akordar
+acordarse;akordarse
+acuerdo;akordo
+a menudo;akoruto
+acostumbrar;akostumbrar
+acento;aksan
+acentuar;aksantuar
+acentuación;aksantuasion
+aceptar;akseptar
+accidente;aksidente
+acción;aksion
+lanzado;aktivo
+acto;akto
+actor;aktor
+actriz;aktrisa
+actual;aktual
+actuar;aktuar
+sino;al kontrario
+al tacto;al tokar
+alrededor;al torno, al dorredor
+alarmar;alarmar
+alrededor;alderredor
+bolsillo;aldikera
+alegre;alegre
+alegre;alegre
+alejar;aleshar
+levantar;alevantar
+levantarse;alevantarse
+algo;algo
+alguien, algo;algun
+alguien, alguno;alguno
+domingo;alhad
+domingo;alhad
+alimentar;alimentar
+alimento;alimento
+limpiar;alimpiar
+acostumbrado;alishtereado
+alcanzar;alkansar
+alcanzar;alkansar
+alquilar;alkilar
+alcohol;alkol
+apellido;alkunya
+alma;alma
+armario;almario
+azafrán;alsafran
+alto;alto
+amanecer;amaneser
+amante;amante
+mañana;amanyana
+amargo;amargo
+amarillo;amariyo
+apagar;amatar
+aficionado, principiante;amator
+embajador;ambasador
+enseñar;ambezar, ensenyar
+enseñar;ambezar, ensenyar
+aprender;ambezarse
+hambriento;ambierto
+hambriento;ambierto 
+hambre;ambre
+amigo;amigo
+mejorar;amijorar
+mejorarse;amijorarse
+amistad;amistad
+amor;amor
+piña tropical;ananas
+ancho;ancho
+a donde;ande
+adonde;ande
+ángel;andjelo
+chiste;anekdota
+anestésico;anesteziko
+animal;animal
+animar;animar
+anís;anito
+cumpleaños;aniversario
+encuesta;anketa
+anoche;anoche
+así;ansi
+enciclopedia;ansiklopedia
+así;ansina
+antes;antes
+penúltimo;antes del dalkavo
+antigua;antika
+antigüedad;antikita
+anteayer;antiyer
+gafas;antojos
+anunciar;anunsiar
+año;anyada
+anyada dulse kon;buenadespues. esto kere dizir el periodo del anyo entero. eg.
+año;anyo
+nudo;anyudo
+embargar;apanyar
+preparar;aparejar, aprontar
+aparente;aparente
+aparecer;apareser
+apartado;apartado 
+apartar;apartar
+apenas;apenas
+apenas;apenas
+no bien;apenas ke
+fijarse;aperseverse
+posar;apozar
+aprendizaje;aprendizaje
+darse prisa;apresurarse
+apretar;apretar
+aproximadamente;aproksimativamente
+preparar;aprontar
+propio;apropiado
+árabe;arabo
+afeitarse;araparse
+arar;arar
+surcar;arar la mar
+reñido;araviado 
+víspera;arba
+archivo;archivo
+ardor;ardor
+dentro;ariento
+harina;arina
+arco;arko
+arma;arma
+ejército;armada
+rascarse;arraskarse
+enfadado;arraviado
+enfadarse;arraviarse, atagantarse
+rasgar;arrazgar
+reojo;arrebashamiento
+regalar;arregalar
+arreglo;arreglamiento
+arreglar;arreglar
+recoger;arrekojer, rekojer
+alumbrar;arrelumbrar, asender
+lucir;arrelumbrar, briyar
+arremangarse;arremangarse
+rematar;arrematar
+arrepentimiento;arrepentimiento
+arrepentirse;arrepentirse
+renunciar;arrepentirse, esvachearse
+empujar;arrepushar, arrondjar
+moderarse, templarse;arresentarse
+arrestar, parar;arrestar
+pararse;arretarse, kedarse
+reventar;arreventar
+apoyar;arrimar
+apoyar;arrimar, apoyar
+arrimarse;arrimarse
+arriba;arriva
+arribar, llegar;arrivar
+rezar;arrogar
+empujar;arrondjar
+arroz;arroz
+arroz;arroz
+regar;arrozar
+irrigar, salpicar;arrufiar
+irrigar, regar;arrufyar
+arrugar;arrugar
+artículo;artikolo
+harto;arto 
+árbol;arvole
+árbol;arvole
+embestir;asaltar
+asegurar;asegurar
+semejante;asemejante
+encender;asender
+asiento;asentador
+sentarse;asentarse
+acercar;aserkar
+acercar;aserkar
+acercarse;aserkarse
+según;asigun
+según;asigun
+asistir;asistir
+asistir;asistir
+atender;asistir
+asombrar;asolombrar
+espárrago;asparago
+aspecto;aspekto
+esperar;asperar, esperar
+aspirina;aspirin
+hasta;asta
+astronómico;astronomiko
+astronauta;astronoto 
+azúcar;asukar
+atacar;atakar
+apego;atamiento
+atar;atar
+atarse;atarse
+atómico;atomiko
+atrasar;atrazar
+atrasar;atrazarse
+atrasarse;atrazarse
+atreverse, osar;atrivirse
+atreverse;atrivirse, tener koraje
+aturdido;atudrido 
+azorar;aturvar
+aumentar;aumentar
+aumentar;aumentar
+unir;aunar
+autor;autor
+despacio;avagar
+avanzar;avansar
+adelantar;avansar, adelantar
+ventaja;avantaje
+rambla;avenida
+haber;aver
+evidenciar;averdadear
+advertir;avertir
+avión;avion
+noticia;avizo
+hablar;avlar
+abogado;avokato
+abril;avril
+abrir;avrir
+apertura;avyertura
+allá;aya
+llegar;ayegar
+ayer;ayer
+ahí;ayi
+mal de ojo;aynara
+aire, viento;ayre
+aire;ayre
+ayudar;ayudar
+hacer;azer
+llover;azer luvya
+entretener;azer pasar el tiempo
+saber mal;azer pena
+retratar;azer portreto
+regalar;azer regalo
+piropear;azer shakaruka
+aceite;azete
+aceite;azete
+burro;azno
+equipaje;bagaje
+colmado;bakal
+balón;bala
+palco;balkon
+plátano;banana
+correa;banda de kuero
+bandera;bandiera
+banco;banka
+bar;bar
+barato;barato
+bárbaro;barbaro
+motora;barka motorizada
+borrar;barrar, efasar
+barrer;barrir
+bajeza;basheza
+bajo, sórdido;basho
+baloncesto;basketbol
+bastar;bastar, abastar
+batalla;batalia
+batallón;batalyon
+bagatela, algarabía;bavajada
+bailarín;baylador 
+bailar;baylar
+baile;bayle
+base;baza
+bendecir;bendizir
+bañarse;benyarse
+gasolina;benzin
+beber;bever
+besar;bezar
+bien;bien
+beneficencia;bienfezensia
+palabra;biervo, palavra
+bistec;biftek
+billete;bilieto
+taquilla;bilyeto
+cerveza;bira
+bicicleta;bisikleta
+vivir;bivir
+avispa;bizba
+blanco;blanko
+rubio;blondo
+azul;blu
+borde;bodre
+bodega;bodrum
+primogénito;bohor 
+botella;bokal, ridoma
+volar;bolar
+bolso de señora;bolsa de mujer
+bolsa;bolsa, sako
+ráfaga;bora
+borracho;borracho
+bósforo;bosfor
+huerta;bostan
+tienda;botika, magazen
+tontería;bovedad
+lelo;bovo, torpe
+tonto;bovo
+bragas;bragas
+brazo;braso
+bravura;bravura
+bergantín;brig ...
+brillar;briyar
+brillar;briyar
+bordar;brodar
+folleto;broshura
+ruido;bruido
+niebla;bruma, duman
+nebuloso;brumozo
+bueno;bueno
+ama de casa;bulisa, mujer de kaza
+agujerito;burakito de alguja
+burlarse de;burlarse de...
+oficina;buro
+buscar;bushkar
+búsqueda;bushkida
+hervir;buyir
+nevera, frigorífico;buziera, frijider
+palabra;byervo
+despacho;büro
+cazuela;cacharole
+paraguas;chadir
+bofetón;chaketon
+cáliz;chanaka
+parábola;chanaka de satelit
+cartera;chanta de ombre
+chocar;chaptear
+topar con;chaptear
+fríjol;chaucha
+té;chay
+chocolate;chicolata
+infancia;chikez
+chicle;chiklet
+pequeño;chiko 
+silbar;chuflar
+coche;coche, araba
+congelador;conjelador
+conceder;conseder
+corcho;corcho
+dado;dado
+aún;dainda
+dar;dar
+enterar;dar haber, informar
+conceder;dar razon
+planchar;dar uti
+fecha;data
+de;de
+donde;de ande
+bancario;de banka
+frutal;de fruta
+comestible;de komer
+de vez en cuando;de vez en kuando
+bajo;debasho
+debajo;debasho
+so;debasho
+decidir;dechidir
+decidirse;dechidirse
+decisión;dechizion
+dedicarse;dedikarse
+dedo;dedo
+defender;defender
+defenderse;defenderse
+desfile;defile
+difunto;defunkto 
+catar;degustar
+decorado;dekor
+edicto;dekreto
+delante;delantre
+delegar;delegar
+exquisito;delisiozo 
+pedir;demandar
+mañana;demanyana
+demasiado;demaziado
+remedio;demedio
+democracia;demokrasia
+democracia;demokrasia
+demostrar;demostrar
+demostrar;demostrar
+depender;depender
+derecha;derecha
+derrocar, derrumbar;derrokar
+desde;desde
+desde;desde
+desde;desde
+desdén;desdenio
+desgracia;desgrasia
+desgracia;desgrasia
+dejar;deshar
+decidir;desidar
+diciembre;desiembre
+dibujar;desinar
+descansar;deskansar
+descarado;deskarado 
+desconfianza;deskonfiensa
+desanimar;deskorajar
+descripción;deskripsion
+describir;deskrivir
+descuidado;deskudiado 
+desaprensión;deskudio
+descubrir;deskuvrir
+descubrir;deskuvrir, deskuvijar
+desordenado;desordenado
+dispararse;despareserse
+después;despues
+tras;despues, atras
+achaque;desrepozo
+destino;destino
+destruir;destruir
+minucia;detalios
+detalle;detalyo
+detener;detener
+posterior;detras, despues
+deber;dever
+faena;dever, mision
+enseguida;devista, pishin
+devorar;devorar
+deseo;dezeo
+desesperarse;dezesperarse
+desear;dezeyar
+desierto;dezierto
+desierto;dezierto
+decir;dezir
+desconcierto;dezorden, konfuzion
+desarrollar;dezvelopar
+día;dia
+todadía;dia entero
+diablo;diavlo
+diente;diente
+dentista;dientisto 
+diez;diez
+diferencia;diferensia
+disparidad;diferensioa
+dificultad;difikultad
+difundir;difuzar
+difusión;difuzyon
+nadie;dinguno
+ninguno;dinguno 
+dignidad;dinyidad
+dios;dio
+bachillerato;diplomado
+dirección;direksion, adreso
+volante;direksion, volante
+directamente;direktamente
+directo;direkto 
+empresario;direktor
+disco;disko
+disculpar;diskulpar
+discutir;diskutir
+discutir, argüir;diskutir
+disponer;dispozar
+distinguir;distinguir
+despistado;distraido 
+diverso;diverso
+diverso;diverso
+divertirse;divertirse
+día;diya / dia
+día;diya / dia
+rodilla;diz
+decir;dizir
+chaqueta;djaketa
+género;djenero
+índole;djenero, klase
+progenitores;djenitores
+gente;djente
+gesto;djesto
+arpía;djibeladjuz
+joven, mancebo;djoven
+joya;djoya
+joyero;djoyero
+judío;djudio 
+jugar;djugar
+juguete;djugete
+jueves;djugeves
+junto;djunto
+jurar;djurar
+fiscal;djuzgo
+juez;djuzgo 
+doblar;doblar
+doce;dodje
+doctor;doktor
+cédula;dokumento
+albala;dokumento ofisial
+dólar;dolar
+duelo;dolio
+dolor;dolor
+doméstico;domestiko, de kaza
+dominio;dominasion
+dos;dos
+después;dospues
+antepenúltimo;doz antes del dalkavo
+doscientos;dozientos
+droga;droga
+duda;dubio
+doblar;dublar
+dulce;dulse
+por lo tanto;dunke
+entonces;dunke, alora
+durante;durante
+duración;durasion
+dormir;durmir
+duro;duro 
+hebreo;ebreo
+echar;echar
+arrojar;echar
+chillar;echar chiyo
+despeñar;echar kon fuersa
+tener cuidado;echar tine, azer atansion
+abalanzar;echar, ekilibrar
+echarse;echarse
+anudarse;echarse anyudo
+encanto;echizo
+hechizo;echizo
+trabajo;echo
+edad;edad
+editar;editar
+efecto;efekto
+pasarlo bien;eglenearse
+egoísta;egoisto
+ufano;egzaltado 
+examen;egzamen
+examinar;egzaminar
+ejecutar;egzekutir
+ejemplo;egzempio
+ejemplar;egzemplar
+ejercicio;egzersis
+exiliar;egziliar
+existir;egzistir
+ahorrar;ekonomizar
+excelente;ekselente
+excepción;eksepsion
+excepto;ekseptado
+excusa;ekskuza
+experimentar;eksperimentar
+explicar;eksplikar, dar a entender
+explicación;eksplikasion
+explorar;eksplorar
+explotar;eksplozar
+estallar;eksplozar
+explosión;eksplozion
+exponer;ekspozar
+exposición;ekspozision
+expresar;ekspresar
+el;el
+próximo;el de despues
+mes que viene;el mez ke viene
+allá usted;el save
+atildado;elegante
+elección;eleksion
+electricidad;elektrisita
+alumno;elevo
+elegir;elijir
+embargo;embargo
+velero;embarkasion kon vela
+enviar;embiar
+envidia;embidia
+infundio;embrolio
+asombrado;empalukeado
+impedir;empedir
+empezar;empesar
+comienzo;empesijo
+empleado;empiegado 
+importa;emporta
+importante;emportante
+imposible;emposivle
+prestado;emprestado
+en medio;en medio
+a la vez;en mizmo tiempo
+ante;en prezensia
+principio;en primero, empesijo
+respecto a;en raporto a
+de repente;en supito
+en seguida;en vista, pishin
+reducir;enchikeser
+subsanar;enderechar
+junto;endjuntos
+juntamente;endjuntos
+sobre;endriva, sovre
+aburrir;enfasyar
+en fin;enfin
+enfermería;enfirmeria
+inválido;enfirmo 
+informática;enformatika
+enfrente;enfrente
+frente a;enfrente de
+engordar;engodrar
+crecer;engrandeser
+engendrar;enjendrar
+interponer;enkashar
+inclinar;enklinar
+colgar;enkolgar
+mandamiento;enkomendansa
+encontrar;enkontrar
+encontrarse;enkontrarse
+encuentro;enkontro
+animar;enkorajar
+jalear;enkorajar
+enloquecer;enlokeser
+sobre;enriva, sovre
+enseñar;ensenyar
+de repente;ensupito
+ensuciar;ensuziar
+comprender;entender
+entender;entender
+interesar;enteresar
+interesarse;enteresarse
+interés;entereso
+interés;entereso
+entero;entero
+interrumpir;enteromper
+entierro;enterramiento
+enterrar;enterrar
+enterrarse;enterrarse
+intención;entision
+rodeado;entornado
+rodear;entornar
+entrada;entrada
+intrincado;entrafikado, komplikado
+entrar;entrar
+entre;entre
+entregar;entregar
+entre tanto;entremientes
+empresa;entreprisa
+entusiasmo;entuziasmo
+inventar;enventar
+verano;enverano
+invitar;envitar
+negar;enyegar
+herencia;erensia
+doler;ergueler
+hermana;ermana
+hermano;ermano
+hermoso, bello;ermozo 
+nuera;ermuera
+nuera;ermuera
+héroe;eroe
+esforzarse;esforsarse
+esfuerzo;esforso
+escaldar;eskaldar
+estofar;eskaldar
+escalera;eskalera
+escalón;eskalon
+escalonar;eskalonar
+acabar;eskapar
+añorar;eskarinyarse
+añoranza;eskarinyo
+exclamar;esklamar
+escoger;eskojer
+escoger;eskojer
+escuela;eskola
+esconderse;eskonderse
+escondido;eskondido
+escribir;eskrivir
+escupir;eskupir
+oscuridad;eskuridad
+tinieblas;eskuridad
+oscuro;eskuro
+excusar;eskuzar
+disculpar;eskuzar
+esmeralda;esmeralda
+espada;espada
+espalda;espalda
+asomar;espander
+extenso;espandido, ancho
+expandir;espandir
+acostarse;espandirse, echarse
+asustar;espantar
+asustarse;espantarse
+tremendo;espantavle
+miedo;espanto
+espanto;espanto
+cobarde;espantozo
+español;espanyol
+repartir;espartir
+espacio;espasio
+despachar;espedir
+espejo;espejo
+espejo;espejo
+espectador;espektador
+espectáculo;espektakolo
+especular;espekular
+esperanza;esperansa
+esperar;esperar
+despertar;espertar
+despertarse;espertarse
+especial;espesial
+despierto, listo;espierto 
+deporte;espor
+compromiso;espozorio
+establecer;estableser
+plantear;estableser
+estado;estado
+estampa;estampa
+estampar;estampar
+estambul;estanbol
+estar;estar
+encontrarse a disgusto;estar desrepozado
+encontrarse a gusto;estar repozado
+constar;estar seguro
+gasolinera;estasion de benzin
+este;este
+eso / esa;este / esta
+estómago;estomago
+historia;estoria
+extraño;estranyo
+estrecho;estrecho
+estrella;estreya
+ostra;estridia
+estropearse;estropiarse
+estudiante;estudiante, elevo
+estudiar;estudiar
+estupendo;estupendo 
+sueño;esuenyo
+piso;etaj, apartamento
+estanque;étang ?
+europa;evropa
+esmirna;ezmirna
+hada;fada
+hadado;fadado
+hecho;fakto
+arruinarse;falitar
+error;falta
+fama;fama
+familia;famiya
+famoso;famozo
+fantástico;fantastiko
+quimera;fantezia
+farmacia;farmasiya
+fascista;fashisto
+fácil;fasil, kolay
+fastidioso;fastidiozo 
+fatigado;fatigado
+fatigar;fatigar
+favor;favor
+faz;faz
+faz;faz, kara
+feliz;feliche
+felicidad;felisida
+feo;feo
+herida;ferida
+herido;ferido
+herir;ferir
+hierro;fierro
+fiesta;fiesta
+hacer fiesta;fiestar
+figura;figura
+fijo;fiks
+fijar;fiksar
+fijar;fiksar
+película;filmo
+película;filmo
+filosofía;filozofia
+fin;fin 
+fin de semana;fin de semana
+hasta;fin, asta
+final;final
+finalmente;finalmente
+por fin;finalmente
+fino;fino
+molestar;fishugar
+débil;flako, sin fuersa
+flaco;flako
+delgado;flako, flakito
+llama;flama
+flecha;flecha
+flor;flor
+florista;floristo
+lacio;flosho
+flota;flota
+fundación;fondasion
+fondo;fondo
+función;fonksion
+funcionar;fonksionar
+forma;forma
+formar;formar
+imponer;forsar
+fotografía;fotografia
+sillón;fotolyo
+butaca;fotolyo
+construir;fraguar
+francés;fransez
+frase;fraza
+fregar;fregar
+frotar;fregar
+freír;freir
+freno;freno
+frente;frente
+fresco;fresko
+frigorífico, nevera;frijider, buziera
+frío;frio
+freír;friyir
+frontera;frontiera
+fruta;fruta
+frutería;frutero
+frutero;frutiera
+piña;fruto del pino
+fuerte;fuerte
+travieso;fuerte
+funesto;funesto 
+falda;fusta
+fútbol;futbol
+huir;fuyir
+escopeta;fuzil, tufenk
+gamba;gamba
+paraíso;ganeden
+paraíso;ganeden
+cuello;garganta
+garganta;garon
+camarero;garson 
+gato;gato
+zarguela;gaya
+gallardía;gayardiya
+gallina;gayina
+gallinero;gayinero
+gallo;gayo
+periódico;gazeta
+gaseosa;gazoza
+guerra;gerra
+guía;giador 
+infierno;ginnam
+guitarra;gitara
+guisar;gizar
+gordo;godro
+gordura;godrura
+oler;goler
+olor;golor
+gobierno;governo
+disfrutar;gozar
+escalafón;grado
+gramática;gramer
+grande;grande
+gracia;grasia
+gracias;grasias
+grave;grave
+bramar;gritar
+grito;grito
+gris;grizo 
+guardar;guadrar
+huerto;guerta
+hortelano;guertalano
+huerto;guerto
+hueso;gueso
+huevo;guevo
+gusto;gusto
+gusano;guzano
+hamburguesa;hamburger
+gandul;haragan
+favor;hatir
+enfermo;hazino 
+enfermedad;hazinura
+y;i
+idea;idea
+higo;igo
+igual;igual
+hija;ija
+hijo;ijo
+ilusión;iluzion
+imagen;imaje
+imaginar;imajinar
+inmediatamente;imediatamente
+inmenso;imenso 
+imitar;imitar
+impaciente;impasiente
+impedimento;impedimiento
+impedir;impedir
+emperador;imperador
+imperio;imperio
+imperio;imperio
+importar;importar
+imprimir;imprimir
+imprudencia;imprudensia
+llenar;inchir
+rellenar;inchir
+vago;indechizo 
+además;indemas
+por ende;indemas
+pista;indisio
+industrial;industrial
+tedio;infasio
+infierno;inferno
+influencia;influensa
+dar una noticia;informar
+información;informasion
+infraestructura;infrastruktura
+inicial;inisial 
+iniciar;inisiar
+inquieto;inkieto 
+incluir;inkluir
+incluso;inkluzo
+incluido;inkluzo 
+inconveniente;inkonvenivle
+inocente;inosente
+inseguridad;inseguridad
+incidente;insidente
+vehículo;instrumento de lokomosion
+inteligente;intelijente
+intensificar;intensifikar
+intestino;intestino
+intimidad;intimidad
+introducción;introduksion
+introducir;introduzir
+electrodoméstico;intrumiento de kaza
+investigación;investigasion
+invertir;investir
+invitado;invitado 
+invitar;invitar
+convidar;invitar
+invitación;invitasion
+nervioso;inyervozo 
+nieto;inyeto 
+nieve;inyeve
+ir;ir
+marchar;ir
+ir de compras;ir a komprar/emplear
+ir de mal en peor;ir de mal en peor
+andar;irse
+ojalá;ishalla
+isla;izla
+japonés;japonezo 
+en general;jeneralmente
+generación;jenerasion
+enero;jenero
+generoso;jenerozo
+geranio;jeraniom
+periódico;jurnal
+cada;kada
+casi;kaji
+calvo;kalavasudo, kalvo
+caldo;kaldo
+calleja;kaleja
+lápiz;kalem
+calificar;kalifikar
+cálculo;kalkolo
+tranquilo;kalmo 
+quieto;kalmo, arrepozado
+calor;kalor
+zapato;kalsado, sapato
+dormitorio;kam. de echar, dormitorio
+cabina;kamara
+habitación;kamareta
+gabinete;kamareta de estudio
+caminar;kaminar
+carretera;kamino prinsipal
+calzada;kamino prinsipal
+camisa;kamiza
+campo;kampo, terreno
+cañón;kanon
+cansado;kansado
+cansancio;kanserya
+cantor;kantador / dera
+cantar;kantar
+botijo;kantaro
+canción;kantika
+canción;kantika
+rincón;kanton
+capacidad;kapachedad
+capaz;kapachi
+capacitad;kapachitad
+jefe, cabecilla;kapo
+mejilla;kara
+cara;kara
+rostro;kara
+semblante;kara
+carácter;karakter
+cardiaco;kardiako
+acariciar;karesar
+acariciar;karesar
+cargar;kargar
+cariño;karinyo
+carne;karne
+caro;karo
+carroza;karosa
+sandia;karpuz
+carbón;karvon
+carnicero;kasap, karnesero
+cazar;kasar
+caja;kasha
+cajón;kashon
+castañuelas;kasranyetas
+azada;kavakadura
+caballo;kavayo
+caber;kaver
+cabeza;kavesa
+cabello;kaveyo
+cabo;kavo
+causar;kavzar
+caso;kavzo
+callarse;kayarse
+calle;kaye
+caliente;kayente
+fiebre;kayentura
+caer;kayer
+casa;kaza
+pueblo;kazal
+pueblerino;kazalino 
+campesino;kazalino
+casar;kazar
+cuyo;ke tiene
+qué;ke, kualo
+quedar;kedar
+permanecer;kedar
+quedarse;kedarse
+quemado;kemado 
+quemar;kemar
+broncearse;kemarse del sol
+quién;ken
+quién sabe;ken save
+querer;kerer
+amar;kerer bien
+querido;kerido
+barbilla, mentón;keshada
+quejarse;kesharse
+cuestión;kestion
+pregunta;kestion, demanda
+queso;kezo
+kilo;kilo
+kilómetro;kilometro
+química;kimika
+químico;kimiko
+chino;kinezo
+quitar;kitar
+sacar;kitar, echar
+claro;klaro 
+clase;klasa
+clásico;klasiko
+cliente;kliente
+cordero;kodrero
+coincidir;koensidar
+colega;kolego 
+colegio;kolej, lise
+colectividad;kolektividad
+columna;kolona
+colonia;koloniya
+colonia;kolonya
+color;kolor
+rojo;kolorado
+comandante;komandante
+combinación;kombinasion
+enaguas;kombinezon, jupon
+comedia;komedia
+comer;komer
+almorzar;komer por midi
+pacer;komer yerva
+pastar;komer yerva
+comerciante;komersante
+comida;komida
+como;komo
+sepulcral;komo de betahayim
+compañero;kompanyero 
+competitivo;kompetitivo 
+ordenador;kompiuter
+traje;komple, kostum
+completamente;kompletamente
+cumplido, cumplimiento;komplimento
+cumplir;komplir
+almíbar;komposto
+compuesto;kompuesto
+comunicar;komunikar
+con;kon
+conmigo;kon mi
+consigo mismo;kon si mizmo
+contigo;kon ti
+condenación;kondanasion
+condición;kondision
+conducta;kondukta
+conductor;konduktor 
+conducir;konduzir
+confiar;konfiar
+confidencia;konfidensia
+confianza;konfiensa
+corroborar;konfirmar
+confundir;konfonder
+confuso;konfuzo 
+congreso;kongreso
+conclusión;konkluzion
+conquistar;konkuistar
+conocer;konoser
+conocido;konosido
+conseja, cuento;konseja, kuento
+aconsejar;konsejar
+consecuencia;konsekuensa
+conciencia;konsensia
+conciencia;konsensya
+consentir;konsentir
+concierto;konserto
+conservar;konservar
+conservar;konservar
+considerar;konsiderar
+considerarse;konsiderarse
+consolar;konsolar
+consuelo;konsolasion
+consulado;konsolato
+consonante;konsonante
+constante;konstante
+consternación;konsternasion
+construir;konstruir
+cónsul;konsul
+tacto;kontakto
+contar;kontar
+contexto;konteksto
+contemplar;kontemplar
+contener;kontener
+contenerse;kontenerse
+contentar;kontentar
+arreglarse;kontentarse
+contento;kontente
+continuado;kontinuado
+continuar;kontinuar
+continuar;kontinuar
+proseguir;kontinuar
+continuidad;kontinuidad
+contra;kontra
+contra;kontra
+contrario;kontrario
+contribución;kontribusyon
+controlar;kontrolar
+puesto;kontuar
+oportuno;konveniente
+convencer;konvenser
+copia;kopya
+coraje;koraje
+valiente;korajozo
+corazón;korason
+correctamente;korektamente
+pasillo;koridor
+corregir;korijar
+coro;koro
+correr;korrer
+corrida;korrida
+corriente;korriente
+curso;korso
+cortar;kortar
+cortar;kortar
+corte;korte
+corral;kortijo
+patio;kortijo
+cortina;kortina
+través;korva
+cosquillas;koshkiyas
+cojo;kosho
+costar;kostar
+cotidiano;kotidiano 
+codo;kovdo
+cosa;koza
+asunto;koza
+cocinar;kozer
+cocina;kozina, mutpak
+corbata;kravata
+crear;krear
+flan;krem karamek
+crecer;kreser
+creer;kreyer
+criatura;kriansa
+niño;kriatura
+criatura;kriatura
+crimen;krimen
+crío;krio 
+criterio;kriter
+crisis;kriza
+cruzada;kruzada
+cuadro;kuadro
+marco;kuadro
+peluquería;kuafor, berber
+cualidad;kualidad
+cualquier;kualkier 
+cual;kualo
+cuando;kuando
+cuarto;kuarto; kuatren
+cuatro;kuatro
+cuchara;kuchara
+cuchillo;kuchiyo
+cuidado;kudiado, atension
+cuidar;kudiar
+cuidar;kudiar
+cuerda;kuedra
+cuenta;kuento
+muñeca;kukla
+lechuza;kukuvaya
+serpiente;kulevra
+culpa;kulpa
+cultivado;kultivado
+cultura;kultura
+cumplir;kumplir
+columpio;kuna
+cuna;kuna
+columpiarse;kunarse
+vaso;kupa
+medicamento;kura
+curiosamente;kuriozamente
+curiosidad;kuriozita
+curioso;kuriozo 
+corto;kurto 
+bajo;kurto, bashitiko 
+cubrir;kuvrir, kuvijar
+coser;kuzir
+trabajador;laboriozo 
+lado;lado
+semáforo;lampas de trafik
+lanzar;lansar
+lanzarse;lansarse, echarse
+largo;largo
+lavar;lavar
+lavarse;lavarse
+trabajar;lavorar
+labor;lavoro
+leche;leche
+lector;lektor
+lentamente;lentamente
+lejano;leshano 
+lejos;leshos
+carta, letra;letra
+libertad;libertad
+libre;libre, libero
+hígado;ligado
+limite;limito
+limpio;limpio
+lindo;lindo
+lengua, lenguaje;lingua
+lengua materna;lingua maternal
+licencia;lisensia
+leve;liviano
+libro;livro
+lógica;lojika
+lobo;lovo
+lugar;lugar
+lujo;lukso
+lujoso;luksyozo
+lumbre;lumbre
+largo;lungo
+lúcido;lusido 
+lluvia;luvia
+luz;luz
+bonito;luzio 
+mas;ma
+doña;madam
+madrugada;madrugada
+maestro;maestro
+majo;maho 
+mayúscula;majiskula
+mayoría;majorita
+máquina;makina
+maquillarse;makiyarse
+máximo;maksimo
+mal;mal
+maldito;maldicho 
+malo;malo 
+desgraciadamente;malorozamente
+mamá;mama
+mácula;mancha
+manera;manera
+manga;manga
+manifestar;manifestar
+faltar;mankar, faltar
+mano;mano
+manzana;mansana
+muchacho, chico;mansevo 
+joven;mansevo, djoven
+puñetes;mansheta
+mantel;mantel
+mantener;mantener
+maña;manya
+magnifico;manyifiko
+desgracia;manziya
+mar;mar
+maravillarse;maraviyarse
+admirarse de?;maraviyarse
+vértigo;mareo, shasheo
+marca;marka
+peor;mas negro, mas mal
+mascar;mashkar
+matar;matar
+material;material
+perejil;maydanoz
+mayor;mayor
+más;maz
+hado;mazal
+afortunado;mazalozo 
+medalla;medalya
+medianoche;medianoche
+medicina;medikeria
+médico;mediko, doktor
+medio;medio
+mediodía;mediodia, midi
+meditar;meditar
+mierda;medra
+lectura;meldadura
+leer;meldar
+memorable;memoravle
+memoria;memoria, tino
+menear;menear
+esgrimir;menear
+revolver;menear, aboltar
+menester;menester
+menos;menos, manko
+mentira;mentira
+mentiroso;mentiroso
+cerebro;meoyo
+razón;meoyo, razon
+merendar;merendar; piknikar
+merecer;mereser
+preocuparse;merikiarse
+comprar;merkar
+mercería;merseriya
+mensaje;mesaje
+mezclar;mesklar
+medir;mesurar
+dar a luz;meter al mundo
+reemplazar;meter en lugar de
+mover;meter en movimiento
+poner;meter, pozar
+metro;metro
+mes;mez
+mesa;meza
+miel;miel
+miembro;miembro
+mientras;mientres
+mejor;mijor
+mejorado;mijorado
+mil;mil
+medicina, remedio;milizina
+millón;milyon
+mínimo;minimum
+menor;minor
+mirada;mirada
+milagro;mirakolo, milagro
+mirar;mirar
+mismo;mismo
+mitad;mitad
+miope;miyope
+miseria;mizeria
+mismo;mizmo
+mueble;moble
+modo;modo
+mojar;mojar
+molestar;molestar
+momento;momento
+dinero;moneda, para
+monosílabo;monosilabo
+montaña;montanya
+montón;monton
+moral;moral
+moreno;moreno 
+morfina;morfina
+criada;mosa
+mosca;moshka
+mozo;moso 
+fonda;motel
+motor;motor
+motocicleta;motosikleta
+nosotros;mozotros
+muchacho;muchacho 
+muela;muela
+fallecimiento;muerte
+muerte;muerte
+nuestro;muestro
+nuevo;muevo
+mujer;mujer
+mucho;muncho
+pelar;mundar
+mundial;mundial
+mundo;mundo
+mundo;mundo
+ayuntamiento;munisipalidad
+morir;murir
+deceder;murir
+expirar;murir
+fallecer;murir
+huésped;musafir, ospitaliero
+labio;musho
+bigote;mustacho
+don;musyu
+muy;muy
+música;muzika
+nada;nada
+nadar;nadar
+nariz;nariz
+hocico;nariz
+nacer;naser
+nacer;naser
+nacional;nasional
+nación;nasyon
+naturaleza;natura
+naturaleza;natura
+por supuesto;naturalmente
+navaja;navaja
+barco;nave, vapor
+negativo;negativo 
+negocio;negosio, echo
+necesario;nesesario
+necesidad;nesesidad
+necesitar;nesesitar,tener menester
+neblina;nevlina
+tampoco;ni... ni...
+nido;nido
+nivel;nivel
+suspender;no reushir el egzamen
+noche;noche
+navidad;noel
+nombre;nombre
+abuelo;nono
+nostalgia;nostaljia
+apostillar;notar
+notablemente;notavlamente
+informativo;novedades, avizos
+novio;novio 
+noble;novle
+jamás;nunka
+nublado;nuvlozo
+objetivo;objektivo 
+objeto;objekto
+observar;observar
+obstáculo;obstakolo
+obtener, conseguir;obtener
+octavo;ochen
+oficial;ofisial
+oficio;ofisio
+ofrecer;ofrir
+augurar;ogurar
+pisar;oizar
+página;oja
+ojo;ojo
+ocasión;okazion
+occidente;oksidente
+ocupado;okupado 
+ocupar;okupar
+holocausto;olokosto
+olvidar;olvidar
+olvidarse;olvidarse
+hombre;ombre
+hombro;ombro
+honor;onor
+once;onze
+operar;operar
+zarzuela;operetta
+opinión;opinion
+oportunidad;oportunidad
+oportuno;oportuno
+oponer;opozar
+agobiar;oprimir
+hora;ora
+reloj;ora de braso
+muñequera;ora de braso
+plegaria;orasion
+orar;orasionar
+orden;orden
+ordenado;ordenado
+ordenar;ordenar, meter orden
+ordinario;ordinario, bayagi
+tapas;ordovres, apetites
+oreja;oreja
+organizador;organizador
+orgullo;orgolyo
+orientar;orientar
+horrible;orivle
+horno;orno
+oro;oro
+hospital;ospital
+hospitalidad;ospitalidad
+autobús;otobus
+autocar;otobus
+automóvil;otomobil
+carro;otomobil, araba
+otoño;otonyo
+otro;otro
+demás;otros
+obedecer;ovedecer, obeisar
+obediente;ovedesyente, obeisente
+obligar;ovligar
+obligación;ovligasion
+obra;ovra
+hoy;oy
+esta mañana;oy demanyana
+escuchar;oyir
+osar;ozar
+padre;padre
+pagar;pagar
+país;pais
+palabra;palavra
+pan;pan
+papá;papa
+papel;papel
+abuelo;papu, nono, granpapa
+para;para
+para qué;para ke
+paralelo;paralelo
+paralítico;paralizado 
+dinero;paras
+abrigo;pardesu
+pared;pared
+parecer;pareser
+parecerse;pareserse
+perezoso;paresozo, haragan
+pereza;pareza, haraganud
+aroma;parfum
+parir;parir
+lucir;parparear
+párpado;parparo
+compartir;partajar
+parte;parte
+parte;parte
+partir;partir
+participar;partisipar
+partidario;partizante
+lograr;parvenir
+paz;pas
+pasa;pasa
+pasado;pasado
+pasado mañana;pasado amanyana
+pasajero;pasajero 
+pasaporte;pasaporto
+pasar;pasar
+pasarse;pasar al enemigo
+cruzar;pasar enfrente
+pasear;pasear
+paciencia;pasensia
+pájaro;pasharo
+pastel;pasta, pastel
+sabor;pasto
+papa, patata;patata
+patata;patata
+suelo;patin
+algarabía;patrania
+patrimonio;patrimonyo
+dueño;patron, proprietario
+pabellón;paviyon
+país;payis
+payaso;paylacho
+pecho;pecho
+pedazo, trozo;pedaso
+titubear;pedrer el ekilibro
+perder;pedrer, piedrer
+lástima;pekado
+pelea;pelea
+pelo;pelo
+tartamudo;peltek
+pena;pena
+ahorcar;pender
+pensamiento;pensada
+pensar;pensar
+pena, problemas;penserios
+perfección;perfeksion
+perfecto;perfekto 
+perfil;perfil, profil
+peligro;perikolo
+peligrosamente;perikolozamente
+peligroso;perikolozo
+preocuparse, esforzarse;perkurar
+permitir;permeter
+perpetua;perpetual
+perro;perro
+perseguir;perseguir
+persona;persona
+personal;personal
+pescado;peshkado
+pescar;peshkar
+pestaña;pestanya
+petróleo;petrolio
+peinarse;peynarse
+pesadez;pezgades
+peso;pezgo
+peso;pezgo
+pié;pie
+perder;piedrer
+muslo;pierna
+pieza dramática;piesa de teatro
+picante;pikante
+pintor;pintador 
+piñón;pinyon
+tenedor;piron
+en seguida;pishin
+piscina;pisina
+nuca;piskueso
+pisar;pizar
+playa;plaj
+plaza;plasa
+plata;plata
+plato;plato
+placer;plazer
+placer;plazer
+potencia;poder
+poema, poesía;poezia
+poco;poko
+policía;polisiya
+cortesía;politeza
+pólvora;polvora
+puente;ponte
+popa;popa
+popular;popular
+por;por
+además;por demaziya, indemas
+por eso;por esto
+por qué;por ke
+por consiguiente;por konsekuensa
+semanal;por semana
+por ciento;por sien
+porque;porke
+pues;portanto
+no obstante;portanto
+por tanto;portanto, aser ke
+monedero;portmone
+billetero;portofolio
+cartera;portofolio de dokumentos
+naranja;portokal
+retrato;portreto
+poseer;posedar
+posesión;posesion
+posibilidad;posibilidad
+posibilidad;posibilidad
+posible;posivle
+correo;posta
+potasio;potasio
+pobre, desgraciado;povereto 
+desgraciado;povereto 
+pollo;poyo
+positivo;pozitivo
+puerro;prasa
+practicar;pratikar
+práctico;pratiko
+precisamente;prechizamente
+preciso;prechizo
+preferir;preferar
+medida;prekosion
+princesa;prensesa
+preocupado;preokupado 
+preocupación;preokupasion
+preparación;preparativos
+preposición;prepozision
+precepto;presepto
+apreciado;presiado 
+precio;presio
+precipicio;presipisio
+picado;presipitado abasho
+pronto;presto
+velocidad;prestor
+velocidad;prestor
+pretexto;preteksto
+pretender;pretend, claim
+negro;preto
+pronostico;previsto
+presentar;prezentar
+presentar;prezentar
+presente;prezente
+preservar;prezervar
+primero;primero 
+primo;primo 
+principio;prinsipio
+prisa;prisa
+privado;privado
+privado;privado 
+probabilidad;probabilidad
+problema;problem
+proyecto;prodjekto
+producirse;produizirse
+producir;produzir
+profesar;profesar
+profesional;profesional
+profesor;profesor
+aprovechar;profitar
+lucrarse;profitar, ganar
+profundo;profundo
+programa;programa
+progresar;progresar
+prolongar;prolungar
+prolongación;prolungasion
+prometer;prometer
+pronunciar;pronunsiar
+proponer;propozar
+proposición;propozision
+propuesta;propozision
+predio;proprieta
+prosperidad;prosperidad
+próspero;prospero
+protestar;protestar
+prueba;prova
+pobre;prove
+provenir;provenir
+provincia;provensia
+proverbio;proverbio
+preguntar;pruntar, demandar
+psiquiatría;psikiatriya
+publicar;publikar
+público;publiko
+a lo mejor;puede ser
+poder;pueder
+cuerpo;puerpo
+puerta;puerta
+pueblo;puevlo
+pulmones;pulmones
+púa;punchon
+confín;punta
+esquina;punta
+punto;punto
+puño;punyo
+muñeca, pulso;puso
+radio;radio
+raíz;rais
+rama;ramo
+rápidamente;rapidamente
+raza;rasa
+racismo;rasizmo
+rata;raton
+rallador;rayador
+rallar;rayar
+rayo;rayo
+real;real
+realizar;realizar
+realmente;realmente
+rebelión;rebelion
+receta;recheta
+redacción;redaksion
+redactar;redaktar
+incorporarse;redresarse
+refrán;refran
+refugiarse;refujiarse
+rehusar;refuzar
+único;regalado 
+regla;regla
+lamentar;regretar
+reír;reir
+región;rejion
+recuperar;rekuperar, rekovrar
+religión;relijion
+remedio;remedio
+zorro;renar
+zorra;renar
+rendir;render
+rendirse;renderse
+darse cuenta;renderse kuento
+rencor;renkor
+renovar;renovelar
+reparar;reparar
+repercusión;reperkusion
+repetir;repetar
+repetido;repetido
+replicar;replikar
+contestar;replikar, responder
+reportaje;reportaje
+reposo;repozo
+república;republika
+respuesta;repuesta
+receta;resefta
+recíprocamente;resiprokamente
+recibir;resivir
+homenaje;respekto
+respeto;respekto
+responder;responder
+responder de;responder de
+responsabilidad;responsabilitad
+restaurante;restorante
+restaurar;restorar
+retraso;retardo
+retina;retina
+reunir;reunir
+reunirse;reunirse
+tener éxito;reushir
+aprobar;reushir el egzamen
+tajada;revanada
+revista;revista
+revolución;revolusion
+rey;rey
+reserva;rezerva
+recio;rezio 
+resolver;rezolver
+pañuelo;rida
+rigurosamente;rigorozamente
+rico;riko
+río;rio
+arriesgarse;rizikar
+riesgo;riziko
+riesgo;riziko
+pedir;rogar
+cohete;roketa
+novela;romanso
+rompecabezas;rompe kavesa
+romper;romper
+robar;rovar
+revés;roves
+roble;rovle
+barra de labios;ruj
+rústico;rustiko 
+pelirrojo;ruvio 
+sacrificio;sakrifisio
+ensalada;salata
+salero;salero
+salida;salida
+salir;salir
+saltar;saltar
+salud;salud
+salvaje;salvaje
+salvar;salvar
+sanar;sanar
+curarse;sanarse
+sanýdad, salud;sanedad
+sangre;sangre
+sangre fría;sangre fria, kalmo
+zapatilla;sapato
+estornudar;sarnudar, estarnudar
+salpicar;sarpikar
+satisfecho;satisfecho 
+saber;saver
+sabor;savor
+postre;savor de boka
+sabroso;savrozo 
+mendigo;sedakero 
+seguir;seguir,perseguir, ir detras
+segundo;segundo 
+índice;segundo dedo
+seguridad;seguridad
+seguro;seguro
+enojo;sehora
+ceja;seja
+secar;sekar
+secretario;sekreter
+secreto;sekreto 
+sexo;sekso
+celebrar;selebrar
+celo;selo
+calabozo;selula
+semana;semana
+cementerio;sementario, betahayim
+cena;sena
+cenar;senar, komer por la noche
+ciencia;sensia
+sentido;senso
+sentimiento;sentimiento
+encontrarse bien;sentirse bien
+centro;sentro
+separar;separar
+sed;ser
+sediento;ser
+inauguración;seremonia de aviertura
+seriamente;seriozamente
+cerca;serka
+próxima;serka
+cercano;serkano 
+cerradura;serradura
+cerrar;serrar
+servicio militar;servisio militar
+sésamo;sesamo
+cebolla;sevoya
+sábado;shabat
+broma;shaka
+piropo;shakaruka
+chal;shal
+champiñón;shampinyon
+selva;shara tropikal
+aturdirse;shashearse
+castaño;shaten
+jabón;shavon
+jefe;shef
+melocotón;shefteli
+escena;shena
+chofer;shofor
+choque;shok
+gracias;shukur
+sí;si
+sino;si no
+izquierda;siedra
+zurdo;siedrero
+ciego;siego 
+siempre;siempre
+séptimo;sieten
+cigarrillo;sigaro
+cigüeña;sigonya
+siguiente;siguiente
+seguir;siguir
+seguro;siguro
+sílaba;silaba
+silencio;silensio
+silueta;silueta
+simpático;simpatiko
+sin;sin ...
+manco;sin braso
+cine;sinema
+quinto;sinken
+cinco;sinko
+cincuenta;sinkuenta
+sincero;sinsero
+sentir;sintir
+cinturón;sintura
+señal;sinyal
+señalar;sinyalar
+firma;sinyatura
+significar;sinyifikar
+significado;sinyifikasion
+signo;sinyo
+caballero;sinyor
+circular;sirkular
+circulación;sirkulasion
+circunstancia;sirkunstansia
+sistema;sistema
+sitio;sitio
+situar;situar
+situación;situasion
+ciudad;sivdad
+civil;sivil
+silla;siya
+sol;sol
+solamente;solamente
+soldado;soldado
+soleado;soleado
+soledad;soledad
+sólo;solo
+solo;solo
+sombra;solombra
+sombra;solombra
+soltero;soltero, muchacho
+solución;solusion
+someter;someter
+sonar;sonar
+sonido;sonete, boz
+sonreír;sonreir
+soñar;sonyar
+sorprender;sorprender
+social;sosyal
+sobre;sovre
+a punto de;sovre el punto
+locutor;spiker
+estilista;stilista
+bolígrafo;stilo
+subsistir;subsistir, turar
+súbdito;sudito 
+suerte;suerte
+sufrir;sufrir
+sugerir;sugjerar
+tema, sujeto;sujeto
+suceder;suksedar
+sucesión;suksesion
+sucesivamente;suksesivamente
+sucesivo;suksesivo 
+zumo;sumo
+jumo, jugo;sumo
+sopa;supa
+superficial;superfisial
+supermercado;supermarket
+soportar;suportar
+suponer;supozar
+surgir;surjir
+sobrevivir;survivir
+cuesta;suvida
+montar;suvir
+sucio;suzio 
+cielo;syelo/sielo
+pintura;tablo
+pizarra;tablo preto
+tarde;tadre
+tafetán;tafta
+gorro;takia
+también;tambien
+tambor;tambur
+tanque;tank
+tañer;tanyer
+tapar;tapar
+tapón;tapon
+balbucear;tartalear
+copa;tasa, kupa
+teatro;teatro
+techo;techo
+cuaderno;tefter
+teja;teja
+tajada;tejada
+tejado;tejado
+técnico;teknisyen
+texto;teksto
+telefonear;telefonar
+telecomunicación;telekomunikasion
+temeridad;temeridad
+temerario;temerozo 
+temerario;temerozo
+tormenta;tempesta, furtuna
+temporalmente;temporalmente
+temprano;temprano
+tener;tener
+intentar;tener entision, aprovar
+osar;tener ozadia
+tener hipo;tener sangluto
+temer;tener temor
+marquesina;tenta
+terminar;terminar
+terrible;terrivle
+tesis;tezis
+ti;ti
+rato;tiempo
+tiempo;tiempo
+tierra;tierra
+territorio;tierra de pais
+sello;timbro, muur
+tímido;timido 
+timón;timon
+tío;tio
+tipo;tipo
+disparar;tirar, travar sovre
+título;titolo
+a sabiendas;todo en saviendo
+tomo y lomo;todo enduna
+todo;todo
+tomar;tomar
+tomar el pelo;tomar al pelo
+ducharse;tomar dush
+enterarse;tomar haber, informarse
+saber a;tomar savor
+tomate;tomat
+hallar, encontrar;topar
+meterse;toparse
+torero;torero
+tornar;tornar
+turno;torno
+toro;toro
+total;total
+tractor;tractor
+traducir;traduizir
+traductor;traduktor 
+traer;traer
+traer;traer
+tráfico;trafiko
+traidor;traidor
+tragedia;trajedia
+tranvía;tramvay
+tranquilizar;trankilizar
+transito;tranzito
+tratar;tratar
+tirar;travar
+atravesar;traversar
+trasera;trazera
+tembloroso;tremblante
+temblar;tremblar
+tren;treno
+tres;tres
+tercer;treser
+tercer;treser
+traducir;tresladar
+tesoro;trezoro
+jersey;triko, sueter
+vientre;tripa
+triste;triste
+triunfar;triunfar
+cambiar;trokar
+cambiar de opinión;trokar de opinion
+tronco;tronko
+ganadería;trupa de bestia
+tu;tu
+wáter;tualeta
+tubo;tubo
+durar;turar
+turco;turko
+tutear;tutuayar
+último;ultimo
+humanidad;umanidad
+humillar;umiliar, arrebashar
+humillación;umiliasion
+gas;umo
+sobre;una anvelop
+como quiera que;una vez ke
+hungría;ungaria
+unidad;unidad
+unido;unido
+único;uniko
+unir;unir
+universal;universal
+universidad;universita
+mutuamente;uno a otro
+uña;unya
+urbano;urbano 
+usar;uzar
+vaca;vaka
+vacaciones;vakansas
+valer;valer
+valer la pena;valer la pena
+maleta;validja
+valioso;valutozo 
+vano;vano, vaziyo
+abuela;vava, nona, granmama
+vacío;vaziyo 
+florero;vazo
+verdad;vedra
+verde;vedre
+vela;vela
+vender;vender
+venta;vendida
+venganza;vengansa
+venir;venir
+ventana;ventana
+veinte;vente
+veinte;vente
+ventoso;ventozo
+ver;ver
+verdad;verdad
+a ver;veremos
+verse;verse
+hacia;verso
+vestido;vestido
+vestir;vestir
+vestirse;vestirse
+vez;vez
+vecino;vezino 
+viajar;viajar
+viaje;viaje
+vida;vida
+cristal;vidro
+parabrisas;vidro delantero
+antiguo;viejo 
+viejo, anciano;viejo,aedado,nikochiri
+visita;vijita
+visitar;vijitar
+víctima;viktima
+victoria;viktoria
+victoria;viktoria
+vino tinto;vino kolorado
+curva;viraje
+ponerse;vistirse
+vitamina;vitamina
+escaparate;vitrina
+vecino;vizino
+vocal;vokal
+voluntad;voluntad
+votación;votasion
+tratar de usted;vuvuayar
+ya;ya
+ya basta;ya basta
+ya;ya, pishin
+llamar;yamar
+llave;yave
+helado;yelada
+resfriado;yelado
+frío;yelado
+hielo;yelo, buz
+lleno;yeno 
+enjoyado;yeno de djoya
+equivocarse;yerrarse
+hierro;yerro
+hierba;yerva
+césped;yerva
+heno;yerva seka
+llevar;yevar
+llorar;yorar
+verdura;zarzavat
+zodíaco;zodiako
+difícil;zor
+cero;sero
+un;un
+uno;uno
+dos;dos
+tres;tres 
+cuatro;kuatro
+cinco;sinko
+seis;sesh
+siete;siete
+ocho;ocho 
+nueve;mueve
+diez;diez
+once;onze 
+doce;dodje
+trece;tredje
+catorce;katorze
+quince;kinze
+dieciséis;diisesh
+diecisiete;diisiete
+dieciocho;diziocho
+diecinueve;dizimueve
+veinte;vente
+veintiún;ventiuno
+veintidós;ventidos
+veintitrés;ventitres
+veinticuatro;ventikuatro
+veinticinco;ventisinko
+veintiséis;ventisesh
+veintisiete;ventisiete
+veintiocho;ventiocho
+veintinueve;ventimueve
+treinta;trenta
+treinta y un;trentiuno
+treinta y dos;trentidos
+treinta y tres;trentitres
+treinta y cuatro;trentikuatro
+treinta y cinco;trentisinko
+treinta y seis;trentisesh
+treinta y siete;trentisiete
+treinta y ocho;trentiocho
+treinta y nueve;trentimueve
+cuarenta;kuarenta
+cuarenta y un;kuarenta i uno
+cuarenta y dos;kuarenta i dos
+cuarenta y tres;kuarenta i tres
+cincuenta;sinkuenta
+cincuenta y cuatro;sinkuenta i kuatro
+cincuenta y cinco;sinkuenta i sinko
+cincuenta y seis;sinkuenta i sesh
+cincuenta y siete;sinkuenta i siete
+cincuenta y ocho;sinkuenta i ocho
+sesenta;sesenta
+sesenta y nueve;sesenta i mueve
+setenta;setenta
+setenta y un;setenta i uno
+setenta y dos;setenta i dos
+ochenta;ochenta
+ochenta y tres;ochenta i tres
+ochenta y cuatro;ochenta i kuatro
+ochenta y cinco;ochenta i sinko
+noventa;noventa
+noventa y seis;noventa i sesh
+noventa y siete;noventa i siete
+noventa y ocho;noventa i ocho
+noventa y nueve;noventa i mueve
+cien;sien
+cien un;sien i uno
+cien dos;sien i dos
+cien diez;sien i diez
+cien noventa;sien i noventa
+doscientos;dozientos
+doscientos un;dozientos i uno
+trescientos;trezientos
+cuatrocientos;kuatroshentos
+cincocientos;kinyentos
+seiscientos;sheshentos
+sietecientos;setesientos
+ochocientos;ochosientos
+novecientos;novesientos
+mil;mil
+millar;mil
+turca;turka
+almuerza;komida de mida
+vasa;kupa
+telefona;telefoa
+mercada;charsa
+puerra;prasa
+bosfora;bosfoa
+chica;ija
+barca;vapoa
+libra;livra
+metrimonia;kazamienta
+rabina;hahaa
+medica;doktoa
+verana;enverana
+trabaja;echa
+mosquita;moshka
+rollita;rulika
+musea;muzea
+teatra;teatraa
+anciana;aedada
+agradecimienta;agradesimienta
+extranjera;ajena
+acuerda;akorda
+acenta;aksaa
+acta;akta
+al tacta;al tokaa
+bolsilla;aldikera
+alimenta;alimenta
+apellida;alkunya
+armaria;almaria
+amiga;amiga
+aña;anyada
+aña;anya
+nuda;anyuda
+archiva;archiva
+arca;arka
+ejércita;armada
+arregla;arreglamienta
+arrepentimienta;arrepentimienta
+artícula;artikola
+asienta;asentadoa
+espárraga;asparaga
+aspecta;aspekta
+apega;atamienta
+abogada;avokata
+mal de oja;aynara
+burra;azna
+palca;balkoa
+plátana;banana
+banca;banka
+baloncesta;basketboa
+primogénita;bohora
+bósfora;bosfoa
+lela;bovo, torpa
+braza;brasa
+folleta;broshura
+ruida;bruida
+agujerita;burakito de alguja
+despacha;büra
+corcha;corcha
+sa;debasha
+deda;deda
+difunta;defunktoa
+edicta;dekreta
+remedia;demedia
+destina;destina
+desierta;dezierta
+desierta;dezierta
+desconcierta;dezorden, konfuzioa
+diabla;diavla
+bachillerata;diplomada
+empresaria;direktoa
+disca;diska
+génera;djenera
+gesta;djesta
+joyera;djoyera
+duela;dolia
+dominia;dominasioa
+hebrea;ebrea
+tener cuidada;echar tine, azer atansioa
+encanta;echiza
+hechiza;echiza
+trabaja;echa
+efecta;efekta
+ejempla;egzempia
+ejercicia;egzersia
+alumna;eleva
+embarga;embarga
+velera;embarkasion kon vela
+infundia;embrolia
+comienza;empesija
+principia;en primero, empesija
+mandamienta;enkomendansa
+entierra;enterramienta
+entusiasma;entuziasma
+verana;enverana
+hermana;ermana
+esfuerza;esforsa
+mieda;espanta
+espanta;espanta
+espacia;espasia
+espeja;espeja
+espeja;espeja
+espectácula;espektakola
+compromisa;espozoria
+estada;estada
+encontrarse a disgusta;estar desrepozada
+estómaga;estomaga
+sueña;esuenya
+pisa;etaj, apartamenta
+hierra;fierra
+fonda;fonda
+frena;frena
+fría;fria
+frutera;frutiera
+paraísa;ganedea
+paraísa;ganedea
+cuella;garganta
+camarera;garsona
+gata;gata
+gallinera;gayinera
+galla;gaya
+periódica;gazeta
+infierna;ginnaa
+gobierna;governa
+grita;grita
+huerta;guerta
+hortelana;guertalana
+huerta;guerta
+huesa;guesa
+hueva;gueva
+gusta;gusta
+gusana;guzana
+higa;iga
+hija;ija
+impedimenta;impedimienta
+imperia;imperia
+imperia;imperia
+tedia;infasia
+infierna;inferna
+vehícula;instrumento de lokomosioa
+intestina;intestina
+electrodoméstica;intrumiento de kaza
+nieta;inyetoa
+gerania;jeranioa
+periódica;jurnaa
+calva;kalavasudo, kalva
+calda;kalda
+cálcula;kalkola
+zapata;kalsado, sapata
+dormitoria;kam. de echar, dormitoria
+campa;kampo, terrena
+cansancia;kanserya
+botija;kantara
+rostra;kara
+cariña;karinya
+carnicera;kasap, karnesera
+caballa;kavaya
+cabella;kaveya
+caba;kava
+casa;kavza
+puebla;kazaa
+campesina;kazalina
+quesa;keza
+kila;kila
+kilómetra;kilometra
+china;kineza
+cordera;kodrera
+colegia;kolej, lisa
+compañera;kompanyeroa
+congresa;kongresa
+concierta;konserta
+consuela;konsolasioa
+consulada;konsolata
+tacta;kontakta
+contexta;konteksta
+pasilla;koridoa
+cora;kora
+cursa;korsa
+patia;kortija
+coda;kovda
+asunta;koza
+niña;kriatura
+cría;krioa
+criteria;kritea
+cuadra;kuadra
+marca;kuadra
+cuchilla;kuchiya
+cuidada;kudiado, atensioa
+columpia;kuna
+vasa;kupa
+medicamenta;kura
+lada;lada
+semáfora;lampas de trafia
+hígada;ligada
+libra;livra
+loba;lova
+luja;luksa
+maestra;maestra
+vértiga;mareo, shashea
+hada;mazaa
+médica;mediko, doktoa
+cerebra;meoya
+metra;metra
+miembra;miembra
+milagra;mirakolo, milagra
+moda;moda
+momenta;momenta
+dinera;moneda, para
+monosílaba;monosilaba
+morena;morenoa
+moza;mosoa
+muchacha;muchachoa
+fallecimienta;muerta
+munda;munda
+munda;munda
+ayuntamienta;munisipalidaa
+labia;musha
+hocica;naria
+barca;nave, vapoa
+negocia;negosio, echa
+nida;nida
+abuela;nona
+novia;novioa
+objetiva;objektivoa
+objeta;objekta
+obstácula;obstakola
+oficia;ofisia
+oja;oja
+holocausta;olokosta
+hombra;ombra
+orgulla;orgolya
+horna;orna
+ora;ora
+carra;otomobil, araba
+otoña;otonya
+abuela;papu, nono, granpapa
+dinera;paraa
+abriga;pardesa
+párpada;parpara
+pasajera;pasajeroa
+pájara;pashara
+suela;patia
+patrimonia;patrimonya
+dueña;patron, proprietaria
+payasa;paylacha
+pecha;pecha
+pela;pela
+tartamuda;peltea
+pensamienta;pensada
+peligra;perikola
+perra;perra
+pescada;peshkada
+petrólea;petrolia
+pesa;pezga
+pesa;pezga
+musla;pierna
+plata;plata
+monedera;portmona
+billetera;portofolia
+retrata;portreta
+correa;posta
+polla;poya
+puerra;prasa
+precepta;presepta
+precia;presia
+precipicia;presipisia
+pretexta;preteksta
+pronostica;prevista
+prima;primoa
+principia;prinsipia
+proyecta;prodjekta
+predia;proprieta
+proverbia;proverbia
+cuerpa;puerpa
+puebla;puevla
+punta;punta
+puña;punya
+racisma;rasizma
+raya;raya
+remedia;remedia
+zorra;renaa
+reposa;repoza
+respeta;respekta
+retrasa;retarda
+tener éxita;reushia
+pañuela;rida
+ría;ria
+riesga;rizika
+riesga;rizika
+sacrificia;sakrifisia
+salera;salera
+mendiga;sedakeroa
+enoja;sehora
+secretaria;sekretea
+secreta;sekretoa
+sexa;seksa
+cela;sela
+calaboza;selula
+cementeria;sementario, betahayia
+sentida;sensa
+sentimienta;sentimienta
+centra;sentra
+sésama;sesama
+piropa;shakaruka
+castaña;shatea
+zurda;siedrera
+cigarrilla;sigara
+silencia;silensia
+manca;sin brasa
+significada;sinyifikasioa
+signa;sinya
+caballera;sinyoa
+sitia;sitia
+sonida;sonete, boa
+bolígrafa;stila
+súbdita;suditoa
+zuma;suma
+supermercada;supermarkea
+ciela;syelo/siela
+gorra;takia
+teatra;teatra
+techa;techa
+cuaderna;teftea
+técnica;teknisyea
+texta;teksta
+tener hipa;tener sangluta
+rata;tiempa
+tiempa;tiempa
+territoria;tierra de paia
+sella;timbro, muua
+tía;tia
+tipa;tipa
+títula;titola
+tomo y loma;todo enduna
+tomar el pela;tomar al pela
+torera;torera
+turna;torna
+tora;tora
+tráfica;trafika
+transita;tranzita
+tesora;trezora
+tronca;tronka
+tuba;tuba
+turca;turka
+vacía;vaziyoa
+florera;vaza
+vecina;vezinoa
+vino tinta;vino kolorada
+vecina;vizina
+resfriada;yelada
+fría;yelada
+hiela;yelo, bua
+hierra;yerra
+hena;yerva seka
+zodíaca;zodiaka
+cera;sera
