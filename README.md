@@ -28,7 +28,7 @@ python main.py -d <dictionary_ladino_root> -i <dataset_to_translate_root> -o <ou
 Example:
 
 ```
-python STT-align/align/align.py -d "resource/dic_esp_lad_v3.txt" -i "resource/dataset.csv" -o "dataset_translate.csv"
+python main.py -d "resource/dic_esp_lad_v3.txt" -i "resource/dataset.csv" -o "dataset_translate.csv"
 ```
 
 ## Results
