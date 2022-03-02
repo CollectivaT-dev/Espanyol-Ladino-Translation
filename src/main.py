@@ -3,10 +3,13 @@ import unidecode
 import util
 import argparse
 import pandas as pd
+import sys
 
 stanza.download('es')
 nlp = stanza.Pipeline('es')
 
+CSV_SPANISH_TAG = "Spanish"
+CSV_LADINO_TAG = "Ladino"
 
 def translate(phrase, dic):
     doc = nlp(phrase)
@@ -62,35 +65,54 @@ def translate(phrase, dic):
 
 
 def main():
-    parser = argparse.ArgumentParser("translate Spain <> Ladino")
-    parser.add_argument("--d", "--lad_dic", help="Dictionary root.")
-    parser.add_argument("--i", "--dataset", help="Dataset to translate.")
-    parser.add_argument("--o", "--translate", help="Dataset to translate.")
+    parser = argparse.ArgumentParser("translate Spanish <> Judeo-Spanish (Ladino)")
+    parser.add_argument("-d", "--lad_dic", help="Dictionary root.", default=None, required=True)
+    parser.add_argument("-i", "--input", help="Sentence segmented text file to translate", default=None)
+    parser.add_argument("-o", "--output", help="Output path", default=None)
+    parser.add_argument("-v", "--interactive", help="Interactive translator", default=False, action='store_true')
+    parser.add_argument("-c", "--csv", help="Translate dataset CSV with EN, ES columns", default=False, action='store_true')
     args = parser.parse_args()
 
-    if args.lad_dic and args.dataset and args.translate:
-        root_dic = args.lad_dic
-        root_dataset = args.dataset
-        root_translate = args.translate
-        file = open(root_dic, 'r', encoding="utf-8")
+    root_dic = args.lad_dic
+    root_dataset = args.input
+    root_translate = args.output
+    iscsv = args.csv
+
+    if not args.lad_dic:
+        print("ERROR: No dictionary given.")
+        sys.exit()
+
+    print("Reading dictionary", args.lad_dic)
+
+    with open(root_dic, 'r', encoding="utf-8") as file:
         lines = file.readlines()
         dic = []
         for line in lines:
             p = {"src": line.split(";")[0], "target": line.split(";")[1]}
             dic.append(p)
+    print("%i entries"%len(dic))
 
-        df = pd.read_csv(root_dataset)
-        en = []
-        es = []
-        la = []
+    if args.interactive:
+        print("Enter sentence to translate (type 0 to exit):")
+        while True:
+            in_sent = input()
+            if in_sent == '0':
+                sys.exit()
+            print(translate(in_sent, dic) + '\n')
 
-        for a in df.index:
-            en.append(df["English"][a])
-            es.append(df["Spanish"][a])
-            la.append(translate(df["Spanish"][a]))
-        p = {'English': en, 'Spanish': es, 'Ladino': la}
-        df_1 = pd.DataFrame(p)
-        df_1.to_csv(root_translate)
+    elif root_dataset and root_translate and not iscsv:
+        print("Translate text")
+        with open(root_dataset, 'r') as f_in, open(root_translate, 'w') as f_out:
+            for l in f_in.readlines():
+                f_out.write(translate(l, dic) + '\n')
+
+    elif root_dataset and root_translate and iscsv:
+        df = pd.read_csv(root_dataset, sep='\t')
+        lad_translations = [translate(a, dic) for a in df[CSV_SPANISH_TAG]]
+        df[CSV_LADINO_TAG] = lad_translations
+        df.to_csv(root_translate, sep='\t', index=False)
+    else:
+        print("ERROR: No sentence or dataset given.")
 
 if __name__ == '__main__':
     main()
