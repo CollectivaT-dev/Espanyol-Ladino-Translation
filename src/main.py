@@ -4,6 +4,8 @@ import util
 import argparse
 import pandas as pd
 import sys
+from tqdm import tqdm
+
 
 stanza.download('es')
 nlp = stanza.Pipeline('es')
@@ -103,12 +105,20 @@ def main():
     elif root_dataset and root_translate and not iscsv:
         print("Translate text")
         with open(root_dataset, 'r') as f_in, open(root_translate, 'w') as f_out:
-            for l in f_in.readlines():
-                f_out.write(translate(l, dic) + '\n')
+            translate_iter = f_in.readlines()
+            with tqdm(total=translate_iter) as pbar:
+                for l in translate_iter:
+                    f_out.write(translate(l, dic) + '\n')
+                    pbar.update(1)
 
     elif root_dataset and root_translate and iscsv:
         df = pd.read_csv(root_dataset, sep='\t')
-        lad_translations = [translate(a, dic) for a in df[CSV_SPANISH_TAG]]
+        translate_iter = df[CSV_SPANISH_TAG]
+        lad_translations = []
+        with tqdm(total=translate_iter) as pbar:
+            for a in translate_iter:
+                lad_translations.append(translate(a, dic))
+                pbar.update(1)
         df[CSV_LADINO_TAG] = lad_translations
         df.to_csv(root_translate, sep='\t', index=False)
     else:
