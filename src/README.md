@@ -18,6 +18,9 @@ optional arguments:
 
   -n INPUT, --language INPUT
                         second language name
+			
+  -c INPUT, --counter INPUT
+                        Translates from the line counter
 
   -o OUTPUT, --output OUTPUT
                         Output path
@@ -29,6 +32,6 @@ optional arguments:
 This mode translates plain text file, line-by-line.
 
 ```
-python src/prepro.py -d resource/dic_esp_lad_v3.txt -s1 resource/SciELO.en-es.es -s2 resource/Scielo.en-es.en -n English -o resource/
+python src/prepro.py -d resource/dic_esp_lad_v3.txt -s1 resource/SciELO.en-es.es -s2 resource/Scielo.en-es.en -n English -o resource/ -c 1
 ```
 
