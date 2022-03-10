@@ -4,10 +4,6 @@ from tqdm import tqdm
 import argparse
 import sys
 
-
-CSV_SPANISH_TAG = "Spanish"
-CSV_LADINO_TAG = "Ladino"
-
 def get_dataset(url):
     text = []
     file = open(url, 'r', encoding="utf-8")
@@ -43,16 +39,11 @@ def main():
 
     lad_dictionary = open(root_dic, 'r', encoding="utf-8")
 
-    #file1 = open('resource/dic_esp_lad_v3.txt', 'r', encoding="utf-8")
     lines = lad_dictionary.readlines()
     dic = []
     for line in lines:
         p = {"src": line.split(";")[0], "target": line.split(";")[1]}
         dic.append(p)
-
-
-    #sentences_es = get_dataset("resource/SciELO.en-es.es")
-    #sentences_en = get_dataset("resource/SciELO.en-es.en")
 
     sentences_es = get_dataset(root_dataset_1)
     sentences_en = get_dataset(root_dataset_2)
