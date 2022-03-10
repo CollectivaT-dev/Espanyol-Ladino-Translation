@@ -4,6 +4,7 @@ from tqdm import tqdm
 import argparse
 import sys
 
+
 def get_dataset(url):
     text = []
     file = open(url, 'r', encoding="utf-8")
@@ -22,6 +23,8 @@ def main():
                         default=None)
     parser.add_argument("-n", "--language", help="second language name",
                         default=None)
+    parser.add_argument("-c", "--counter", type=int, help="Translates from the line counter",
+                        default=None)
     parser.add_argument("-o", "--output", help="Output path", default=None)
     args = parser.parse_args()
 
@@ -30,9 +33,14 @@ def main():
     root_dataset_2 = args.input_2
     root_translate = args.output
     language = args.language
+    counter = args.counter
 
     if not args.lad_dic:
         print("ERROR: No dictionary given.")
+        sys.exit()
+
+    if not args.counter:
+        print("ERROR: No counter.")
         sys.exit()
 
     print("Reading dictionary", args.lad_dic)
@@ -62,7 +70,7 @@ def main():
     total = min(len(sentences_es), len(sentences_en))
     with tqdm(total=total) as pbar:
         for a, b in translate_iter:
-            if count > 132999:
+            if count > counter:
                 en.append(b)
                 es.append(a)
                 la.append(m.translate(a, dic))
@@ -79,6 +87,7 @@ def main():
     p = {'Source': s, language: en, 'Spanish': es, 'Ladino': la}
     df_1 = pd.DataFrame(p)
     df_1.to_csv(root_translate+"/dataset.csv")
+
 
 if __name__ == '__main__':
     main()
