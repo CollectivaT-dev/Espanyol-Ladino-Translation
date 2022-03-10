@@ -32,6 +32,6 @@ optional arguments:
 This mode translates plain text file, line-by-line.
 
 ```
-python src/prepro.py -d resource/dic_esp_lad_v3.txt -s1 resource/SciELO.en-es.es -s2 resource/Scielo.en-es.en -n English -o resource/ -c 1
+python src/prepro.py -d resource/dic_esp_lad_v3.txt -s1 resource/SciELO.en-es.es -s2 resource/Scielo.en-es.en -n English -o resource/ -c 0
 ```
 
