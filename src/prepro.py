@@ -44,6 +44,11 @@ def main():
         print("Creating directory")
         os.makedirs(root_translate)
 
+    outfilename = os.path.basename(root_dataset_1)
+    outfilepath = os.path.join(root_translate, outfilename+".csv")
+
+    print("Output to:", outfilepath)
+
     print("Reading dictionary", args.lad_dic)
 
     lad_dictionary = open(root_dic, 'r', encoding="utf-8")
@@ -80,21 +85,17 @@ def main():
                 if flag % 500 == 0:
                     p = {'Source': s, language: en, 'Spanish': es, 'Ladino': la}
                     df_1 = pd.DataFrame(p)
-                    df_1.to_csv(root_translate+"/dataset.csv", sep='\t', index=False)
+                    df_1.to_csv(outfilepath, sep='\t', index=False)
                     print("Save...")
             count = count + 1
             pbar.update(1)
         pbar.close()
+    
     p = {'Source': s, language: en, 'Spanish': es, 'Ladino': la}
     df_1 = pd.DataFrame(p)
-    
-    outfilename = os.path.basename(root_dataset_1)
-    outfilepath = os.path.join(root_translate, outfilename+".csv")
-
     df_1.to_csv(outfilepath, sep='\t', index=False)
 
     print("Finished...", outfilepath)
-
 
 if __name__ == '__main__':
     main()
