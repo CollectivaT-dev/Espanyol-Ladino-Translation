@@ -3,6 +3,7 @@ import main as m
 from tqdm import tqdm
 import argparse
 import sys
+import os
 
 
 def get_dataset(url):
@@ -24,7 +25,7 @@ def main():
     parser.add_argument("-n", "--language", help="second language name",
                         default=None)
     parser.add_argument("-c", "--counter", type=int, help="Translates from the line counter",
-                        default=None)
+                        default=0)
     parser.add_argument("-o", "--output", help="Output path", default=None)
     args = parser.parse_args()
 
@@ -39,9 +40,9 @@ def main():
         print("ERROR: No dictionary given.")
         sys.exit()
 
-    if not args.counter:
-        print("ERROR: No counter.")
-        sys.exit()
+    if not os.path.exists(root_translate):
+        print("Creating directory")
+        os.makedirs(root_translate)
 
     print("Reading dictionary", args.lad_dic)
 
@@ -86,7 +87,13 @@ def main():
         pbar.close()
     p = {'Source': s, language: en, 'Spanish': es, 'Ladino': la}
     df_1 = pd.DataFrame(p)
-    df_1.to_csv(root_translate+"/dataset.csv", sep='\t', index=False)
+    
+    outfilename = os.path.basename(root_dataset_1)
+    outfilepath = os.path.join(root_translate, outfilename+".csv")
+
+    df_1.to_csv(outfilepath, sep='\t', index=False)
+
+    print("Finished...", outfilepath)
 
 
 if __name__ == '__main__':
