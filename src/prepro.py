@@ -79,14 +79,14 @@ def main():
                 if flag % 500 == 0:
                     p = {'Source': s, language: en, 'Spanish': es, 'Ladino': la}
                     df_1 = pd.DataFrame(p)
-                    df_1.to_csv(root_translate+"/dataset.csv")
+                    df_1.to_csv(root_translate+"/dataset.csv", sep='\t', index=False)
                     print("Save...")
             count = count + 1
             pbar.update(1)
         pbar.close()
     p = {'Source': s, language: en, 'Spanish': es, 'Ladino': la}
     df_1 = pd.DataFrame(p)
-    df_1.to_csv(root_translate+"/dataset.csv")
+    df_1.to_csv(root_translate+"/dataset.csv", sep='\t', index=False)
 
 
 if __name__ == '__main__':
