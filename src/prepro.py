@@ -1,7 +1,12 @@
-import nltk
 import pandas as pd
 import main as m
 from tqdm import tqdm
+import argparse
+import sys
+
+
+CSV_SPANISH_TAG = "Spanish"
+CSV_LADINO_TAG = "Ladino"
 
 def get_dataset(url):
     text = []
@@ -13,16 +18,47 @@ def get_dataset(url):
 
 
 def main():
+    parser = argparse.ArgumentParser("translate Spanish <> Judeo-Spanish (Ladino)")
+    parser.add_argument("-d", "--lad_dic", help="Dictionary root.", default=None, required=True)
+    parser.add_argument("-s1", "--input_esp", help="Sentence segmented Spanish text file to translate",
+                        default=None)
+    parser.add_argument("-s2", "--input_2", help="Sentence segmented other language text file",
+                        default=None)
+    parser.add_argument("-n", "--language", help="second language name",
+                        default=None)
+    parser.add_argument("-o", "--output", help="Output path", default=None)
+    args = parser.parse_args()
 
-    file1 = open('resource/dic_esp_lad_v3.txt', 'r', encoding="utf-8")
-    Lines = file1.readlines()
+    root_dic = args.lad_dic
+    root_dataset_1 = args.input_esp
+    root_dataset_2 = args.input_2
+    root_translate = args.output
+    language = args.language
+
+    if not args.lad_dic:
+        print("ERROR: No dictionary given.")
+        sys.exit()
+
+    print("Reading dictionary", args.lad_dic)
+
+    lad_dictionary = open(root_dic, 'r', encoding="utf-8")
+
+    #file1 = open('resource/dic_esp_lad_v3.txt', 'r', encoding="utf-8")
+    lines = lad_dictionary.readlines()
     dic = []
-    for l in Lines:
-        p = {"src": l.split(";")[0], "target": l.split(";")[1]}
+    for line in lines:
+        p = {"src": line.split(";")[0], "target": line.split(";")[1]}
         dic.append(p)
 
-    sentences_es = get_dataset("resource/Europarl.en-es.es")
-    sentences_en = get_dataset("resource/Europarl.en-es.en")
+
+    #sentences_es = get_dataset("resource/SciELO.en-es.es")
+    #sentences_en = get_dataset("resource/SciELO.en-es.en")
+
+    sentences_es = get_dataset(root_dataset_1)
+    sentences_en = get_dataset(root_dataset_2)
+
+    name = root_dataset_2.split("/")[-1]
+    name = name.split(".")[0]
 
     en = []
     es = []
@@ -35,25 +71,23 @@ def main():
     total = min(len(sentences_es), len(sentences_en))
     with tqdm(total=total) as pbar:
         for a, b in translate_iter:
-            if count > 0:
+            if count > 132999:
                 en.append(b)
                 es.append(a)
                 la.append(m.translate(a, dic))
-                s.append("Europarl")
+                s.append(name)
                 flag = flag + 1
                 if flag % 500 == 0:
-                    p = {'Source': s, 'English': en, 'Spanish': es, 'Ladino': la}
+                    p = {'Source': s, language: en, 'Spanish': es, 'Ladino': la}
                     df_1 = pd.DataFrame(p)
-                    df_1.to_csv("resource/dataset.csv")
+                    df_1.to_csv(root_translate+"/dataset.csv")
                     print("Save...")
-            else:
-                break
             count = count + 1
             pbar.update(1)
         pbar.close()
-    p = {'Source': s, 'English': en, 'Spanish': es, 'Ladino': la}
+    p = {'Source': s, language: en, 'Spanish': es, 'Ladino': la}
     df_1 = pd.DataFrame(p)
-    df_1.to_csv("resource/dataset.csv")
+    df_1.to_csv(root_translate+"/dataset.csv")
 
 if __name__ == '__main__':
     main()
