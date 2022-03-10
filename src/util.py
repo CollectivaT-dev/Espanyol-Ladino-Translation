@@ -90,11 +90,15 @@ def conj_verb(verb_esp, verb_lad):
         verb_lad = verb_lad
     else:
         suffix = get_suffix(text_verb, inf_verb)
-        if "Number=Sing|Person=1|Tense=Past" in verb_esp.feats or \
+        if len(suffix) == 0:
+            verb_lad = text_verb
+        elif "Number=Sing|Person=1|Tense=Past" in verb_esp.feats or \
                 "Number=Sing|Person=3|Tense=Past" in verb_esp.feats or \
                 "Number=Sing|Person=1|Tense=Pres" in verb_esp.feats:
             root_lad = verb_lad[:len(verb_lad) - 2]
-            if root_lad[-1] == suffix[:1]:
+            if len(root_lad) == 0:
+                verb_lad = text_verb
+            elif root_lad[-1] == suffix[:1]:
                 verb_lad = verb_lad[:len(verb_lad) - 3] + suffix
             else:
                 verb_lad = verb_lad[:len(verb_lad) - 2] + suffix
@@ -176,3 +180,13 @@ def fix_phrase(phrase):
         .replace("¡ ", "").strip()
     phrase = " ".join(phrase.split())
     return phrase
+
+
+def get_dic(root):
+    file = open(root, 'r', encoding="utf-8")
+    lines = file.readlines()
+    dic = []
+    for line in lines:
+        p = {"src": line.split(";")[0], "target": line.split(";")[1]}
+        dic.append(p)
+    return dic
