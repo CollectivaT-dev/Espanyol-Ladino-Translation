@@ -8,11 +8,21 @@ import os
 
 def get_dataset(url):
     text = []
-    file = open(url, 'r', encoding="utf-8")
-    lines = file.readlines()
-    for line in lines:
-        text.append(line.replace("\n", ""))
+    with open(url, 'r', encoding="utf-8") as lines:
+        for line in lines:
+            text.append(line.replace("\n", ""))
     return text
+
+def find_all(name, path):
+    result = []
+    counter = 0
+    for root, dirs, files in os.walk(path):
+        for file in files:
+            if file.find(name) != -1:
+                text = get_dataset(path+file)
+                counter = counter + len(text)
+                result.append(os.path.join(root, name))
+    return len(result), counter
 
 
 def main():
@@ -24,8 +34,6 @@ def main():
                         default=None)
     parser.add_argument("-n", "--language", help="second language name",
                         default=None)
-    parser.add_argument("-c", "--counter", type=int, help="Translates from the line counter",
-                        default=0)
     parser.add_argument("-o", "--output", help="Output path", default=None)
     args = parser.parse_args()
 
@@ -34,7 +42,6 @@ def main():
     root_dataset_2 = args.input_2
     root_translate = args.output
     language = args.language
-    counter = args.counter
 
     if not args.lad_dic:
         print("ERROR: No dictionary given.")
@@ -45,19 +52,16 @@ def main():
         os.makedirs(root_translate)
 
     outfilename = os.path.basename(root_dataset_1)
-    outfilepath = os.path.join(root_translate, outfilename+".csv")
-
+    files_n, counter = find_all(outfilename+"_", root_translate)
+    outfilepath = os.path.join(root_translate, outfilename+"_"+str(files_n+1) + ".csv")
     print("Output to:", outfilepath)
-
     print("Reading dictionary", args.lad_dic)
-
-    lad_dictionary = open(root_dic, 'r', encoding="utf-8")
-
-    lines = lad_dictionary.readlines()
     dic = []
-    for line in lines:
-        p = {"src": line.split(";")[0], "target": line.split(";")[1]}
-        dic.append(p)
+
+    with open(root_dic, 'r', encoding="utf-8") as lines:
+        for line in lines:
+            p = {"src": line.split(";")[0], "target": line.split(";")[1]}
+            dic.append(p)
 
     sentences_es = get_dataset(root_dataset_1)
     sentences_en = get_dataset(root_dataset_2)
