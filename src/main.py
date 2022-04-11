@@ -108,7 +108,7 @@ def main():
         print("Translate text")
         with open(root_dataset, 'r') as f_in, open(root_translate, 'w') as f_out:
             translate_iter = f_in.readlines()
-            with tqdm(total=translate_iter) as pbar:
+            with tqdm(total=len(translate_iter)) as pbar:
                 for l in translate_iter:
                     f_out.write(translate(l, dic) + '\n')
                     pbar.update(1)
