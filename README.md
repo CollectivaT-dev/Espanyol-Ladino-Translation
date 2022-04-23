@@ -46,7 +46,7 @@ optional arguments:
 This mode opens an interactive panel where given sentence is translated. 
 
 ```
-python src/main.py -dv resource/lista_verbos_ladino_conjugados.txt -dw resource/lista_palabras_ladino -v
+python src/main.py -dv resource/lista_verbos_ladino_conjugados.txt -dw resource/lista_palabras_ladino.txt -v
 ```
 
 ## Translate sentence-segmented text file
@@ -54,7 +54,7 @@ python src/main.py -dv resource/lista_verbos_ladino_conjugados.txt -dw resource/
 This mode translates plain text file, line-by-line.
 
 ```
-python src/main.py -dv resource/lista_verbos_ladino_conjugados.txt -dw resource/lista_palabras_ladino -i samples/sentences.txt -o translated_sentences.txt
+python src/main.py -dv resource/lista_verbos_ladino_conjugados.txt -dw resource/lista_palabras_ladino.txt -i samples/sentences.txt -o translated_sentences.txt
 ```
 
 ## Translate TSV
@@ -62,7 +62,7 @@ python src/main.py -dv resource/lista_verbos_ladino_conjugados.txt -dw resource/
 This mode reads a tab-separated file, translates sentences under column "Spanish" and adds it as a new "Ladino" column. You need to use the option `-c` or `--csv`.
 
 ```
-python src/main.py -dv resource/lista_verbos_ladino_conjugados.txt -dw resource/lista_palabras_ladino -i samples/sentences.csv -o translated_sentences.csv -c
+python src/main.py -dv resource/lista_verbos_ladino_conjugados.txt -dw resource/lista_palabras_ladino.txt -i samples/sentences.csv -o translated_sentences.csv -c
 ```
 
 # Examples
