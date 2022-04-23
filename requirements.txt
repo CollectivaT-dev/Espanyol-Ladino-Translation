@@ -2,3 +2,5 @@ pandas
 stanza
 unidecode
 tqdm
+ftfy
+spanishconjugator
