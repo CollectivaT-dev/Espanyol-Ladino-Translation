@@ -25,8 +25,10 @@ python -m pip install -r requirements.txt
 usage: translate Spanish <> Judeo-Spanish (Ladino) [-h] -d LAD_DIC [-i INPUT]
                                                    [-o OUTPUT] [-v] [-c]
 required arguments:
-  -d LAD_DIC, --lad_dic LAD_DIC
-                        Dictionary root.
+  -dv LAD_DIC_VERB, --lad_dic_verb LAD_DIC_VERB
+                        Dictionary of verbs.
+  -dw LAD_DIC_NOUN, --lad_dic_noun LAD_DIC_NOUN
+                        Dictionary of nouns.
 
 optional arguments:
   -h, --help            show help message and exit
@@ -44,7 +46,7 @@ optional arguments:
 This mode opens an interactive panel where given sentence is translated. 
 
 ```
-python src/main.py -d resource/dic_esp_lad_v3.txt -v
+python src/main.py -dv resource/lista_verbos_ladino_conjugados.txt -dw resource/lista_palabras_ladino -v
 ```
 
 ## Translate sentence-segmented text file
@@ -52,7 +54,7 @@ python src/main.py -d resource/dic_esp_lad_v3.txt -v
 This mode translates plain text file, line-by-line.
 
 ```
-python src/main.py -d resource/dic_esp_lad_v3.txt -i samples/sentences.txt -o translated_sentences.txt
+python src/main.py -dv resource/lista_verbos_ladino_conjugados.txt -dw resource/lista_palabras_ladino -i samples/sentences.txt -o translated_sentences.txt
 ```
 
 ## Translate TSV
@@ -60,7 +62,7 @@ python src/main.py -d resource/dic_esp_lad_v3.txt -i samples/sentences.txt -o tr
 This mode reads a tab-separated file, translates sentences under column "Spanish" and adds it as a new "Ladino" column. You need to use the option `-c` or `--csv`.
 
 ```
-python src/main.py -d resource/dic_esp_lad_v3.txt -i samples/sentences.csv -o translated_sentences.csv -c
+python src/main.py -dv resource/lista_verbos_ladino_conjugados.txt -dw resource/lista_palabras_ladino -i samples/sentences.csv -o translated_sentences.csv -c
 ```
 
 # Examples
