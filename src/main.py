@@ -151,7 +151,7 @@ def main():
 
     elif root_dataset and root_translate and not iscsv:
         print("Translate text")
-        with open(root_dataset, 'r') as f_in, open(root_translate, 'w') as f_out:
+        with open(root_dataset, 'r', encoding="utf-8") as f_in, open(root_translate, 'w') as f_out:
             translate_iter = f_in.readlines()
             with tqdm(total=len(translate_iter)) as pbar:
                 for l in translate_iter:
