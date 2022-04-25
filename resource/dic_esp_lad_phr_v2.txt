@@ -1,6 +1,11 @@
+la siensias;las siensias
 el kura;la kura
 kaso de agua;kupa de agua
 el shara;la shara
+las bolas;los topes
+un chiko guerta;una chika guerta
+vas a azer;vas azer
+la bola;el tope
 admirarse de?;maraviyarse
 komer la noche;komer para la noche
 komer la tarde;komer para la tarde
@@ -14,9 +19,11 @@ es dezir;kere dezir
 tyenes que;deves de
 tyene que;deve de
 tenemos que;devemos de
+sople la nariz;Amokate!
+el garganta;el piskueso
 tenesh que;devesh de
-tienen que;deven de
 a el;al
+tienen que;deven de
 es dezir;kere dezir
 ay ke;kale
 tengo ke;kale
@@ -25,22 +32,19 @@ pimientos vedres reyenos;dolmas de pipirushkas
 estan resien;son rezin
 aze yelado;esta yelado
 los dota;la dota
-Ken es;Ken
 el guerta;la guerta
+es pasensia;tiene pasensia
 kostum de banyo;manyo
 D'estambol;D'Estambol
 los kriaturas;las kriaturas
 Los kriaturas;Las kriaturas
-ken es;ken
-kantador / azzan;hazan
-De ande;Anda
+una mesaje;un mesaje
+azzan;hazan
 de ande;anda
 el kolor;la kolor
-merkar le;merkarle
 ven tu, tambien;ven i tu
 al final;a la fin
 al tacta;al tokaa
-Los guertas;Las guertas
 los guertas;las guertas
 rozaes;rozas
 al tacto;al tokar
@@ -49,7 +53,6 @@ mijor amiga;amiga intima
 ama de casa;mujer de kaza
 barra de labios;ruj
 bolso de señora;bolsa de mujer
-burlarse de;burlarse de...
 cambiar de opinión;trokar de opinion
 cien diez;sien i diez
 cien dos;sien i dos
@@ -97,7 +100,7 @@ noventa y siete;noventa i siete
 ochenta y cinco;ochenta i sinko
 ochenta y cuatro;ochenta i kuatro
 ochenta y tres;ochenta i tres
-para qué;para ke
+para que;para ke
 pasado mañana;pasado amanyana
 pasarlo bien;eglenearse
 pieza dramática;piesa de teatro
@@ -134,3 +137,5 @@ treinta y tres;trentitres
 treinta y un;trentiuno
 vino tinta;vino kolorada
 vino tinto;vino kolorado
+del komida:de la komida
+de el;del
