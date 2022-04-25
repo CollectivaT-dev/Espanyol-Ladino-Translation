@@ -14,7 +14,8 @@ CSV_SPANISH_TAG = "Spanish"
 CSV_LADINO_TAG = "Ladino"
 
 
-def translate(phrase, dic1, dic2):
+def translate(phrase, dic1, dic2):      
+    phrase = phrase[0].lower() + phrase[1:]
     doc = nlp(phrase)
     jud_phrase = ""
     w = ""
@@ -25,13 +26,18 @@ def translate(phrase, dic1, dic2):
             flag1 = 0
             flag2 = 0
             w = ""
+            if word.upos in ["VERB","AUX"] and (word.lemma)[-2:] not in ["ar","er","ir"]:
+                w = util.judeo_parse(word.text)
+                flag1 = 1
+                flag2 = 0
+            
             word_esp = word.text
             mixed_case = not word_esp.islower() and not word_esp.isupper()
             if mixed_case:
                 flag2 = 1
-            if word.upos in ["VERB","AUX"]:
+            if word.upos in ["VERB","AUX"] and flag1 == 0:
                 for d in dic1:
-                    if word_esp.lower() == d["src"]:
+                    if word_esp.lower() == d["src"] or word_esp.lower() == util.elimina_tildes(d["src"]):
                         word_lad = d["target"].replace("\n", "")
                         if word_esp.lower() in ["he","has","ha","han","hemos"]:
                             pers = word_esp.lower()
@@ -40,30 +46,30 @@ def translate(phrase, dic1, dic2):
                         else:
                             w = word_lad
                         flag1 = 1
-            else:
+            elif flag1 == 0:
                 for d in dic2:
-                    if word_esp.lower() == d["src"]:
+                    if word_esp.lower() == d["src"] or word_esp.lower() == util.elimina_tildes(d["src"]):
                         word_lad = d["target"].replace("\n", "")
                         w = word_lad
                         flag1 = 1
             if flag1 == 0:
                 if word.upos in ["VERB","AUX"]: 
                     for d in dic1:
-                        if word.lemma == d["src"]:
+                        if word.lemma == d["src"] or word.lemma == util.elimina_tildes(d["src"]):
                             word_lad = d["target"].replace("\n", "")
-                            w = conj_verb(word, word_lad,aux, pers)
+                            w = util.conj_verb(word, word_lad,aux, pers)
+                            w = util.judeo_parse(w.lower())
                             aux = 0
-                            flag2 = 0
                             flag1 = 1
                             break
                     if flag1 == 0:
-                        w = conj_verb(word, word,aux, pers)
+                        w = util.conj_verb(word, word.lemma,aux, pers)
+                        w = util.judeo_parse(w)
                         aux = 0
                         flag1 = 1
-                        flag2 = 0
                 else: 
                     for d in dic2:
-                        if word.lemma == d["src"]:
+                        if word.lemma == d["src"] or word.lemma == util.elimina_tildes(d["src"]):
                             word_lad = d["target"].replace("\n", "")
                             if word.lemma == word_lad or word_esp.lower() == word_lad:
                                 w = word_esp
@@ -77,14 +83,14 @@ def translate(phrase, dic1, dic2):
                             break           
             if flag1 == 0:
                 if word.upos == "PROPN" or word.upos == "DET":
-                    w = word.text
+                    w = util.judeo_parse(word.text)
                 else:
                     w = util.judeo_parse(word_esp)
             if flag2 == 1:
                 jud_phrase += w.replace("\n", "").capitalize() + " "
             else:
                 jud_phrase += w.replace("\n", "") + " "
-    return unidecode.unidecode(util.fix_phrase(jud_phrase))
+    return unidecode.unidecode(util.fix_phrase(jud_phrase)).capitalize()
 
 
 def main():

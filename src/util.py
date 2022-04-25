@@ -1,7 +1,12 @@
-from spanishconjugator import Conjugator
+
 from ftfy import fix_encoding
+import mlconjug3
+import unicodedata
+
+default_conjugator = mlconjug3.Conjugator(language='es')
 
 def judeo_parse(word):
+    word = word.lower()
     if word.find("h") != -1:
         indices = [i for i, x in enumerate(word) if x == "h"]
         for h in indices:
@@ -50,6 +55,10 @@ def judeo_parse(word):
         word = word.replace("ct", "kt")
     if word.find("x") != -1:
         word = word.replace("x", "ks")
+    if word.find("ee") != -1:
+        word = word.replace("ee", "ye")
+    if word.find("yy") != -1:
+        word = word.replace("yy", "y")
     return word
 
 
@@ -84,40 +93,6 @@ def get_suffix(real_verb, inf_verb):
     suffix = ''.join([str(elem) for elem in suffix_vec])
     return suffix
 
-
-def conj_verb(verb_esp, verb_lad):
-    text_verb = verb_esp.text
-    text_verb = text_verb.lower()
-    inf_verb = verb_esp.lemma
-
-    if text_verb[-2] in ["ar", "er", "ir"] or "VerbForm=Inf" in verb_esp.feats:
-        verb_lad = verb_lad
-    else:
-        suffix = get_suffix(text_verb, inf_verb)
-        if len(suffix) == 0:
-            verb_lad = text_verb
-        elif "Number=Sing|Person=1|Tense=Past" in verb_esp.feats or \
-                "Number=Sing|Person=3|Tense=Past" in verb_esp.feats or \
-                "Number=Sing|Person=1|Tense=Pres" in verb_esp.feats:
-            root_lad = verb_lad[:len(verb_lad) - 2]
-            if len(root_lad) == 0:
-                verb_lad = text_verb
-            elif root_lad[-1] == suffix[:1]:
-                verb_lad = verb_lad[:len(verb_lad) - 3] + suffix
-            else:
-                verb_lad = verb_lad[:len(verb_lad) - 2] + suffix
-        elif "Number=Sing|Person=3|Tense=Fut" in verb_esp.feats or \
-                "Number=Sing|Person=1|Tense=Fut" in verb_esp.feats or \
-                "Number=Plur|Person=3|Tense=Fut" in verb_esp.feats or \
-                "Number=Plur|Person=3|Tense=Past" in verb_esp.feats or \
-                "Number=Plur|Person=1|Tense=Fut" in verb_esp.feats:
-            verb_lad = verb_lad + suffix
-        elif "Number=Sing|Person=2|Tense=Pres" in verb_esp.feats or \
-                "Number=Plur|Person=3|Tense=Pres" in verb_esp.feats or \
-                "Number=Plur|Person=1|Tense=Pres" in verb_esp.feats or \
-                "|Number=Plur|Person=3|Tense=Imp|" in verb_esp.feats:
-            verb_lad = verb_lad[:len(verb_lad) - 1] + suffix
-    return verb_lad
 
 
 def conj_aux(aux_esp, aux_lad):
@@ -164,19 +139,23 @@ def fix_phrase(phrase):
     file = open('resource/dic_esp_lad_phr_v2.txt', 'r', encoding="utf-8")
     lines = file.readlines()
     for line in lines:
-        if phrase.find(line.split(";")[0]) != -1:
-            phrase = phrase.replace(line.split(";")[0], line.split(";")[1].replace("\n", ""))
-    if phrase.find("del komida") != -1:
-        phrase = phrase.replace("del komida", "de la komida")
-    phrase = phrase.replace(" .", ".").replace(" ?", "?")\
-        .replace(" !", "!").replace(" ,", ",").replace("de el", "del")\
+        phrase = phrase.replace(" .", ".").replace(" ?", "?")\
+        .replace(" !", "!").replace(" ,", ",")\
         .replace('" ', '"').replace(" ;", ";").replace("¿ ", "")\
-        .replace("¡ ", "").strip()
+        .replace("¡ ", "").replace("Qué ","Ke ").replace("Cuánto ","Kuanto ").strip()
+        if phrase.find(" "+line.split(";")[0]+" ") != -1 or phrase.find(" "+line.split(";")[0]+".") != -1:
+            phrase = phrase.replace(line.split(";")[0], line.split(";")[1].replace("\n", ""))
     phrase = " ".join(phrase.split())
     return phrase
 
 
 def get_dic(root):
+    '''
+    with open(root, 'r', encoding="utf-8") as lines:
+        key = [line.split(";")[0] for line in lines]
+        value = [line.split(";")[1].replace("\n","") for line in lines]
+    return dict(zip(key, value))
+    '''
     file = open(root, 'r', encoding="utf-8")
     lines = file.readlines()
     dic = []
@@ -187,17 +166,7 @@ def get_dic(root):
 
 
 def get_gerundio(word):
-    if word[-2:].replace("\n","") == "ar":
-        word = word[:-2]+"ando"
-    elif word[-2:].replace("\n","") in ["er","ir"]:
-        if len(word) > 2:
-            if word[-3] in ["ñ","ll"]:
-                word = word[:-2]+"endo"
-            else:
-                word = word[:-2]+"iendo"
-        else:
-            word = word[:-2]+"iendo"
-    return word
+    return default_conjugator.conjugate(word).conjug_info['Gerundio']['Gerundio Gerondio']['']
 
 
 def get_gerundio_lad(word):
@@ -231,17 +200,17 @@ def get_participio(word):
 
 def change_person_number(per):
     per_num = 0
-    if per == "yo":
+    if per == "1s":
         per_num = 0
-    elif per == "tu":
+    elif per == "2s":
         per_num = 1
-    elif per == "usted":
+    elif per == "3s":
         per_num = 2
-    elif per == "nosotros":
+    elif per == "1p":
         per_num = 3
-    elif per == "vosotros":
+    elif per == "2p":
         per_num = 4
-    elif per == "ustedes":
+    elif per == "3p":
         per_num = 5
     return per_num
     
@@ -265,78 +234,88 @@ def change_aux_number(aux):
     return per_num
     
 
+def get_irr_verb():
+    with open("resource/lista_verbos_irregulares.txt", 'r', encoding="utf-8") as lines:
+        list_verb = [line.replace("\n","") for line in lines]
+    return list_verb
+    
+
+def elimina_tildes(word):
+    word = word.replace("á","a").replace("é","e").replace("í","i").replace("ó","o").replace("ú","u")
+    return word
+
+
 def conj_verb(verb_esp, inf_lad_verb, aux, pers):
     tipo = 0
     flag = 0
-    tempo = ["present","imperfect","preterite","future","simple_conditional"]
-    person = ["yo","tu","usted","nosotros","vosotros","ustedes"]
+    tempo = ["Indicativo presente", "Indicativo pretérito imperfecto","Indicativo pretérito perfecto simple","Indicativo futuro","Condicional Condicional"]
+    person = ["1s","2s","3s","1p","2p","3p"]
     data = ["o","as","a","amos","ash","an"]
     pers = change_aux_number(pers)
     esp_verb = verb_esp.text
     esp_verb = esp_verb.lower()
     inf_esp_verb = verb_esp.lemma
-    if verb_esp == inf_lad_verb:
-        inf_lad_verb = judeo_parse(inf_esp_verb)
+    list_verb = get_irr_verb()
+    if inf_esp_verb in list_verb:
+        return esp_verb
     for t in tempo:
         for p in person:
             esp_verb_conj = ""
-            if t == "simple_conditional":
-                esp_verb_conj = Conjugator().conjugate(inf_esp_verb,t,"conditional",p)
+            if t == "Condicional Condicional":
+                esp_verb_conj = default_conjugator.conjugate(inf_esp_verb).conjug_info['Condicional'][t][p]
             else:
-                esp_verb_conj = Conjugator().conjugate(inf_esp_verb,t,"indicative",p)
+                esp_verb_conj = default_conjugator.conjugate(inf_esp_verb).conjug_info['Indicativo'][t][p]
             esp_verb_conj = str(esp_verb_conj)
             if str(esp_verb_conj) != "None":
                 esp_verb_conj = fix_encoding(esp_verb_conj)
             if tipo == 0:
                 if inf_lad_verb[-2:].replace("\n","") == "ar":
-                    if t == "present":
+                    if t == "Indicativo presente":
                         data = ["o","as","a","amos","ash","an"]
-                    elif t == "imperfect":
+                    elif t == "Indicativo pretérito imperfecto":
                         data = ["ava","avas","ava","avamos","avash","avan"]
-                    elif t == "preterite":
+                    elif t == "Indicativo pretérito perfecto simple":
                         data = ["i","ates","o","imos","atesh","aron"]
-                    elif t == "future":
+                    elif t == "Indicativo futuro":
                         data = ["va","vas a","va","vamos a","vash a","van a"]
-                    elif t == "conditional_simple":
+                    elif t == "Condicional Condicional":
                         data = ["aria","arias","aria","ariamos","ariash","arian"]
-                elif inf_lad_verb[-2:] == "er":
-                    if t == "present":
+                elif inf_lad_verb[-2:].replace("\n","") == "er":
+                    if t == "Indicativo presente":
                         data = ["o","es","e","emos","esh","en"]
-                    elif t == "imperfect":
+                    elif t == "Indicativo pretérito imperfecto":
                         data = ["ia","ias","ia","iamos","iash","ian"]
-                    elif t == "preterite":
+                    elif t == "Indicativo pretérito perfecto simple":
                         data = ["i","ites","yo","imos","itesh","yeron"]
-                    elif t == "future":
+                    elif t == "Indicativo futuro":
                         data = ["va","vas a","va","vamos a","vash a","van a"]
-                    elif t == "conditional_simple":
+                    elif t == "Condicional Condicional":
                         data = ["eria","erias","eria","eriamos","eriash","erian"]    
-                elif inf_lad_verb[-2:] == "ir":
-                    if t == "present":
+                elif inf_lad_verb[-2:].replace("\n","") == "ir":
+                    if t == "Indicativo presente":
                         data = ["o","es","e","imos","ish","en"]
-                    elif t == "imperfect":
+                    elif t == "Indicativo pretérito imperfecto":
                         data = ["ia","ias","ia","iamos","iash","ian"]
-                    elif t == "preterite":
+                    elif t == "Indicativo pretérito perfecto simple":
                         data = ["i","ites","yo","imos","itesh","yeron"]
-                    elif t == "future":
+                    elif t == "Indicativo futuro":
                         data = ["va","vas a","va","vamos a","vash a","van a"]
-                    elif t == "conditional_simple":
+                    elif t == "Condicional Condicional":
                         data = ["iria","irias","iria","iriamos","iriash","irian"]
-            
             per = change_person_number(p)
-            if t == "preterite" and aux == 1 and per == pers:
+            if t == "Indicativo pretérito perfecto simple" and aux == 1 and per == pers:
                 inf_lad_verb = inf_lad_verb[:-2]+data[per]
                 flag = 1
                 break
             if esp_verb_conj == esp_verb:
-                if t == "future":
+                if t == "Indicativo futuro":
                     inf_lad_verb = data[per]+" "+inf_lad_verb
                 else:
-                    inf_lad_verb = inf_lad_verb[:-2]+data[per]  
+                    inf_lad_verb = inf_lad_verb[:-2]+data[per]
                 flag = 1
                 break
         if flag == 1:
             break
-
     if flag == 1:
         return inf_lad_verb
     else:
