@@ -127,7 +127,7 @@ def main():
         for line in lines:
             p = {"src": line.split(";")[0], "target": line.split(";")[1]}
             dic_verb.append(p)
-    print("%i entries"%len(dic))
+    print("%i entries"%len(dic_verb))
 
 
     print("Reading dictionary of nouns", args.lad_dic_noun)
@@ -138,7 +138,7 @@ def main():
         for line in lines:
             p = {"src": line.split(";")[0], "target": line.split(";")[1]}
             dic_noun.append(p)
-    print("%i entries"%len(dic))
+    print("%i entries"%len(dic_noun))
 
 
     if args.interactive:
