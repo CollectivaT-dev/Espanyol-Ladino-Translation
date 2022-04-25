@@ -7,16 +7,6 @@ default_conjugator = mlconjug3.Conjugator(language='es')
 
 def judeo_parse(word):
     word = word.lower()
-    if word.find("h") != -1:
-        indices = [i for i, x in enumerate(word) if x == "h"]
-        for h in indices:
-            string_list = list(word)
-            if h != 0:
-                if word[h - 2] != "c":
-                    string_list[h] = ""
-            else:
-                string_list[0] = ""
-        word = "".join(string_list)
     if word.find("ca") != -1:
         word = word.replace("ca", "ka")
     if word.find("co") != -1:
@@ -145,24 +135,30 @@ def fix_phrase(phrase):
         .replace("¡ ", "").replace("Qué ","Ke ").replace("Cuánto ","Kuanto ").strip()
         if phrase.find(" "+line.split(";")[0]+" ") != -1 or phrase.find(" "+line.split(";")[0]+".") != -1:
             phrase = phrase.replace(line.split(";")[0], line.split(";")[1].replace("\n", ""))
+        if phrase.find("ar se ") != -1:
+            phrase = phrase.replace("ar se ","ar ")
+        elif phrase.find("er se ") != -1:
+            phrase = phrase.replace("er se ","er ")
+        elif phrase.find("ir se ") != -1:
+            phrase = phrase.replace("ir se ","ir ")
+        elif phrase.find("ar se.") != -1:
+            phrase = phrase.replace("ar se","ar")
+        elif phrase.find("er se.") != -1:
+            phrase = phrase.replace("er se","er")
+        elif phrase.find("ir se.") != -1:
+            phrase = phrase.replace("ir se","ir")
+        elif phrase.find("Ay ke ") != -1:
+            phrase = phrase.replace("Ay ke ","Kale ")
+        elif phrase.find("Ay ke.") != -1:
+            phrase = phrase.replace("Ay ke.","Kale.")
     phrase = " ".join(phrase.split())
     return phrase
 
 
 def get_dic(root):
-    '''
     with open(root, 'r', encoding="utf-8") as lines:
-        key = [line.split(";")[0] for line in lines]
-        value = [line.split(";")[1].replace("\n","") for line in lines]
+        key, value = zip(*[(line.split(";")[0],line.split(";")[1].replace("\n","")) for line in lines])
     return dict(zip(key, value))
-    '''
-    file = open(root, 'r', encoding="utf-8")
-    lines = file.readlines()
-    dic = []
-    for line in lines:
-        p = {"src": line.split(";")[0], "target": line.split(";")[1]}
-        dic.append(p)
-    return dic
 
 
 def get_gerundio(word):
@@ -234,13 +230,8 @@ def change_aux_number(aux):
     return per_num
     
 
-def get_irr_verb():
-    with open("resource/lista_verbos_irregulares.txt", 'r', encoding="utf-8") as lines:
-        list_verb = [line.replace("\n","") for line in lines]
-    return list_verb
-    
-
 def elimina_tildes(word):
+    word = str(word)
     word = word.replace("á","a").replace("é","e").replace("í","i").replace("ó","o").replace("ú","u")
     return word
 
@@ -255,9 +246,6 @@ def conj_verb(verb_esp, inf_lad_verb, aux, pers):
     esp_verb = verb_esp.text
     esp_verb = esp_verb.lower()
     inf_esp_verb = verb_esp.lemma
-    list_verb = get_irr_verb()
-    if inf_esp_verb in list_verb:
-        return esp_verb
     for t in tempo:
         for p in person:
             esp_verb_conj = ""
@@ -329,4 +317,4 @@ def conj_verb(verb_esp, inf_lad_verb, aux, pers):
                 part_lad_verb = get_participio(inf_lad_verb)
                 return part_lad_verb
             else:
-                return inf_lad_verb
+                return esp_verb

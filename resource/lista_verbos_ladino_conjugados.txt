@@ -12,7 +12,7 @@ abrazar;abrasar
 abrir;avrir
 abrochar;abrokar
 aburrir;enfasyar
-acabar;akavar
+acabar;akabar
 acampar;akampar
 reconocer;rekonoser
 acariciar;akarisiar
@@ -122,7 +122,7 @@ capitular;kapitular
 capturar;kapturar
 cargar;kargar
 carácter;karakter
-casar;kasar
+casar;cazar
 catar;degustar
 causar;kausar
 cautivar;kautivar
@@ -204,7 +204,7 @@ contratar;kontratar
 controlar;kontrolar
 convencer;konvenser
 conversar;konversar
-convidar;invitar
+convidar;combidar
 convivir;konvivir
 cooperar;kooperar
 coordinar;koodrinar
@@ -257,7 +257,7 @@ despertar;espertar
 despeñar;echar kon fuersa
 detectar;detektar
 dictar;diktar
-diferenciar;diferensiar
+diferenciar;diferensyar
 discriminar;diskriminar
 disculpar;eskuzar
 discutir;diskutir
@@ -394,7 +394,7 @@ levantar;alevantar
 liquidar;likidar
 llamar;yamar
 llegar;ayegar
-llenar;inchir
+llenar;inchar
 llevar;yevar
 llorar;yorar
 llover;azer luvya
@@ -561,8 +561,11 @@ volver;tornar
 haber;aver
 hay;ay
 había;avia
+habia;avia
 hubo;uvo
-habrá;va aver
+habra;avra
+habras;avras
+habrá;avra
 habría;avria
 hacer;azer
 haciendo;aziendo
@@ -782,6 +785,7 @@ veríamos;veriamos
 veríais;veriash
 verían;verian
 decir;dizir
+decido;desido
 digo;digo
 dices;dizes
 dice;dize
@@ -1164,9 +1168,46 @@ jugaríais;djugash
 jugarían;djugan
 ponlo;metelo
 ríete;riyete
+servir;sirvir
 muerdete;moryete
 alegirnos;elejirnos
 relajar;kalmar
 relájate;kalmate
 vuelan;bolan
 cuenta;konta
+hecho;echo
+haciendo;azyendo
+debiendo;devyendo
+debido;devido
+queriendo;keryendo
+querido;kerido
+sabiendo;savyendo
+sabido;savido
+siendo;syendo
+sido;sido
+teniendo;tenyendo
+tenido;tenido
+viendo;vyendo
+visto;visto
+diciendo;dicyendo
+dicho;dicho
+yendo;indo
+compras;merkaras
+ido;ido
+viniendo;vinyendo
+venido;vinido
+supongo;supozo
+propone;propoze
+pierde;pedra
+agradezco;agradesko
+estudie;estudye
+habríamos;avriamos
+habriamos;avriamos
+comamos;komamos
+venid;vení
+leendo;meldando
+convidada;kombidada
+estudiado;estudyado
+hubiera;uvyera
+hubieran;uvyeran
+dado;echo

@@ -489,7 +489,7 @@ año;anyo
 añoranza;eskarinyo
 añoraste;anyorates
 añoré;anyori
-aún;dainda
+aún;ainda
 bachillerata;diplomada
 bachillerato;diplomado
 bagatela;bavajada
@@ -738,7 +738,7 @@ carroza;karosa
 cartera;chanta de ombre
 cartera;portofolio
 carácter;karakter
-casa;kaza
+casa;caza
 casado;kasado
 casados;kasados
 casamentera;kazamentera
@@ -913,7 +913,7 @@ cobraste;kobrates
 cobro;kobro
 coce;kuze
 coche;otomobil
-cocina;giza
+cocina;mupák
 cocí;kosi
 cocías;kosias
 codificaí;kodifikai
@@ -1433,9 +1433,9 @@ diecinueve;dizimueve
 dieciocho;diziocho
 diecisiete;disiete
 dieciséis;disesh
-diferencia;diferensia
-diferencias;diferensias
-diferenciaste;diferensiates
+diferencia;diferensya
+diferencias;diferensyas
+diferenciaste;diferensyates
 diferencié;diferensii
 diferí;diferi
 diferías;diferias
@@ -1561,6 +1561,8 @@ edificaí;edifikai
 editaste;editates
 educaí;edukai
 educí;educi
+judaizmo;djudaizmo
+amabilidad;amabilita
 educías;educias
 efecta;efekta
 efecto;efekto
@@ -1568,7 +1570,7 @@ efectuaí;efektuai
 egoísta;egoisto
 ejecutaste;ejekutates
 ejemplar;egzemplar
-ejemplo;egzemplo
+ejemplo;egzempyo
 ejercicia;egzersia
 ejercicio;egzersis
 ejercitaste;ejersitates
@@ -2859,6 +2861,7 @@ palidecí;palidesi
 palidecías;palidesias
 pantalones;pantalon
 papá;papa
+agua;agua
 parabrisas;vidro delantero
 paraguas;chadir
 parahusaí;parausai
@@ -2945,7 +2948,9 @@ periódica;jurnaa
 periódico;gazeta
 periódico;jurnal
 perjudicaí;perjudikai
-pero;ma
+pero;pero
+instituto;lise
+convidada;kombidada
 perpetua;perpetual
 perpetuaí;perpetuai
 perquirirás;perkiriras
@@ -3657,6 +3662,7 @@ sostení;sosteni
 sostenías;sostenias
 soterraí;soterrai
 soñas;sonyas
+pudiera;pudyera
 subarrendaí;subarrendai
 subseguí;subsegi
 subseguías;subsegias
@@ -3668,6 +3674,7 @@ sucesivo;suksesivo
 sucesión;suksesion
 sucio;suzio
 suegras;eshuegras
+tuvieras;tuvyeras
 suelo;patin
 sueño;es.huenyo
 sueños;es.huenyos
@@ -3840,3 +3847,7 @@ y;i
 príncipe;prens
 británicos;inglezes
 británico;inglez
+rubia;blonda
+rubio;blondo
+rubias;blondas
+rubios;blondos

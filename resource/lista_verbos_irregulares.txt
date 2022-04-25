@@ -1292,3 +1292,9 @@ zambullir
 zambullirse
 zurcir
 zurriar
+
+
+
+dar
+estar
+haber

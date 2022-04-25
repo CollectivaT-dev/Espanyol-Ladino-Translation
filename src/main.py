@@ -26,19 +26,14 @@ def translate(phrase, dic1, dic2):
             flag1 = 0
             flag2 = 0
             w = ""
-            if word.upos in ["VERB","AUX"] and (word.lemma)[-2:] not in ["ar","er","ir"]:
-                w = util.judeo_parse(word.text)
-                flag1 = 1
-                flag2 = 0
-            
             word_esp = word.text
             mixed_case = not word_esp.islower() and not word_esp.isupper()
             if mixed_case:
                 flag2 = 1
             if word.upos in ["VERB","AUX"] and flag1 == 0:
                 for d in dic1:
-                    if word_esp.lower() == d["src"] or word_esp.lower() == util.elimina_tildes(d["src"]):
-                        word_lad = d["target"].replace("\n", "")
+                    if word_esp.lower() == d or word_esp.lower() == util.elimina_tildes(d):
+                        word_lad = dic1[d]
                         if word_esp.lower() in ["he","has","ha","han","hemos"]:
                             pers = word_esp.lower()
                             w = ""
@@ -48,17 +43,20 @@ def translate(phrase, dic1, dic2):
                         flag1 = 1
             elif flag1 == 0:
                 for d in dic2:
-                    if word_esp.lower() == d["src"] or word_esp.lower() == util.elimina_tildes(d["src"]):
-                        word_lad = d["target"].replace("\n", "")
+                    if word_esp.lower() == d or word_esp.lower() == util.elimina_tildes(d):
+                        word_lad = dic2[d]
                         w = word_lad
                         flag1 = 1
+            if word.upos in ["VERB","AUX"] and (word.lemma)[-2:] not in ["ar","er","ir"] and flag1 == 0:
+                w = util.judeo_parse(word.text)
+                flag1 = 1
+                flag2 = 0  
             if flag1 == 0:
                 if word.upos in ["VERB","AUX"]: 
                     for d in dic1:
-                        if word.lemma == d["src"] or word.lemma == util.elimina_tildes(d["src"]):
-                            word_lad = d["target"].replace("\n", "")
+                        if word.lemma == d or word.lemma == util.elimina_tildes(d):
+                            word_lad = dic1[d]
                             w = util.conj_verb(word, word_lad,aux, pers)
-                            w = util.judeo_parse(w.lower())
                             aux = 0
                             flag1 = 1
                             break
@@ -69,8 +67,8 @@ def translate(phrase, dic1, dic2):
                         flag1 = 1
                 else: 
                     for d in dic2:
-                        if word.lemma == d["src"] or word.lemma == util.elimina_tildes(d["src"]):
-                            word_lad = d["target"].replace("\n", "")
+                        if word.lemma == d or word.lemma == util.elimina_tildes(d):
+                            word_lad = dic2[d]
                             if word.lemma == word_lad or word_esp.lower() == word_lad:
                                 w = word_esp
                             elif word.upos in ["NOUN", "ADJ"]:
@@ -87,10 +85,11 @@ def translate(phrase, dic1, dic2):
                 else:
                     w = util.judeo_parse(word_esp)
             if flag2 == 1:
-                jud_phrase += w.replace("\n", "").capitalize() + " "
+                jud_phrase += w.capitalize() + " "
             else:
-                jud_phrase += w.replace("\n", "") + " "
-    return unidecode.unidecode(util.fix_phrase(jud_phrase)).capitalize()
+                jud_phrase += w + " "
+    jud_phrase = unidecode.unidecode(util.fix_phrase(jud_phrase))
+    return jud_phrase[0].capitalize()+ jud_phrase[1:]
 
 
 def main():
@@ -120,26 +119,15 @@ def main():
 
     print("Reading dictionary of verbs", args.lad_dic_verb)
     
-
-    with open(root_dic, 'r', encoding="utf-8") as file:
-        lines = file.readlines()
-        dic_verb = []
-        for line in lines:
-            p = {"src": line.split(";")[0], "target": line.split(";")[1]}
-            dic_verb.append(p)
+    dic_verb = util.get_dic(root_dic)
     print("%i entries"%len(dic_verb))
 
 
     print("Reading dictionary of nouns", args.lad_dic_noun)
     
-    with open(root_dic_n, 'r', encoding="utf-8") as file:
-        lines = file.readlines()
-        dic_noun = []
-        for line in lines:
-            p = {"src": line.split(";")[0], "target": line.split(";")[1]}
-            dic_noun.append(p)
+    dic_noun = util.get_dic(root_dic_n)
     print("%i entries"%len(dic_noun))
-
+    
 
     if args.interactive:
         print("Enter sentence to translate (type 0 to exit):")
