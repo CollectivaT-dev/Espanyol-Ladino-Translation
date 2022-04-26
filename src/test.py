@@ -2,9 +2,9 @@ import main
 import util
 import pytest
 
-ROOT_DIC = "../resource/lista_verbos_ladino_conjugados.txt"
-ROOT_DIC_N = "../resource/lista_palabras_ladino.txt"
-ROOT_DIC_P = "../resource/dic_esp_lad_phr_v2.txt"
+ROOT_DIC = "resource/lista_verbos_ladino_conjugados.txt"
+ROOT_DIC_N = "resource/lista_palabras_ladino.txt"
+ROOT_DIC_P = "resource/dic_esp_lad_phr_v2.txt"
 
 print("Reading dictionary of verbs", ROOT_DIC)
 
@@ -24,6 +24,7 @@ print("%i entries"%len(dic_phrase))
 
 trans = lambda x: main.translate(x, dic_verb, dic_noun, dic_phrase)
 
+
 vosotros_tests = [("estáis", "estash"),
 				  ("miráis", "mirash"),
 				  ("tenéis", "tenesh"),
@@ -42,10 +43,11 @@ vosotros_tests = [("estáis", "estash"),
 def test_vosotros(x, y):
     pytest.assume(trans(x) == y)
 
-perfect_conversions = [('he venido', 'viní'),
+
+perfect_conversions = [('he venido', 'vini'),
 					   ('he dicho', 'dizi'),
 					   ('he hecho', 'ize'),
-					   ('has hecho', 'izites'),
+					   ('has hecho', 'izites'), #si escribes "tu has hecho" si sale"
 					   ('ha hecho', 'izo'),
 					   ('hemos hecho', 'izimos'),
 					   ('habéis hecho', 'izitesh'),
@@ -71,10 +73,11 @@ perfect_conversions = [('he venido', 'viní'),
 def test_perfect(x, y):
     pytest.assume(trans(x) == y)
 
-imperative_vosotros = [("no salgais", "no salgash"),
-						("no vengais", "no vengash"),
+
+imperative_vosotros = [("no salgáis", "no salgash"),
+						("no vengáis", "no vengash"),
 						("no digais", "no digash"),
-						("no vayais", "no vayash"),
+						("no vayais", "no vaygash"),
 						("no conozcas", "no konoskash"),
 						("no traigas", "no traigash")]
 
@@ -97,8 +100,8 @@ conjugations = [('supongo', 'supozo'),
 				('vivo', 'bivo'),
 				('estas cocinando', 'estas gizando'),
 				('estás cocinando', 'estas gizando'),
-				('estoy llamando', 'estoy yamando'),
-				('agradeczo', 'agradesko'),
+				('estoy llamando', 'esto yamando'),
+				('agradezco', 'agradesko'),
 				('habras terminado', 'avras eskapado')]
 
 @pytest.mark.parametrize(('x', 'y'), conjugations)
@@ -108,8 +111,8 @@ def test_perfect(x, y):
 future_conversion = [('telefonaré', 'va telefonar'),
 					 ('telefonarás', 'vas a telefonar'),
 					 ('telefonará', 'va telefonar'),
-					 ('telefonarémos', 'vamos a telefonar'),
-					 ('telefonareis', 'vash a telefonar'),
+					 ('telefonaremos', 'vamos a telefonar'),
+					 ('telefonaréis', 'vash a telefonar'),
 					 ('telefonarán', 'van a telefonar'),
 					 ('pondré', 'va meter'),
 					 ('abriremos', 'vamos a avrir'),
@@ -123,12 +126,12 @@ future_conversion = [('telefonaré', 'va telefonar'),
 def test_future_conversion(x, y):
     pytest.assume(trans(x) == y)
 
-tener_que = [("Tengo que", "devo de"),
-			("Tienes que", "deves de"),
-			("Tiene que", "deve de"),
-			("Tenemos que", "devemos de"),
-			("Teneis que", "devesh de"),
-			("Tienen que", "deven de")]
+tener_que = [("tengo que", "devo de"),
+			("tienes que", "deves de"),
+			("tiene que", "deve de"),
+			("tenemos que", "devemos de"),
+			("teneis que", "devesh de"),
+			("tienen que", "deven de")]
 
 @pytest.mark.parametrize(('x', 'y'), tener_que)
 def test_tener_que(x, y):
@@ -142,24 +145,25 @@ def test_hay_que(x, y):
 
 sentences = [("Ellos quieren casarse", "Eyos keren kazarse"),
 			 ("Cuando Sara prepara la mesa, siempre pone flores y mantel de encaje",
-			  "Kuando Sara apareja la meza, siempre mete flores y mantel de dantela"),
+			  "Kuando Sara apareja la meza, siempre mete rozas i mantel de dantela"),
 			 ("Sara lee libros de aventura.","Sara melda livros de aventura."),
 			 ("En otoño empiezan las lluvias. Esto es bueno porque las presas se llenan de agua.",
 			  "En otonyo empesan las luvyas. Esto es bueno porke las presas se inchan de agua."),
 			 ("Venid aquí", "Veni aki"),
-			 ('esta leendo', 'esta meldando'),
+			 ('esta leyendo', 'esta meldando'),
 			 ('esto es una cocina', 'esto es una mupak'),
 			 ('hay que dejar', 'kale deshar'),
 			 ("suele ser", "debe ser"),
 			 ("solian", "debian ser"),
 			 ("soy profesora", "so profesora"),
-			 ("Es decir, yo voy.", "Kere dizir, yo voy."),
+			 ("Es decir, yo voy.", "Es dizir, yo vo."),
 			 ("No utilizo mucho mi ordenador.", "No kullaneo muncho mi ordenador."),
-			 ("Ella es marroquí", "Ella es marokino/a")]
+			 ("Ella es marroquí", "Eya es marokino/a")]
 
 @pytest.mark.parametrize(('x', 'y'), sentences)
 def test_sentences(x, y):
     pytest.assume(trans(x) == y)
+
 
 #NOTE: if this is too hard to implement, better make the translations as in famozo/a
 gender = [('famosa', 'famoza'),
@@ -174,6 +178,8 @@ gender = [('famosa', 'famoza'),
 @pytest.mark.parametrize(('x', 'y'), gender)
 def test_gender(x, y):
     pytest.assume(trans(x) == y)
+
+
 
 other = [('te', 'te'),
 		 ('té', 'chay'),

@@ -16,13 +16,21 @@ CSV_SPANISH_TAG = "Spanish"
 CSV_LADINO_TAG = "Ladino"
 
 
-def translate(phrase, verb_dic, noun_dic, phrase_dic):   
+def translate(phrase, verb_dic, noun_dic, phrase_dic):
+    up = 0
+    if phrase[0].isupper() == True:
+        up = 1
     phrase = phrase[0].lower() + phrase[1:]
     doc = nlp(phrase)
     jud_phrase = ""
     w = ""
     aux = 0
     pers = ""
+    index = -1
+    perf_veb = ["he","has","ha","hemos","habéis","han"]
+    pro_next_verb = ["se","me"]
+    pro_verb = 0
+    verb = 0
     for sent in doc.sentences:
         for word in sent.words:
             flag1 = 0
@@ -32,27 +40,46 @@ def translate(phrase, verb_dic, noun_dic, phrase_dic):
             mixed_case = not word_esp.islower() and not word_esp.isupper()
             if mixed_case:
                 flag2 = 1
+            if  word.upos in ["PRON"] and  word_esp.lower() in pro_next_verb:
+                w = word.text
+                pro_verb = 1
+                flag1 = 1
             if word.upos in ["VERB","AUX"] and flag1 == 0:
                 for d in verb_dic:
                     if word_esp.lower() == d or word_esp.lower() == util.elimina_tildes(d):
                         word_lad = verb_dic[d]
-                        if word_esp.lower() in ["he","has","ha","han","hemos"]:
+                        if word_esp.lower() in perf_veb and word.upos in ["AUX"]:
+                            index = perf_veb.index(word_esp.lower())
                             pers = word_esp.lower()
                             w = ""
                             aux = 1
+                        elif word_esp.lower() in ["había","habías","había","habíamos","habíais","habían","habré","habrás","habrá","habremos","habréis","habrán","habría","habrías","habría","habríamos","habríais","habrían","haya","hayas","haya","hayamos","hayáis","hayan","hubiera","hubiese","hubieras","hubieses","hubiéramos","hubiésemos","hubierais","hubieseis","hubieran","hubieses"] and word.upos in ["AUX"]:    
+                            w = verb_dic[d]
+                            aux = 2
+                        elif aux == 1:
+                            w = verb_dic[d].split("/")[index]
+                            aux = 0
+                        elif aux == 2:
+                            w = verb_dic[d].split("/")[6]
+                            aux = 0
                         else:
                             w = word_lad
+                        verb = 1
                         flag1 = 1
+                        pro_verb = 0
             elif flag1 == 0:
                 for d in noun_dic:
                     if word_esp.lower() == d or word_esp.lower() == util.elimina_tildes(d):
                         word_lad = noun_dic[d]
                         w = word_lad
                         flag1 = 1
+                        verb = 0
             if word.upos in ["VERB","AUX"] and (word.lemma)[-2:] not in ["ar","er","ir"] and flag1 == 0:
                 w = util.judeo_parse(word.text)
                 flag1 = 1
-                flag2 = 0  
+                flag2 = 0
+                verb = 1
+                pro_verb = 0
             if flag1 == 0:
                 if word.upos in ["VERB","AUX"]: 
                     for d in verb_dic:
@@ -61,12 +88,16 @@ def translate(phrase, verb_dic, noun_dic, phrase_dic):
                             w = util.conj_verb(word, word_lad,aux, pers)
                             aux = 0
                             flag1 = 1
+                            verb = 1
+                            pro_verb = 0
                             break
                     if flag1 == 0:
                         w = util.conj_verb(word, word.lemma,aux, pers)
                         w = util.judeo_parse(w)
                         aux = 0
                         flag1 = 1
+                        verb = 1
+                        pro_verb = 0
                 else: 
                     for d in noun_dic:
                         if word.lemma == d or word.lemma == util.elimina_tildes(d):
@@ -80,28 +111,37 @@ def translate(phrase, verb_dic, noun_dic, phrase_dic):
                             else:
                                 w = word_lad
                             flag1 = 1
+                            verb = 0
                             break           
             if flag1 == 0:
                 if word.upos == "PROPN" or word.upos == "DET":
                     w = util.judeo_parse(word.text)
+                    verb = 0
                 else:
                     w = util.judeo_parse(word_esp)
+                    verb = 0
             if flag2 == 1:
                 jud_phrase += w.capitalize() + " "
             else:
-                jud_phrase += w + " "
+                if pro_verb == 1 and verb == 1:
+                    jud_phrase = jud_phrase[:-1] + w + " "
+                    pro_verb = 0
+                else:
+                    jud_phrase += w + " "
     jud_phrase = unidecode.unidecode(util.fix_phrase(jud_phrase, phrase_dic))
-    return jud_phrase#[0].capitalize()+ jud_phrase[1:]
+    if up == 1:
+        jud_phrase = jud_phrase[0].capitalize()+ jud_phrase[1:]
+    return jud_phrase
 
 
 def main():
     parser = argparse.ArgumentParser("translate Spanish <> Judeo-Spanish (Ladino)")
     parser.add_argument("-dv", "--lad_dic_verb", help="Dictionary of verbs.", 
-        default=os.path.join(SCRIPT_DIR, "../resource/lista_verbos_ladino_conjugados.txt"), required=False)
+        default=os.path.join(SCRIPT_DIR, "resource/lista_verbos_ladino_conjugados.txt"), required=False)
     parser.add_argument("-dw", "--lad_dic_noun", help="Dictionary of words.", 
-        default=os.path.join(SCRIPT_DIR, "../resource/lista_palabras_ladino.txt"), required=False)
+        default=os.path.join(SCRIPT_DIR, "resource/lista_palabras_ladino.txt"), required=False)
     parser.add_argument("-dp", "--lad_dic_phrase", help="Dictionary of phrases.", 
-        default=os.path.join(SCRIPT_DIR, "../resource/dic_esp_lad_phr_v2.txt"), required=False)
+        default=os.path.join("", "resource/dic_esp_lad_phr_v2.txt"), required=False)
     parser.add_argument("-i", "--input", help="Sentence segmented text file to translate", 
         default=None)
     parser.add_argument("-o", "--output", help="Output path", default=None)

@@ -3,6 +3,7 @@ has;as
 ha;a
 han;an
 hemos;emos
+habéis;avesh
 mentir;mintir
 mentiré;mintire
 abalanzar;ekilibrar
@@ -93,7 +94,7 @@ bailar;baylar
 bajar;abashar
 balancear;balansear
 balbucear;tartalear
-bañar;banyar
+bañar;benyar
 beber;bever
 bendecir;bendizirs
 beneficiar;benefisiar
@@ -122,7 +123,7 @@ capitular;kapitular
 capturar;kapturar
 cargar;kargar
 carácter;karakter
-casar;cazar
+casar;kazar
 catar;degustar
 causar;kausar
 cautivar;kautivar
@@ -324,7 +325,7 @@ excusar;ekskusar
 exhalar;eksalar
 exhibir;eksibir
 exiliar;eksziliar
-existir;eksistir
+existir;egzistir
 expandir;espandir
 experimentar;eksperimentar
 expirar;murir
@@ -558,17 +559,150 @@ vigilar;vidjilar
 vincular;vinkular
 vivir;bivir
 volver;tornar
+había;avia
+habías;avias
+había;avia
+habíamos;aviamos
+habíais;aviash
+habían;avian
+habré;avre
+habrás;avras
+habrá;avra
+habremos;avremos
+habréis;avresh
+habrán;avran
+habría;avria
+habrías;avrias
+habría;avria
+habríamos;avriamos
+habríais;avriash
+habrían;avrian
+haya;ayga
+hayas;aygas
+haya;ayga
+hayamos;aygamos
+hayáis;aygash
+hayan;aygan
+hubiera;uvyera
+hubiese;uvyera
+hubieras;uvyeras
+hubieses;uvyeras
+hubiéramos;uvyeramos
+hubiésemos;uvyeramos
+hubierais;uvyerash
+hubieseis;uvyerash
+hubieran;uvyeran
+hubieses;uvyeran
+dar;dar
+doy;do
+das;das
+da;da
+damos;damos
+dais;dash
+dan;dan
+daba;dava
+dabas;davas
+daba;dava
+dábamos;davamos
+dabaís;davash
+daban;davan
+di;di
+diste;dates
+dio;dyo
+dimos;dimos
+disteis;datesh
+dieron;dyeron
+daré;va dar
+darás;vas a dar
+dará;va a dar
+daremos;vamos a dar
+daréis;vash a dar
+darán;van a dar
+daría;daria
+darías;darias
+daría;daria
+daríamos;dariamos
+daríais;dariash
+darían;darian
+dando;dando
+dado;di/dates/dyo/dimos/datesh/dyeron/dado
+dé;de
+des;des
+dé;de
+demos;demos
+deis;desh
+den;den
+diera;dyera
+diese;dyera
+dieras;dyeras
+dieses;dyeras
+diera;dyera
+diese;dyera
+diéramos;dyeramos
+diésemos;dyeramos
+dierais;dyerash
+dieseis;dyerash
+dieran;dyeran
+diesen;dyeran
+estar;estar
+estoy;esto
+estás;estas
+está;esta
+estamos;estamos
+estáis;estash
+están;estan
+estaba;estava
+estabas;estavas
+estábamos;estavamos
+estabais;estavash
+estaban;estavan
+estuve;estuve
+estuviste;estuvites
+estuvo;estuvo
+estuvimos;estuvimos
+estuvisteis;estuvitesh
+estuvieron;estuvyeron
+estaré;va estar
+estarás;vas a estar 
+estará;va a estar
+estaremos;vamos a estar
+estaréis;vash a estar
+estarán;van a estar
+estaría;estaria
+estarías;estarias
+estaría;estaria
+estaríamos;estariamos
+estaríais;estariash
+estarían;estarian
+estando;estando
+estado;estuve/estuvites/estuvo/estuvimos/estuvitesh/estuvyeron/estado
+esté;este
+estés;estes
+esté;este
+estemos;estemos
+estéis;estesh
+estén;esten
+estuviera;estuvyera
+estuviese;estuvyera
+estuvieras;estuvyeras
+estuvieses;estuvyeras
+estuviera;estuvyera
+estuviese;estuvyera
+estuviéramos;estuvyeramos
+estuviésemos;estuvyeramos
+estuvierais;estuvyerash
+estuvieseis;estuvyerash
+estuvieran;estuvyeran
+estuviesen;estuvyeran
 haber;aver
 hay;ay
 había;avia
-habia;avia
 hubo;uvo
 habra;avra
 habras;avras
 habrá;avra
 habría;avria
 hacer;azer
-haciendo;aziendo
 hago;ago
 haces;azes
 hace;aze
@@ -588,17 +722,37 @@ hicimos;izimos
 hicisteis;izitesh
 hicieron;izyeron
 haré;va hacer
-harás;vas hacer
-hará;va hacer
-haremos;vamos hacer
-haréis;vash hacer
-harán;van hacer
+harás;vas a hacer
+hará;va a hacer
+haremos;vamos a hacer
+haréis;vash a hacer
+harán;van a hacer
 haría;azeria
 harías;azerias
 haría;areria
 haríamos;azeriamos
 haríais;azeriash
 harían;azerian
+haciendo;aziendo
+hecho;ize/izites/izo/izimos/izitesh/izyeron/echo
+haga;aga
+hagas;agas
+haga;aga
+hagamos;agamos
+hagáis;agash
+hagan;agan
+hiciera;izyera
+hiciese;izyera
+hicieras;izyeras
+hicieses;izyeras
+hiciera;izyera
+hiciese;izyera
+hiciéramos;izyeramos
+hiciésemos;izyeramos
+hicierais;izyerash
+hicieseis;izyerash
+hicieran;izyeran
+hicieses;izyeran
 deber;dever
 debo;devo
 debes;deves
@@ -630,6 +784,24 @@ debería;devria
 deberíamos;devamos
 deberíais;devash
 deberían;devan
+debiendo;devyendo
+debido;devi/devites/devyo/devimos/devitesh/devyeron/devido
+deba;deva
+debas;devas
+deba;deva
+debamos;devamos
+debáis;devash
+deban;devan
+debiera;devyera
+debiese;devyera
+debieras;devyeras
+debieses;devyeras
+debiéramos;devyeramos
+debiésemos;devyeramos
+debierais;devyerash
+debieseis;devyerash
+debieran;devyeran
+debiesen;devyeran
 querer;kerer
 quiero;kero
 quieres;keres
@@ -649,7 +821,7 @@ quiso;kijo
 quisimos;kijimos
 quisisteis;kijitesh
 quisieron;kijeron
-querré;vo kerer
+querré;va kerer
 querrás;vas a kerer
 querrá;va a kerer
 querremos;vamos a kerer
@@ -661,6 +833,23 @@ querría;kereria
 querríamos;kereriamos
 querríais;kereriash
 querrían;kererian
+queriendo;keryendo
+querido;kije/kijiste/kijo/kijimos/kijitesh/kijeron/kerido
+quiera;kera
+quieras;keras
+queremos;keremos
+queráis;kerash
+quieran;keran
+quisiera;kijera
+quisiese;kijera
+quisieras;kijeras
+quisieses;kijeras
+quisiéramos;kijeramos
+quisiésemos;kijeramos
+quisierais;kijerash
+quisieseis;kijerash
+quisieran;kijeran
+quisiesen;kijeran
 saber;saver
 sé;se
 sabes;saves
@@ -675,7 +864,7 @@ sabíamos;saviamos
 sabíais;saviash
 sabían;savian
 supe;supe
-supiste;supiste
+supiste;supite
 supo;supo
 supimos;supimos
 supisteis;supitesh
@@ -692,6 +881,23 @@ sabría;savria
 sabríamos;savriamos
 sabríais;savriash
 sabrían;savrian
+sabiendo;savyendo
+sabido;supe/supiste/supo/supimos/supitesh/supyeron/savido
+sepa;sepa
+sepas;sepas
+sepamos;sepamos
+sepáis;sepash
+sepan;sepan
+supiera;supyera
+supiese;supyera
+supieras;supyeras
+supieses;supyeras
+supiéramos;supyeramos
+supiésemos;supyeramos
+supierais;supyerash
+supieseis;supyerash
+supieran;supyeran
+supiesen;supyeran
 ser;ser
 está;esta
 soy;so
@@ -705,12 +911,13 @@ eras;eras
 éramos;eramos
 erais;erash
 eran;eran
+fui;fui
 fuiste;fuistes
 fue;fue
 fuimos;fuimos
 fuisteis;fuitesh
 fueron;fueron
-seré;va a ser
+seré;va ser
 serás;vas a ser
 será;va a ser
 seremos;vamos a ser
@@ -722,13 +929,30 @@ sería;seria
 seríamos;seriamos
 seríais;seriash
 serían;serian
+siendo;syendo
+sido;fui/fuistes/fue/fuimos/fuitesh/fueron/sido
+sea;sea
+seas;seas
+seamos;seamos
+seáis;seash
+sean;sean
+fuera;fuera
+fuese;fuera
+fueras;fueras
+fueses;fueras
+fuéramos;fueramos
+fuésemos;fueramos
+fuerais;fuerash
+fueseis;fuerash
+fueran;fueran
+fuesen;fueran
 tener;tener
 tengo;tengo
 tienes;tyenes
 tiene;tyene
 tenemos;tenemos
 tenéis;tenesh
-tienen;tyene
+tienen;tyenen
 tenía;tenia
 tenías;tenias
 tenía;tenia
@@ -741,7 +965,7 @@ tuvo;tuvo
 tuvimos;tuvimos
 tuvisteis;tuvitesh
 tuvieron;tuvyeron
-tendré;va a tener
+tendré;va tener
 tendrás;vas a tener
 tendrá;va a tener
 tendremos;vamos a tener
@@ -753,6 +977,23 @@ tendría;tendria
 tendríamos;tendriamos
 tendríais;tendriash
 tendría;tendrian
+teniendo;tenyendo
+tenido;tuve/tuvites/tuvo/tuvimos/tuvitesh/tuvyeron/tenido
+tenga;tenga
+tengas;tengas
+tengamos;tengamos
+tengáis;tengash
+tengan;tengan
+tuviera;tuvyera
+tuviese;tuvyera
+tuvieras;tuvyeras
+tuvieses;tuvyeras
+tuviéramos;tuvyeramos
+tuviésemos;tuvyeramos
+tuvierais;tuvyerash
+tuvieseis;tuvyerash
+tuvieran;tuvyeran
+tuviesen;tuvyeran
 ver;ver
 veo;veo
 ves;ves
@@ -766,7 +1007,7 @@ veía;via
 veíamos;viamos
 veíais;viash
 veían;vian
-vi;vide
+vi;vi
 viste;vites
 vio;vido
 vimos;vimos
@@ -777,13 +1018,30 @@ verás;vas a ver
 verá;va a ver
 veremos;vamos a ver
 veréis;vash a ver
-verán;vvan a  ver
+verán;van a  ver
 vería;veria
 verías;verias
 vería;veria
 veríamos;veriamos
 veríais;veriash
 verían;verian
+viendo;vyendo
+visto;vi;vide/vites/vido/vimos/vitesh/vyeron/visto
+vea;veyga
+veas;veygas
+veamos;veygamos
+veáis;veygash
+vean;veygan
+viera;vyera
+viese;vyera
+vieras;vyeras
+vieses;vyeras
+viéramos;vyeramos
+viésemos;vyeramos
+vierais;vyerash
+vieseis;vyerash
+vieran;vyeran
+viesen;vyeran
 decir;dizir
 decido;desido
 digo;digo
@@ -804,19 +1062,35 @@ dijo;disho
 dijimos;dishimos
 dijisteis;dishitesh
 dijeron;disheron
-diré;va decir
-dirás;vas a decir
-dirá;va a decir
-diremos;vamos a decir
-diréis;vash a decir
-dirán;van a decir
+diré;va dizir
+dirás;vas a dizir
+dirá;va a dizir
+diremos;vamos a dizir
+diréis;vash a dizir
+dirán;van a dizir
 diría;diria
 dirías;dirias
 diría;diria
 diríamos;diriamos
 diríais;diriash
 dirían;dirian
-suena;sona
+diciendo;dizyendo
+dicho;dizi/dishites/disho/dishimos/dishitesh/disheron/dicho
+diga;diga
+digas;digas
+digamos;digamos
+digáis;digash
+digan;digan
+dijera;dishera
+dijese;dishera
+dijeras;disheras
+dijeses;disheras
+dijéramos;disheramos
+dijésemos;disheramos
+dijerais;disherash
+dijeseis;disherash
+dijeran;disheran
+dijesen;disheran
 ir;ir
 voy;vo
 vas;vas
@@ -848,12 +1122,19 @@ iría;iria
 iríamos;iriamos
 iríais;iriash
 irían;irian
+yendo;indo
+ido;fui/fuites/fue/fuimos/fuitesh/fueron/ido
+vaya;vayga
+vayas;vaygas
+vayamos;vaygamos
+vayáis;vaygash
+vayan;vaygan
 venir;vinir
 vengo;vengo
 vienes;vyenes
 viene;vyene
-venimos;venimos
-venís;venish
+venimos;vinimos
+venís;vinish
 vienen;vyenen
 venía;venia
 venías;venias
@@ -866,347 +1147,44 @@ vino;vino
 vinimos;vinimos
 vinisteis;vinitesh
 vinieron;vinyeron
-vendré;vendre
-vendrás;vendras 
-vendrá;vendra
-vendremos;vendremos
-vendréis;vendresh
-vendrán;vendran
+vendré;va vinir
+vendrás;vas a vinir 
+vendrá;va a venir
+vendremos;vamos a venir
+vendréis;vash a venir
+vendrán;van a venir
 vendría;vendria
 vendrías;vendrias
 vendríamos;vendriamos
-vendríais;vendres
-aprendo;ambezo
-aprendes;ambezas
-aprende;ambeza
-aprendemos;ambezamos
-aprendéis;ambezash
-aprenden;ambezan
-aprendía;ambezava
-aprendías;ambezavas
-aprendíamos;ambezavamos
-aprendíais;ambezavash
-aprendían;ambezavan
-aprendí;ambezi
-aprendiste;ambezates
-aprendió;ambezo
-aprendimos;ambezimos
-aprendisteis;ambezatesh
-aprendieron;ambezaron
-aprenderé;va ambezar
-aprenderás;vas a ambezar
-aprenderá;va ambezar
-aprenderemos;vamos a ambezar
-aprenderéis;vash a ambezar
-aprenderán;van a ambezar
-aprendería;ambezo
-aprenderías;ambezas
-aprendería;ambeza
-aprenderíamos;ambezamos
-aprenderíais;ambezash
-aprenderían;ambezan
-levanto;alevanto
-levantas;alevantas
-levanta;alevanta
-levantamos;alevantamos
-levantáis;alevantash
-levantan;alevantan
-levantaba;alevantava
-levantabas;alevantavas
-levantábamos;alevantavamos
-levantabais;alevantavash
-levantaban;alevantavan
-levanté;alevanti
-levantaste;alevantates
-levantó;alevanto
-levantamos;alevantimos
-levantasteis;alevantatesh
-levantaron;alevantaron
-levantaré;va alevantar
-levantarás;vas a alevantar
-levantará;va alevantar
-levantaremos;vamos a alevantar
-levantaréis;vash a alevantar
-levantarán;van a alevantar
-levantaría;alevanto
-levantarías;alevantas
-levantaría;alevanta
-levantaríamos;alevantamos
-levantaríais;alevantash
-levantarían;alevantan
-inflo;unflo
-inflas;unflas
-infla;unfla
-inflamos;unflamos
-infláis;unflash
-inflan;unflan
-inflaba;unflava
-inflabas;unflavas
-inflábamos;unflavamos
-inflabais;unflavash
-inflaban;unflavan
-inflé;unfli
-inflaste;unflates
-infló;unflo
-inflamos;unflimos
-inflasteis;unflatesh
-inflaron;unflaron
-inflaré;va unflar
-inflarás;vas a unflar
-inflará;va unflar
-inflaremos;vamos a unflar
-inflaréis;vash a unflar
-inflarán;van a unflar
-inflaría;unflo
-inflarías;unflas
-inflaría;unfla
-inflaríamos;unflamos
-inflaríais;unflash
-inflarían;unflan
-preparo;aparejo
-preparas;aparejas
-prepara;apareja
-preparamos;aparejamos
-preparáis;aparejash
-preparan;aparejan
-preparaba;aparejava
-preparabas;aparejavas
-preparábamos;aparejavamos
-preparabais;aparejavash
-preparaban;aparejavan
-preparé;apareji
-preparaste;aparejates
-preparó;aparejo
-preparamos;aparejimos
-preparasteis;aparejatesh
-prepararon;aparejaron
-prepararé;va aparejar
-prepararás;vas a aparejar
-preparará;va aparejar
-prepararemos;vamos a aparejar
-prepararéis;vash a aparejar
-prepararán;van a aparejar
-prepararía;aparejo
-prepararías;aparejas
-prepararía;apareja
-prepararíamos;aparejamos
-prepararíais;aparejash
-prepararían;aparejan
-vuelvo;torno
-vuelves;tornas
-vuelve;torna
-volvemos;tornamos
-volvéis;tornash
-vuelven;tornan
-volvía;tornava
-volvías;tornavas
-volvíamos;tornavamos
-volvíais;tornavash
-volvían;tornavan
-volví;torni
-volviste;tornates
-volvió;torno
-volvimos;tornimos
-volvisteis;tornatesh
-volvieron;tornaron
-volveré;va tornar
-volverás;vas a tornar
-volverá;va tornar
-volveremos;vamos a tornar
-volveréis;vash a tornar
-volverán;van a tornar
-volvería;torno
-volverías;tornas
-volvería;torna
-volveríamos;tornamos
-volveríais;tornash
-volverían;tornan
-regreso;torno
-regresas;tornas
-regresa;torna
-regresamos;tornamos
-regresáis;tornash
-regresan;tornan
-regresaba;tornava
-regresabas;tornavas
-regresábamos;tornavamos
-regresabais;tornavash
-regresaban;tornavan
-regresé;torni
-regresaste;tornates
-regresó;torno
-regresamos;tornimos
-regresasteis;tornatesh
-regresaron;tornaron
-regresaré;va tornar
-regresarás;vas a tornar
-regresará;va tornar
-regresaremos;vamos a tornar
-regresaréis;vash a tornar
-regresarán;van a tornar
-regresaría;torno
-regresarías;tornas
-regresaría;torna
-regresaríamos;tornamos
-regresaríais;tornash
-regresarían;tornan
-termino;eskapo
-terminas;eskapas
-termina;eskapa
-terminamos;eskapamos
-termináis;eskapash
-terminan;eskapan
-terminaba;eskapava
-terminabas;eskapavas
-terminábamos;eskapavamos
-terminabais;eskapavash
-terminaban;eskapavan
-terminé;eskapi
-terminaste;eskapates
-terminó;eskapo
-terminamos;eskapimos
-terminasteis;eskapatesh
-terminaron;eskaparon
-terminaré;va eskapar
-terminarás;vas a eskapar
-terminará;va eskapar
-terminaremos;vamos a eskapar
-terminaréis;vash a eskapar
-terminarán;van a eskapar
-terminaría;eskapo
-terminarías;eskapas
-terminaría;eskapa
-terminaríamos;eskapamos
-terminaríais;eskapash
-terminarían;eskapan
-sento;asento
-sentas;asentas
-senta;asenta
-sentamos;asentamos
-sentáis;asentash
-sentan;asentan
-sentaba;asentava
-sentabas;asentavas
-sentábamos;asentavamos
-sentabais;asentavash
-sentaban;asentavan
-senté;asenti
-sentaste;asentates
-sentó;asento
-sentamos;asentimos
-sentasteis;asentatesh
-sentaron;asentaron
-sentaré;va asentar
-sentarás;vas a asentar
-sentará;va asentar
-sentaremos;vamos a asentar
-sentaréis;vash a asentar
-sentarán;van a asentar
-sentaría;asento
-sentarías;asentas
-sentaría;asenta
-sentaríamos;asentamos
-sentaríais;asentash
-sentarían;asentan
-trao;truo
-traes;trues
-trae;true
-traemos;truemos
-traéis;truesh
-traen;truen
-traía;truia
-traías;truias
-traíamos;truiamos
-traíais;truiash
-traían;truian
-traí;trui
-traiste;truites
-traió;truyo
-traimos;truimos
-traisteis;truitesh
-traieron;truyeron
-traeré;va truer
-traerás;vas a truer
-traerá;va truer
-traeremos;vamos a truer
-traeréis;vash a truer
-traerán;van a truer
-traería;truo
-traerías;truas
-traería;trua
-traeríamos;truamos
-traeríais;truash
-traerían;truan
-jugo;djugo
-jugas;djugas
-juga;djuga
-jugamos;djugamos
-jugáis;djugash
-jugan;djugan
-jugaba;djugava
-jugabas;djugavas
-jugábamos;djugavamos
-jugabais;djugavash
-jugaban;djugavan
-jugé;djugi
-jugaste;djugates
-jugó;djugo
-jugamos;djugimos
-jugasteis;djugatesh
-jugaron;djugaron
-jugaré;va djugar
-jugarás;vas a djugar
-jugará;va djugar
-jugaremos;vamos a djugar
-jugaréis;vash a djugar
-jugarán;van a djugar
-jugaría;djugo
-jugarías;djugas
-jugaría;djuga
-jugaríamos;djugamos
-jugaríais;djugash
-jugarían;djugan
-ponlo;metelo
-ríete;riyete
-servir;sirvir
-muerdete;moryete
-alegirnos;elejirnos
-relajar;kalmar
-relájate;kalmate
-vuelan;bolan
-cuenta;konta
-hecho;echo
-haciendo;azyendo
-debiendo;devyendo
-debido;devido
-queriendo;keryendo
-querido;kerido
-sabiendo;savyendo
-sabido;savido
-siendo;syendo
-sido;sido
-teniendo;tenyendo
-tenido;tenido
-viendo;vyendo
-visto;visto
-diciendo;dicyendo
-dicho;dicho
-yendo;indo
-compras;merkaras
-ido;ido
+vendríais;vendrash
 viniendo;vinyendo
-venido;vinido
+venido;vini/vinites/vino/vinimos/vinitesh/vinyeron/vinido
+vengan;venga
+vengas;vengas
+vengamos;vengamos
+vengáis;vengash
+vengan;vengan
+viniera;vinyera
+viniese;vinyera
+vinieras;vinyeras
+vinieses;vinyeras
+viniéramos;vinyeramos
+viniésemos;vinyeramos
+vinierais;vinyerash
+vinieseis;vinyerash
+vinieran;vinyeran
+viniesen;vinyeran
+compras;merkaras
 supongo;supozo
 propone;propoze
 pierde;pedra
 agradezco;agradesko
 estudie;estudye
-habríamos;avriamos
-habriamos;avriamos
 comamos;komamos
 venid;vení
 leendo;meldando
 convidada;kombidada
 estudiado;estudyado
-hubiera;uvyera
-hubieran;uvyeran
+miráis;mirash
+oís;oyish
+creendo;kreyendo

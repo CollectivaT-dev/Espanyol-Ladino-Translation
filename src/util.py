@@ -126,39 +126,36 @@ def conj_adj_noun(word_esp, word_lad):
 
 
 def fix_phrase(phrase, phrase_dict):
-    # file = open('resource/dic_esp_lad_phr_v2.txt', 'r', encoding="utf-8")
-    # lines = file.readlines()
-    # for line in lines:
-    for key in phrase_dict:
-        phrase = phrase.replace(" .", ".").replace(" ?", "?")\
+    phrase = " "+phrase+" "
+    if phrase.find(" ay ke ") != -1:
+        phrase = phrase.replace(" ay ke "," kale ")
+    if phrase.find(" tengo ke ") != -1:
+        phrase = phrase.replace(" tengo ke "," devo de ")
+    if phrase.find(" tyenes ke ") != -1:
+        phrase = phrase.replace(" tyenes ke "," deves de ")
+    if phrase.find(" tyene ke ") != -1:
+        phrase = phrase.replace(" tyene ke "," deve de ")
+    if phrase.find(" tenemos ke ") != -1:
+        phrase = phrase.replace(" tenemos ke "," devemos de ")
+    if phrase.find(" tenesh ke ") != -1:
+        phrase = phrase.replace(" tenesh ke "," devesh de ")
+    if phrase.find(" tyenen ke ") != -1:
+        phrase = phrase.replace(" tyenen ke "," deven de ")
+    phrase = phrase.replace(" .", ".").replace(" ?", "?")\
         .replace(" !", "!").replace(" ,", ",")\
         .replace('" ', '"').replace(" ;", ";").replace("¿ ", "")\
-        .replace("¡ ", "").replace("Qué ","Ke ").replace("Cuánto ","Kuanto ").strip()
-        if phrase.find(" "+key+" ") != -1 or phrase.find(" "+key+".") != -1:
-            phrase = phrase.replace(key, phrase_dict[key].replace("\n", ""))
-        if phrase.find("ar se ") != -1:
-            phrase = phrase.replace("ar se ","ar ")
-        elif phrase.find("er se ") != -1:
-            phrase = phrase.replace("er se ","er ")
-        elif phrase.find("ir se ") != -1:
-            phrase = phrase.replace("ir se ","ir ")
-        elif phrase.find("ar se.") != -1:
-            phrase = phrase.replace("ar se","ar")
-        elif phrase.find("er se.") != -1:
-            phrase = phrase.replace("er se","er")
-        elif phrase.find("ir se.") != -1:
-            phrase = phrase.replace("ir se","ir")
-        elif phrase.find("Ay ke ") != -1:
-            phrase = phrase.replace("Ay ke ","Kale ")
-        elif phrase.find("Ay ke.") != -1:
-            phrase = phrase.replace("Ay ke.","Kale.")
+        .replace("¡ ", "").replace("Qué ","Ke ").replace("Cuánto ","Kuanto ")
+    for key in phrase_dict:
+        if phrase.find(" "+key+" ") != -1:
+            phrase = phrase.replace(" "+key+" "," "+phrase_dict[key]+" ")
+            break
     phrase = " ".join(phrase.split())
     return phrase
 
 
 def get_dic(root):
     with open(root, 'r', encoding="utf-8") as lines:
-        key, value = zip(*[(line.split(";")[0],line.split(";")[1].replace("\n","")) for line in lines])
+            key, value = zip(*[(line.split(";")[0],line.split(";")[1].replace("\n","")) for line in lines])
     return dict(zip(key, value))
 
 
@@ -240,7 +237,7 @@ def elimina_tildes(word):
 def conj_verb(verb_esp, inf_lad_verb, aux, pers):
     tipo = 0
     flag = 0
-    tempo = ["Indicativo presente", "Indicativo pretérito imperfecto","Indicativo pretérito perfecto simple","Indicativo futuro","Condicional Condicional"]
+    tempo = ["Indicativo presente", "Indicativo pretérito imperfecto","Indicativo pretérito perfecto simple","Indicativo futuro","Condicional Condicional","Subjuntivo presente","Subjuntivo pretérito imperfecto 1"]
     person = ["1s","2s","3s","1p","2p","3p"]
     data = ["o","as","a","amos","ash","an"]
     pers = change_aux_number(pers)
@@ -252,6 +249,8 @@ def conj_verb(verb_esp, inf_lad_verb, aux, pers):
             esp_verb_conj = ""
             if t == "Condicional Condicional":
                 esp_verb_conj = default_conjugator.conjugate(inf_esp_verb).conjug_info['Condicional'][t][p]
+            elif t == "Subjuntivo presente" or t == "Subjuntivo pretérito imperfecto 1":
+                esp_verb_conj = default_conjugator.conjugate(inf_esp_verb).conjug_info['Subjuntivo'][t][p]
             else:
                 esp_verb_conj = default_conjugator.conjugate(inf_esp_verb).conjug_info['Indicativo'][t][p]
             esp_verb_conj = str(esp_verb_conj)
@@ -269,6 +268,10 @@ def conj_verb(verb_esp, inf_lad_verb, aux, pers):
                         data = ["va","vas a","va","vamos a","vash a","van a"]
                     elif t == "Condicional Condicional":
                         data = ["aria","arias","aria","ariamos","ariash","arian"]
+                    elif t == "Subjuntivo presente":
+                        data = ["e","es","e","emos","esh","en"]
+                    elif t == "Subjuntivo pretérito imperfecto 1":
+                        data = ["ara","aras","ara","aramos","arash","aran"]
                 elif inf_lad_verb[-2:].replace("\n","") == "er":
                     if t == "Indicativo presente":
                         data = ["o","es","e","emos","esh","en"]
@@ -279,7 +282,11 @@ def conj_verb(verb_esp, inf_lad_verb, aux, pers):
                     elif t == "Indicativo futuro":
                         data = ["va","vas a","va","vamos a","vash a","van a"]
                     elif t == "Condicional Condicional":
-                        data = ["eria","erias","eria","eriamos","eriash","erian"]    
+                        data = ["eria","erias","eria","eriamos","eriash","erian"]
+                    elif t == "Subjuntivo presente":
+                        data = ["a","as","a","amos","ash","an"]
+                    elif t == "Subjuntivo pretérito imperfecto 1":
+                        data = ["yera","yeras","yera","yeramos","yerash","yeran"]
                 elif inf_lad_verb[-2:].replace("\n","") == "ir":
                     if t == "Indicativo presente":
                         data = ["o","es","e","imos","ish","en"]
@@ -291,6 +298,10 @@ def conj_verb(verb_esp, inf_lad_verb, aux, pers):
                         data = ["va","vas a","va","vamos a","vash a","van a"]
                     elif t == "Condicional Condicional":
                         data = ["iria","irias","iria","iriamos","iriash","irian"]
+                    elif t == "Subjuntivo presente":
+                        data = ["a","as","a","amos","ash","an"]
+                    elif t == "Subjuntivo pretérito imperfecto 1":
+                        data = ["yera","yeras","yera","yeramos","yerash","yeran"]
             per = change_person_number(p)
             if t == "Indicativo pretérito perfecto simple" and aux == 1 and per == pers:
                 inf_lad_verb = inf_lad_verb[:-2]+data[per]
