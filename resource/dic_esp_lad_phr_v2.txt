@@ -137,5 +137,5 @@ treinta y tres;trentitres
 treinta y un;trentiuno
 vino tinta;vino kolorada
 vino tinto;vino kolorado
-del komida:de la komida
+del komida;de la komida
 de el;del

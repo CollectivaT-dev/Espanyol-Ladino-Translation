@@ -5,7 +5,9 @@ import argparse
 import pandas as pd
 import sys
 from tqdm import tqdm
+import os
 
+SCRIPT_DIR = os.path.dirname(os.path.realpath(__file__))
 
 stanza.download('es')
 nlp = stanza.Pipeline('es')
@@ -14,7 +16,7 @@ CSV_SPANISH_TAG = "Spanish"
 CSV_LADINO_TAG = "Ladino"
 
 
-def translate(phrase, dic1, dic2):      
+def translate(phrase, verb_dic, noun_dic, phrase_dic):   
     phrase = phrase[0].lower() + phrase[1:]
     doc = nlp(phrase)
     jud_phrase = ""
@@ -31,9 +33,9 @@ def translate(phrase, dic1, dic2):
             if mixed_case:
                 flag2 = 1
             if word.upos in ["VERB","AUX"] and flag1 == 0:
-                for d in dic1:
+                for d in verb_dic:
                     if word_esp.lower() == d or word_esp.lower() == util.elimina_tildes(d):
-                        word_lad = dic1[d]
+                        word_lad = verb_dic[d]
                         if word_esp.lower() in ["he","has","ha","han","hemos"]:
                             pers = word_esp.lower()
                             w = ""
@@ -42,9 +44,9 @@ def translate(phrase, dic1, dic2):
                             w = word_lad
                         flag1 = 1
             elif flag1 == 0:
-                for d in dic2:
+                for d in noun_dic:
                     if word_esp.lower() == d or word_esp.lower() == util.elimina_tildes(d):
-                        word_lad = dic2[d]
+                        word_lad = noun_dic[d]
                         w = word_lad
                         flag1 = 1
             if word.upos in ["VERB","AUX"] and (word.lemma)[-2:] not in ["ar","er","ir"] and flag1 == 0:
@@ -53,9 +55,9 @@ def translate(phrase, dic1, dic2):
                 flag2 = 0  
             if flag1 == 0:
                 if word.upos in ["VERB","AUX"]: 
-                    for d in dic1:
+                    for d in verb_dic:
                         if word.lemma == d or word.lemma == util.elimina_tildes(d):
-                            word_lad = dic1[d]
+                            word_lad = verb_dic[d]
                             w = util.conj_verb(word, word_lad,aux, pers)
                             aux = 0
                             flag1 = 1
@@ -66,9 +68,9 @@ def translate(phrase, dic1, dic2):
                         aux = 0
                         flag1 = 1
                 else: 
-                    for d in dic2:
+                    for d in noun_dic:
                         if word.lemma == d or word.lemma == util.elimina_tildes(d):
-                            word_lad = dic2[d]
+                            word_lad = noun_dic[d]
                             if word.lemma == word_lad or word_esp.lower() == word_lad:
                                 w = word_esp
                             elif word.upos in ["NOUN", "ADJ"]:
@@ -88,22 +90,30 @@ def translate(phrase, dic1, dic2):
                 jud_phrase += w.capitalize() + " "
             else:
                 jud_phrase += w + " "
-    jud_phrase = unidecode.unidecode(util.fix_phrase(jud_phrase))
-    return jud_phrase[0].capitalize()+ jud_phrase[1:]
+    jud_phrase = unidecode.unidecode(util.fix_phrase(jud_phrase, phrase_dic))
+    return jud_phrase#[0].capitalize()+ jud_phrase[1:]
 
 
 def main():
     parser = argparse.ArgumentParser("translate Spanish <> Judeo-Spanish (Ladino)")
-    parser.add_argument("-dv", "--lad_dic_verb", help="Dictionary of verbs.", default=None, required=True)
-    parser.add_argument("-dw", "--lad_dic_noun", help="Dictionary of words.", default=None, required=True)
-    parser.add_argument("-i", "--input", help="Sentence segmented text file to translate", default=None)
+    parser.add_argument("-dv", "--lad_dic_verb", help="Dictionary of verbs.", 
+        default=os.path.join(SCRIPT_DIR, "../resource/lista_verbos_ladino_conjugados.txt"), required=False)
+    parser.add_argument("-dw", "--lad_dic_noun", help="Dictionary of words.", 
+        default=os.path.join(SCRIPT_DIR, "../resource/lista_palabras_ladino.txt"), required=False)
+    parser.add_argument("-dp", "--lad_dic_phrase", help="Dictionary of phrases.", 
+        default=os.path.join(SCRIPT_DIR, "../resource/dic_esp_lad_phr_v2.txt"), required=False)
+    parser.add_argument("-i", "--input", help="Sentence segmented text file to translate", 
+        default=None)
     parser.add_argument("-o", "--output", help="Output path", default=None)
-    parser.add_argument("-v", "--interactive", help="Interactive translator", default=False, action='store_true')
-    parser.add_argument("-c", "--csv", help="Translate dataset CSV with EN, ES columns", default=False, action='store_true')
+    parser.add_argument("-v", "--interactive", help="Interactive translator", 
+        default=False, action='store_true')
+    parser.add_argument("-c", "--csv", help="Translate dataset CSV with EN, ES columns", 
+        default=False, action='store_true')
     args = parser.parse_args()
 
-    root_dic = args.lad_dic_verb
-    root_dic_n = args.lad_dic_noun
+    root_dic_verb = args.lad_dic_verb
+    root_dic_noun = args.lad_dic_noun
+    root_dic_phrase = args.lad_dic_phrase
     root_dataset = args.input
     root_translate = args.output
     iscsv = args.csv
@@ -117,16 +127,21 @@ def main():
         sys.exit()   
         
 
-    print("Reading dictionary of verbs", args.lad_dic_verb)
+    print("Reading dictionary of verbs", root_dic_verb)
     
-    dic_verb = util.get_dic(root_dic)
+    dic_verb = util.get_dic(root_dic_verb)
     print("%i entries"%len(dic_verb))
 
 
-    print("Reading dictionary of nouns", args.lad_dic_noun)
+    print("Reading dictionary of nouns", root_dic_noun)
     
-    dic_noun = util.get_dic(root_dic_n)
+    dic_noun = util.get_dic(root_dic_noun)
     print("%i entries"%len(dic_noun))
+
+    print("Reading dictionary of phrases", root_dic_phrase)
+    
+    dic_phrase = util.get_dic(root_dic_phrase)
+    print("%i entries"%len(dic_phrase))
     
 
     if args.interactive:
@@ -135,7 +150,7 @@ def main():
             in_sent = input()
             if in_sent == '0':
                 sys.exit()
-            print(translate(in_sent, dic_verb, dic_noun) + '\n')
+            print(translate(in_sent, dic_verb, dic_noun, dic_phrase) + '\n')
 
     elif root_dataset and root_translate and not iscsv:
         print("Translate text")
@@ -143,7 +158,7 @@ def main():
             translate_iter = f_in.readlines()
             with tqdm(total=len(translate_iter)) as pbar:
                 for l in translate_iter:
-                    f_out.write(translate(l, dic_verb, dic_noun) + '\n')
+                    f_out.write(translate(l, dic_verb, dic_noun, dic_phrase) + '\n')
                     pbar.update(1)
 
     elif root_dataset and root_translate and iscsv:
@@ -152,7 +167,7 @@ def main():
         lad_translations = []
         with tqdm(total=translate_iter) as pbar:
             for a in translate_iter:
-                lad_translations.append(translate(a, dic_verb, dic_noun))
+                lad_translations.append(translate(a, dic_verb, dic_noun, dic_phrase))
                 pbar.update(1)
         df[CSV_LADINO_TAG] = lad_translations
         df.to_csv(root_translate, sep='\t', index=False)

@@ -125,16 +125,17 @@ def conj_adj_noun(word_esp, word_lad):
     return word_lad
 
 
-def fix_phrase(phrase):
-    file = open('resource/dic_esp_lad_phr_v2.txt', 'r', encoding="utf-8")
-    lines = file.readlines()
-    for line in lines:
+def fix_phrase(phrase, phrase_dict):
+    # file = open('resource/dic_esp_lad_phr_v2.txt', 'r', encoding="utf-8")
+    # lines = file.readlines()
+    # for line in lines:
+    for key in phrase_dict:
         phrase = phrase.replace(" .", ".").replace(" ?", "?")\
         .replace(" !", "!").replace(" ,", ",")\
         .replace('" ', '"').replace(" ;", ";").replace("¿ ", "")\
         .replace("¡ ", "").replace("Qué ","Ke ").replace("Cuánto ","Kuanto ").strip()
-        if phrase.find(" "+line.split(";")[0]+" ") != -1 or phrase.find(" "+line.split(";")[0]+".") != -1:
-            phrase = phrase.replace(line.split(";")[0], line.split(";")[1].replace("\n", ""))
+        if phrase.find(" "+key+" ") != -1 or phrase.find(" "+key+".") != -1:
+            phrase = phrase.replace(key, phrase_dict[key].replace("\n", ""))
         if phrase.find("ar se ") != -1:
             phrase = phrase.replace("ar se ","ar ")
         elif phrase.find("er se ") != -1:

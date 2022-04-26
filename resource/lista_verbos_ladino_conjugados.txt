@@ -1210,4 +1210,3 @@ convidada;kombidada
 estudiado;estudyado
 hubiera;uvyera
 hubieran;uvyeran
-dado;echo

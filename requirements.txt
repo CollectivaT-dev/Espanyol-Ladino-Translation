@@ -4,5 +4,7 @@ unidecode
 tqdm
 ftfy
 spanishconjugator
-import mlconjug3
-import unicodedata
+mlconjug3
+unicodedata
+pytest
+pytest-assume
