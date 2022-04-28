@@ -37,9 +37,13 @@ def translate(phrase, verb_dic, noun_dic, phrase_dic):
             flag2 = 0
             w = ""
             word_esp = word.text
+            if word_esp.isupper() or any(ele.isupper() for ele in word_esp[1:]):
+                w = word_esp
+                flag1 = 1
+                flag2 = 0
             mixed_case = not word_esp.islower() and not word_esp.isupper()
             if mixed_case:
-                flag2 = 1
+                flagd2 = 1
             if  word.upos in ["PRON"] and  word_esp.lower() in pro_next_verb:
                 w = word.text
                 pro_verb = 1
