@@ -4,6 +4,5 @@ unidecode
 tqdm
 ftfy
 mlconjug3
-unicodedata
 pytest
 pytest-assume
