@@ -171,14 +171,6 @@ def main():
     root_translate = args.output
     iscsv = args.csv
 
-    if not args.lad_dic_verb:
-        print("ERROR: No dictionary given.")
-        sys.exit()
-        
-    if not args.lad_dic_noun:
-        print("ERROR: No dictionary given.")
-        sys.exit()   
-        
 
     print("Reading dictionary of verbs", root_dic_verb)
     
