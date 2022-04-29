@@ -1,9 +1,149 @@
-
 from ftfy import fix_encoding
 import mlconjug3
 import unicodedata
+import unidecode
+import stanza
 
 default_conjugator = mlconjug3.Conjugator(language='es')
+nlp = None
+perf_veb = ["he","has","ha","hemos","habéis","han"]
+pro_next_verb = ["se","me"]
+
+def load_stanza_nlp(cachedir=None):
+    global nlp
+    if cachedir:
+        nlp = stanza.Pipeline(lang='es', dir=cachedir)
+    else:
+        nlp = stanza.Pipeline(lang='es')
+
+def translate(phrase, verb_dic, noun_dic, phrase_dic, stanza_cachedir=None):
+    if not nlp:
+        load_stanza_nlp(stanza_cachedir)
+
+    up = 0
+    if phrase[0].isupper() == True:
+        up = 1
+    phrase = phrase[0].lower() + phrase[1:]
+    doc = nlp(phrase)
+    jud_phrase = ""
+    w = ""
+    aux = 0
+    pers = ""
+    index = -1
+    
+    pro_verb = 0
+    verb = 0
+    for sent in doc.sentences:
+        for word in sent.words:
+            flag1 = 0
+            flag2 = 0
+            w = ""
+            word_esp = word.text
+            if word_esp.isupper() or any(ele.isupper() for ele in word_esp[1:]):
+                w = word_esp
+                flag1 = 1
+                flag2 = 0
+            mixed_case = not word_esp.islower() and not word_esp.isupper()
+            if mixed_case:
+                flagd2 = 1
+            if  word.upos in ["PRON"] and  word_esp.lower() in pro_next_verb:
+                w = word.text
+                pro_verb = 1
+                flag1 = 1
+            if word.upos in ["VERB","AUX"] and flag1 == 0:
+                #TODO: Make this work with verb_dic.get(word_esp.lower())
+                for d in verb_dic:
+                    if word_esp.lower() == d or word_esp.lower() == elimina_tildes(d):
+                        word_lad = verb_dic[d]
+                        if word_esp.lower() in perf_veb and word.upos in ["AUX"]:
+                            index = perf_veb.index(word_esp.lower())
+                            pers = word_esp.lower()
+                            w = ""
+                            aux = 1
+                        elif word_esp.lower() in ["había","habías","había","habíamos","habíais","habían","habré","habrás","habrá","habremos","habréis","habrán","habría","habrías","habría","habríamos","habríais","habrían","haya","hayas","haya","hayamos","hayáis","hayan","hubiera","hubiese","hubieras","hubieses","hubiéramos","hubiésemos","hubierais","hubieseis","hubieran","hubieses"] and word.upos in ["AUX"]:    
+                            w = verb_dic[d]
+                            aux = 2
+                        elif aux == 1:
+                            w = verb_dic[d].split("/")[index]
+                            aux = 0
+                        elif aux == 2:
+                            w = verb_dic[d].split("/")[6]
+                            aux = 0
+                        else:
+                            w = word_lad
+                        verb = 1
+                        flag1 = 1
+                        pro_verb = 0
+                        break #TODO: Check if it breaks anything
+            elif flag1 == 0:
+                #TODO: Make this work with noun_dic.get(word_esp.lower())
+                for d in noun_dic:
+                    if word_esp.lower() == d or word_esp.lower() == elimina_tildes(d):
+                        word_lad = noun_dic[d]
+                        w = word_lad
+                        flag1 = 1
+                        verb = 0
+                        break #TODO: Check if it breaks anything
+            if word.upos in ["VERB","AUX"] and (word.lemma)[-2:] not in ["ar","er","ir"] and flag1 == 0:
+                w = judeo_parse(word.text)
+                flag1 = 1
+                flag2 = 0
+                verb = 1
+                pro_verb = 0
+            if flag1 == 0:
+                if word.upos in ["VERB","AUX"]: 
+                    #TODO: Make this work with verb_dic.get(word_esp.lower())
+                    for d in verb_dic:
+                        if word.lemma == d or word.lemma == elimina_tildes(d):
+                            word_lad = verb_dic[d]
+                            w = conj_verb(word, word_lad,aux, pers)
+                            aux = 0
+                            flag1 = 1
+                            verb = 1
+                            pro_verb = 0
+                            break
+                    if flag1 == 0:
+                        w = conj_verb(word, word.lemma,aux, pers)
+                        w = judeo_parse(w)
+                        aux = 0
+                        flag1 = 1
+                        verb = 1
+                        pro_verb = 0
+                else: 
+                    #TODO: Make this work with noun_dic.get(word_esp.lower())
+                    for d in noun_dic:
+                        if word.lemma == d or word.lemma == elimina_tildes(d):
+                            word_lad = noun_dic[d]
+                            if word.lemma == word_lad or word_esp.lower() == word_lad:
+                                w = word_esp
+                            elif word.upos in ["NOUN", "ADJ"]:
+                                w = conj_adj_noun(word, word_lad)
+                            elif word.upos == "DET":
+                                w = word_esp
+                            else:
+                                w = word_lad
+                            flag1 = 1
+                            verb = 0
+                            break           
+            if flag1 == 0:
+                if word.upos == "PROPN" or word.upos == "DET":
+                    w = judeo_parse(word.text)
+                    verb = 0
+                else:
+                    w = judeo_parse(word_esp)
+                    verb = 0
+            if flag2 == 1:
+                jud_phrase += w.capitalize() + " "
+            else:
+                if pro_verb == 1 and verb == 1:
+                    jud_phrase = jud_phrase[:-1] + w + " "
+                    pro_verb = 0
+                else:
+                    jud_phrase += w + " "
+    jud_phrase = unidecode.unidecode(fix_phrase(jud_phrase, phrase_dic))
+    if up == 1:
+        jud_phrase = jud_phrase[0].capitalize()+ jud_phrase[1:]
+    return jud_phrase
 
 def judeo_parse(word):
     word = word.lower()
