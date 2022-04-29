@@ -8,6 +8,9 @@ from tqdm import tqdm
 import os
 
 SCRIPT_DIR = os.path.dirname(os.path.realpath(__file__))
+PATH_VERB_DICT = os.path.join(SCRIPT_DIR, "../resource/lista_verbos_ladino_conjugados.txt")
+PATH_NOUN_DICT = os.path.join(SCRIPT_DIR, "../resource/lista_palabras_ladino.txt")
+PATH_PHRASE_DICT = os.path.join("", "resource/dic_esp_lad_phr_v2.txt")
 
 stanza.download('es')
 nlp = stanza.Pipeline('es')
@@ -49,6 +52,7 @@ def translate(phrase, verb_dic, noun_dic, phrase_dic):
                 pro_verb = 1
                 flag1 = 1
             if word.upos in ["VERB","AUX"] and flag1 == 0:
+                #TODO: Make this work with verb_dic.get(word_esp.lower())
                 for d in verb_dic:
                     if word_esp.lower() == d or word_esp.lower() == util.elimina_tildes(d):
                         word_lad = verb_dic[d]
@@ -71,13 +75,16 @@ def translate(phrase, verb_dic, noun_dic, phrase_dic):
                         verb = 1
                         flag1 = 1
                         pro_verb = 0
+                        break #TODO: Check if it breaks anything
             elif flag1 == 0:
+                #TODO: Make this work with noun_dic.get(word_esp.lower())
                 for d in noun_dic:
                     if word_esp.lower() == d or word_esp.lower() == util.elimina_tildes(d):
                         word_lad = noun_dic[d]
                         w = word_lad
                         flag1 = 1
                         verb = 0
+                        break #TODO: Check if it breaks anything
             if word.upos in ["VERB","AUX"] and (word.lemma)[-2:] not in ["ar","er","ir"] and flag1 == 0:
                 w = util.judeo_parse(word.text)
                 flag1 = 1
@@ -86,6 +93,7 @@ def translate(phrase, verb_dic, noun_dic, phrase_dic):
                 pro_verb = 0
             if flag1 == 0:
                 if word.upos in ["VERB","AUX"]: 
+                    #TODO: Make this work with verb_dic.get(word_esp.lower())
                     for d in verb_dic:
                         if word.lemma == d or word.lemma == util.elimina_tildes(d):
                             word_lad = verb_dic[d]
@@ -103,6 +111,7 @@ def translate(phrase, verb_dic, noun_dic, phrase_dic):
                         verb = 1
                         pro_verb = 0
                 else: 
+                    #TODO: Make this work with noun_dic.get(word_esp.lower())
                     for d in noun_dic:
                         if word.lemma == d or word.lemma == util.elimina_tildes(d):
                             word_lad = noun_dic[d]
@@ -141,11 +150,11 @@ def translate(phrase, verb_dic, noun_dic, phrase_dic):
 def main():
     parser = argparse.ArgumentParser("translate Spanish <> Judeo-Spanish (Ladino)")
     parser.add_argument("-dv", "--lad_dic_verb", help="Dictionary of verbs.", 
-        default=os.path.join(SCRIPT_DIR, "resource/lista_verbos_ladino_conjugados.txt"), required=False)
+        default=PATH_VERB_DICT, required=False)
     parser.add_argument("-dw", "--lad_dic_noun", help="Dictionary of words.", 
-        default=os.path.join(SCRIPT_DIR, "resource/lista_palabras_ladino.txt"), required=False)
+        default=PATH_NOUN_DICT, required=False)
     parser.add_argument("-dp", "--lad_dic_phrase", help="Dictionary of phrases.", 
-        default=os.path.join("", "resource/dic_esp_lad_phr_v2.txt"), required=False)
+        default=PATH_PHRASE_DICT, required=False)
     parser.add_argument("-i", "--input", help="Sentence segmented text file to translate", 
         default=None)
     parser.add_argument("-o", "--output", help="Output path", default=None)
