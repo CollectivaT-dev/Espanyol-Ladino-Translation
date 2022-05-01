@@ -7,7 +7,7 @@ import stanza
 default_conjugator = mlconjug3.Conjugator(language='es')
 nlp = None
 perf_veb = ["he","has","ha","hemos","habéis","han"]
-pro_next_verb = ["se","me"]
+pro_next_verb = ["se","me","le","lo"]
 
 def load_stanza_nlp(cachedir=None):
     global nlp
@@ -37,12 +37,16 @@ def translate(phrase, verb_dic, noun_dic, phrase_dic, stanza_cachedir=None):
         for word in sent.words:
             flag1 = 0
             flag2 = 0
+            flag3 = 0
             w = ""
             word_esp = word.text
             if word_esp.isupper() or any(ele.isupper() for ele in word_esp[1:]):
                 w = word_esp
                 flag1 = 1
                 flag2 = 0
+                flag3 = 1
+            if word_esp[0].isupper() and flag3 == 0:
+                flag2 = 1
             mixed_case = not word_esp.islower() and not word_esp.isupper()
             if mixed_case:
                 flagd2 = 1
@@ -145,8 +149,21 @@ def translate(phrase, verb_dic, noun_dic, phrase_dic, stanza_cachedir=None):
         jud_phrase = jud_phrase[0].capitalize()+ jud_phrase[1:]
     return jud_phrase
 
+
+def replace_str_index(text,index=0,replacement=''):
+    return '%s%s%s'%(text[:index],replacement,text[index+1:])
+
+
 def judeo_parse(word):
     word = word.lower()
+    if word.find("h") != -1:
+        indices = [pos for pos, char in enumerate(word) if char == "h"]
+        for h in indices:
+            if h == 0:
+                word = replace_str_index(word,h,"*")
+            if h > 1 and word[h-1] != "c":
+                word = replace_str_index(word,h,"*")
+        word = word.replace("*","")
     if word.find("ca") != -1:
         word = word.replace("ca", "ka")
     if word.find("co") != -1:

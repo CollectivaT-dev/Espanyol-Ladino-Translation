@@ -1026,7 +1026,7 @@ veríamos;veriamos
 veríais;veriash
 verían;verian
 viendo;vyendo
-visto;vi;vide/vites/vido/vimos/vitesh/vyeron/visto
+visto;vi/vide/vites/vido/vimos/vitesh/vyeron/visto
 vea;veyga
 veas;veygas
 veamos;veygamos

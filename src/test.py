@@ -222,3 +222,18 @@ other = [('te', 'te'),
 @pytest.mark.parametrize(('x', 'y'), other)
 def test_other(x, y):
     pytest.assume(trans(x) == y)
+    
+    
+new = [('operación', 'operasion'),
+		 ('hola', 'ola'),
+		 ("aguadito", "agadito"),
+		 ("queso", "kezo"),
+		 ("experto", "eksperto"),
+		 ("gobernador", "governador"),
+		 ("llamachay", "yamachay"),
+		 ("ñandu", "nyandu"),
+		 ("scraft", "skraft")]
+
+@pytest.mark.parametrize(('x', 'y'), new)
+def test_new(x, y):
+    pytest.assume(trans(x) == y)

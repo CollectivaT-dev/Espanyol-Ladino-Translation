@@ -1,14 +1,23 @@
 import pandas as pd
-import main as m
 from tqdm import tqdm
 import argparse
 import sys
 import os
+from util import translate, get_dic
+import stanza
+
+
+stanza.download(lang='es')
+
+SCRIPT_DIR = os.path.dirname(os.path.realpath(__file__))
+PATH_VERB_DICT = os.path.join(SCRIPT_DIR, "../resource/lista_verbos_ladino_conjugados.txt")
+PATH_NOUN_DICT = os.path.join(SCRIPT_DIR, "../resource/lista_palabras_ladino.txt")
+PATH_PHRASE_DICT = os.path.join("", "resource/dic_esp_lad_phr_v2.txt")
 
 
 def get_dataset(url):
     text = []
-    with open(url, 'r', encoding="utf-8") as lines:
+    with open(url, 'r', encoding="utf8", errors='ignore') as lines:
         for line in lines:
             text.append(line.replace("\n", ""))
     return text
@@ -27,7 +36,12 @@ def find_all(name, path):
 
 def main():
     parser = argparse.ArgumentParser("translate Spanish <> Judeo-Spanish (Ladino)")
-    parser.add_argument("-d", "--lad_dic", help="Dictionary root.", default=None, required=True)
+    parser.add_argument("-dv", "--lad_dic_verb", help="Dictionary of verbs.", 
+        default=PATH_VERB_DICT, required=False)
+    parser.add_argument("-dw", "--lad_dic_noun", help="Dictionary of words.", 
+        default=PATH_NOUN_DICT, required=False)
+    parser.add_argument("-dp", "--lad_dic_phrase", help="Dictionary of phrases.", 
+        default=PATH_PHRASE_DICT, required=False)
     parser.add_argument("-s1", "--input_esp", help="Sentence segmented Spanish text file to translate",
                         default=None)
     parser.add_argument("-s2", "--input_2", help="Sentence segmented other language text file",
@@ -37,31 +51,41 @@ def main():
     parser.add_argument("-o", "--output", help="Output path", default=None)
     args = parser.parse_args()
 
-    root_dic = args.lad_dic
+
+    root_dic_verb = args.lad_dic_verb
+    root_dic_noun = args.lad_dic_noun
+    root_dic_phrase = args.lad_dic_phrase
     root_dataset_1 = args.input_esp
     root_dataset_2 = args.input_2
     root_translate = args.output
     language = args.language
 
-    if not args.lad_dic:
-        print("ERROR: No dictionary given.")
-        sys.exit()
-
     if not os.path.exists(root_translate):
         print("Creating directory")
         os.makedirs(root_translate)
+        
+    print("Reading dictionary of verbs", root_dic_verb)
+    
+    dic_verb = get_dic(root_dic_verb)
+    print("%i entries"%len(dic_verb))
+
+
+    print("Reading dictionary of nouns", root_dic_noun)
+    
+    dic_noun = get_dic(root_dic_noun)
+    print("%i entries"%len(dic_noun))
+
+    print("Reading dictionary of phrases", root_dic_phrase)
+    
+    dic_phrase = get_dic(root_dic_phrase)
+    print("%i entries"%len(dic_phrase))    
+        
 
     outfilename = os.path.basename(root_dataset_1)
     files_n, counter = find_all(outfilename+"_", root_translate)
     outfilepath = os.path.join(root_translate, outfilename+"_"+str(files_n+1) + ".csv")
     print("Output to:", outfilepath)
-    print("Reading dictionary", args.lad_dic)
-    dic = []
-
-    with open(root_dic, 'r', encoding="utf-8") as lines:
-        for line in lines:
-            p = {"src": line.split(";")[0], "target": line.split(";")[1]}
-            dic.append(p)
+    
 
     sentences_es = get_dataset(root_dataset_1)
     sentences_en = get_dataset(root_dataset_2)
@@ -83,10 +107,10 @@ def main():
             if count > counter:
                 en.append(b)
                 es.append(a)
-                la.append(m.translate(a, dic))
+                la.append(translate(a, dic_verb, dic_noun, dic_phrase))
                 s.append(name)
                 flag = flag + 1
-                if flag % 500 == 0:
+                if flag % 200 == 0:
                     p = {'Source': s, language: en, 'Spanish': es, 'Ladino': la}
                     df_1 = pd.DataFrame(p)
                     df_1.to_csv(outfilepath, sep='\t', index=False)
