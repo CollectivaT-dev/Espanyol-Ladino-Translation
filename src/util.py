@@ -69,7 +69,7 @@ def translate(phrase, verb_dic, noun_dic, phrase_dic, stanza_cachedir=None):
                             aux = 2
                         elif aux == 1:
                             if verb_dic[d].find("/") != -1:
-                                w = verb_dic[d].split("/")[index]
+                                w = verb_dic[d].split("/")[index]                            
                             else:
                                 w = verb_dic[d]
                             aux = 0
@@ -317,13 +317,32 @@ def fix_phrase(phrase, phrase_dict):
 
 
 def get_dic(root):
-    with open(root, 'r', encoding="utf-8", errors='ignore') as lines:
+    with open(root, 'r', encoding="utf-8") as lines:
             key, value = zip(*[(line.split(";")[0],line.split(";")[1].replace("\n","")) for line in lines])
     return dict(zip(key, value))
 
 
 def get_gerundio(word):
-    return default_conjugator.conjugate(word).conjug_info['Gerundio']['Gerundio Gerondio']['']
+    try:
+        return default_conjugator.conjugate(word).conjug_info['Gerundio']['Gerundio Gerondio']['']
+    except:
+    	return get_gerundio_esp(word)
+
+
+def get_gerundio_esp(word):
+    pl = " "
+    if len(word.split(" ")) > 1:
+        word = word.split(" ")[0]
+        f = 0
+        for i in word.split(" "):
+            if f != 0: 
+                pl = pl + i + " "
+            f = f + 1
+    if word[-2:].replace("\n","") == "ar":
+        word = word[:-2]+"ando"
+    elif word[-2:].replace("\n","") in ["er","ir"]:
+        word = word[:-2]+"iendo"
+    return word+pl.rstrip()
 
 
 def get_gerundio_lad(word):
@@ -411,11 +430,20 @@ def conj_verb(verb_esp, inf_lad_verb, aux, pers):
         for p in person:
             esp_verb_conj = ""
             if t == "Condicional Condicional":
-                esp_verb_conj = default_conjugator.conjugate(inf_esp_verb).conjug_info['Condicional'][t][p]
+                try:
+                    esp_verb_conj = default_conjugator.conjugate(inf_esp_verb).conjug_info['Condicional'][t][p]
+                except:
+                    esp_verb_conj = inf_esp_verb
             elif t == "Subjuntivo presente" or t == "Subjuntivo pretérito imperfecto 1":
-                esp_verb_conj = default_conjugator.conjugate(inf_esp_verb).conjug_info['Subjuntivo'][t][p]
+                try:
+                    esp_verb_conj = default_conjugator.conjugate(inf_esp_verb).conjug_info['Subjuntivo'][t][p]
+                except:
+                    esp_verb_conj = inf_esp_verb
             else:
-                esp_verb_conj = default_conjugator.conjugate(inf_esp_verb).conjug_info['Indicativo'][t][p]
+                try:
+                    esp_verb_conj = default_conjugator.conjugate(inf_esp_verb).conjug_info['Indicativo'][t][p]
+                except:
+                    esp_verb_conj = inf_esp_verb
             esp_verb_conj = str(esp_verb_conj)
             if str(esp_verb_conj) != "None":
                 esp_verb_conj = fix_encoding(esp_verb_conj)
