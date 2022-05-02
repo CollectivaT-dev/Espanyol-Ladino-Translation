@@ -16,11 +16,10 @@ PATH_PHRASE_DICT = os.path.join("", "resource/dic_esp_lad_phr_v2.txt")
 
 
 def get_dataset(url):
-    text = []
     with open(url, 'r', encoding="utf8", errors='ignore') as lines:
-        for line in lines:
-            text.append(line.replace("\n", ""))
-    return text
+        value = [line.replace("\n","") for line in lines]
+    return dict(zip(range(len(value)), value))
+
 
 def find_all(name, path):
     result = []
@@ -105,12 +104,12 @@ def main():
     with tqdm(total=total) as pbar:
         for a, b in translate_iter:
             if count > counter:
-                en.append(b)
-                es.append(a)
-                la.append(translate(a, dic_verb, dic_noun, dic_phrase))
+                es.append(sentences_es[a])
+                en.append(sentences_en[b])
+                la.append(translate(sentences_es[a], dic_verb, dic_noun, dic_phrase))
                 s.append(name)
                 flag = flag + 1
-                if flag % 200 == 0:
+                if flag % 10 == 0:
                     p = {'Source': s, language: en, 'Spanish': es, 'Ladino': la}
                     df_1 = pd.DataFrame(p)
                     df_1.to_csv(outfilepath, sep='\t', index=False)

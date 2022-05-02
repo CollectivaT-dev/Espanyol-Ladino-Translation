@@ -68,10 +68,16 @@ def translate(phrase, verb_dic, noun_dic, phrase_dic, stanza_cachedir=None):
                             w = verb_dic[d]
                             aux = 2
                         elif aux == 1:
-                            w = verb_dic[d].split("/")[index]
+                            if verb_dic[d].find("/") != -1:
+                                w = verb_dic[d].split("/")[index]
+                            else:
+                                w = verb_dic[d]
                             aux = 0
                         elif aux == 2:
-                            w = verb_dic[d].split("/")[6]
+                            if verb_dic[d].find("/") != -1:
+                                w = verb_dic[d].split("/")[6]
+                            else:
+                                w = verb_dic[d]
                             aux = 0
                         else:
                             w = word_lad
@@ -88,7 +94,7 @@ def translate(phrase, verb_dic, noun_dic, phrase_dic, stanza_cachedir=None):
                         flag1 = 1
                         verb = 0
                         break #TODO: Check if it breaks anything
-            if word.upos in ["VERB","AUX"] and (word.lemma)[-2:] not in ["ar","er","ir"] and flag1 == 0:
+            if word.upos in ["VERB","AUX"] and (word.lemma)[-2:] not in ["ar","er","ir","ír"] and flag1 == 0:
                 w = judeo_parse(word.text)
                 flag1 = 1
                 flag2 = 0
@@ -311,7 +317,7 @@ def fix_phrase(phrase, phrase_dict):
 
 
 def get_dic(root):
-    with open(root, 'r', encoding="utf-8") as lines:
+    with open(root, 'r', encoding="utf-8", errors='ignore') as lines:
             key, value = zip(*[(line.split(";")[0],line.split(";")[1].replace("\n","")) for line in lines])
     return dict(zip(key, value))
 
@@ -444,7 +450,7 @@ def conj_verb(verb_esp, inf_lad_verb, aux, pers):
                         data = ["a","as","a","amos","ash","an"]
                     elif t == "Subjuntivo pretérito imperfecto 1":
                         data = ["yera","yeras","yera","yeramos","yerash","yeran"]
-                elif inf_lad_verb[-2:].replace("\n","") == "ir":
+                elif inf_lad_verb[-2:].replace("\n","") in ["ir","ír"]:
                     if t == "Indicativo presente":
                         data = ["o","es","e","imos","ish","en"]
                     elif t == "Indicativo pretérito imperfecto":
