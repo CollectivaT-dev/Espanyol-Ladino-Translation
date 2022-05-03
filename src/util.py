@@ -19,25 +19,16 @@ def load_stanza_nlp(cachedir=None):
 def translate(phrase, verb_dic, noun_dic, phrase_dic, stanza_cachedir=None):
     if not nlp:
         load_stanza_nlp(stanza_cachedir)
-
-    up = 0
+    
+    aux, index, pro_verb, verb, up = 0, -1, 0, 0, 0
     if phrase[0].isupper() == True:
         up = 1
     phrase = phrase[0].lower() + phrase[1:]
     doc = nlp(phrase)
-    jud_phrase = ""
-    w = ""
-    aux = 0
-    pers = ""
-    index = -1
-    
-    pro_verb = 0
-    verb = 0
+    jud_phrase, pers = "", ""
     for sent in doc.sentences:
         for word in sent.words:
-            flag1 = 0
-            flag2 = 0
-            flag3 = 0
+            flag1, flag2, flag3 = 0, 0, 0
             w = ""
             word_esp = word.text
             if word_esp.isupper() or any(ele.isupper() for ele in word_esp[1:]):
@@ -167,7 +158,7 @@ def judeo_parse(word):
         for h in indices:
             if h == 0:
                 word = replace_str_index(word,h,"*")
-            if h > 1 and word[h-1] != "c":
+            if h > 1 and word[h-1] not in ["c","s"]:
                 word = replace_str_index(word,h,"*")
         word = word.replace("*","")
     if word.find("ca") != -1:
@@ -247,26 +238,8 @@ def get_suffix(real_verb, inf_verb):
     return suffix
 
 
-
-def conj_aux(aux_esp, aux_lad):
-    text_aux = aux_esp.text
-    text_aux = text_aux.lower()
-    inf_aux = aux_esp.lemma
-
-    suffix = get_suffix(text_aux, inf_aux)
-
-    if "Number=Sing|Person=3|Tense=Imp" in aux_esp.feats:
-        aux_lad = aux_lad[:len(aux_lad) - 1] + suffix
-    elif "|Number=Sing|Person=3|Tense=Pres|" in aux_esp.feats or \
-            "|Number=Sing|Person=1|Tense=Pres|" in aux_esp.feats or \
-            "|Number=Plur|Person=3|Tense=Pres|" in aux_esp.feats:
-        aux_lad = aux_lad[:len(aux_lad) - 2] + suffix
-    return aux_lad
-
-
 def conj_adj_noun(word_esp, word_lad):
     text_esp = word_esp.text
-
     if str(word_esp.feats) != "None":
         if "Sing" in word_esp.feats:
             word_lad = word_lad
@@ -389,9 +362,8 @@ def change_person_number(per):
     elif per == "3p":
         per_num = 5
     return per_num
-    
-    
-    
+
+
 def change_aux_number(aux):
     aux = str(aux)
     per_num = 0
@@ -417,8 +389,7 @@ def elimina_tildes(word):
 
 
 def conj_verb(verb_esp, inf_lad_verb, aux, pers):
-    tipo = 0
-    flag = 0
+    tipo, flag = 0, 0
     tempo = ["Indicativo presente", "Indicativo pretérito imperfecto","Indicativo pretérito perfecto simple","Indicativo futuro","Condicional Condicional","Subjuntivo presente","Subjuntivo pretérito imperfecto 1"]
     person = ["1s","2s","3s","1p","2p","3p"]
     data = ["o","as","a","amos","ash","an"]
@@ -463,7 +434,7 @@ def conj_verb(verb_esp, inf_lad_verb, aux, pers):
                         data = ["e","es","e","emos","esh","en"]
                     elif t == "Subjuntivo pretérito imperfecto 1":
                         data = ["ara","aras","ara","aramos","arash","aran"]
-                elif inf_lad_verb[-2:].replace("\n","") == "er":
+                elif inf_lad_verb[-2:].replace("\n","") in ["er","ér"]:
                     if t == "Indicativo presente":
                         data = ["o","es","e","emos","esh","en"]
                     elif t == "Indicativo pretérito imperfecto":
