@@ -33,9 +33,7 @@ def translate(phrase, verb_dic, noun_dic, phrase_dic, stanza_cachedir=None):
             word_esp = word.text
             if word_esp.isupper() or any(ele.isupper() for ele in word_esp[1:]):
                 w = word_esp
-                flag1 = 1
-                flag2 = 0
-                flag3 = 1
+                flag1, flag2, flag3= 1, 0, 1
             if word_esp[0].isupper() and flag3 == 0:
                 flag2 = 1
             mixed_case = not word_esp.islower() and not word_esp.isupper()
@@ -43,8 +41,7 @@ def translate(phrase, verb_dic, noun_dic, phrase_dic, stanza_cachedir=None):
                 flagd2 = 1
             if  word.upos in ["PRON"] and  word_esp.lower() in pro_next_verb:
                 w = word.text
-                pro_verb = 1
-                flag1 = 1
+                pro_verb, flag1 = 1, 1
             if word.upos in ["VERB","AUX"] and flag1 == 0:
                 #TODO: Make this work with verb_dic.get(word_esp.lower())
                 for d in verb_dic:
@@ -72,9 +69,7 @@ def translate(phrase, verb_dic, noun_dic, phrase_dic, stanza_cachedir=None):
                             aux = 0
                         else:
                             w = word_lad
-                        verb = 1
-                        flag1 = 1
-                        pro_verb = 0
+                        verb, flag1, pro_verb= 1, 1, 0
                         break #TODO: Check if it breaks anything
             elif flag1 == 0:
                 #TODO: Make this work with noun_dic.get(word_esp.lower())
@@ -82,15 +77,11 @@ def translate(phrase, verb_dic, noun_dic, phrase_dic, stanza_cachedir=None):
                     if word_esp.lower() == d or word_esp.lower() == elimina_tildes(d):
                         word_lad = noun_dic[d]
                         w = word_lad
-                        flag1 = 1
-                        verb = 0
+                        flag1, verb = 1, 0
                         break #TODO: Check if it breaks anything
             if word.upos in ["VERB","AUX"] and (word.lemma)[-2:] not in ["ar","er","ir","ír"] and flag1 == 0:
                 w = judeo_parse(word.text)
-                flag1 = 1
-                flag2 = 0
-                verb = 1
-                pro_verb = 0
+                flag1, flag2, verb, pro_verb= 1, 0, 1, 0
             if flag1 == 0:
                 if word.upos in ["VERB","AUX"]: 
                     #TODO: Make this work with verb_dic.get(word_esp.lower())
@@ -98,18 +89,12 @@ def translate(phrase, verb_dic, noun_dic, phrase_dic, stanza_cachedir=None):
                         if word.lemma == d or word.lemma == elimina_tildes(d):
                             word_lad = verb_dic[d]
                             w = conj_verb(word, word_lad,aux, pers)
-                            aux = 0
-                            flag1 = 1
-                            verb = 1
-                            pro_verb = 0
+                            aux, flag1, verb, pro_verb = 0, 1, 1, 0
                             break
                     if flag1 == 0:
                         w = conj_verb(word, word.lemma,aux, pers)
                         w = judeo_parse(w)
-                        aux = 0
-                        flag1 = 1
-                        verb = 1
-                        pro_verb = 0
+                        aux, flag1, verb, pro_verb = 0, 1, 1, 0
                 else: 
                     #TODO: Make this work with noun_dic.get(word_esp.lower())
                     for d in noun_dic:
@@ -123,8 +108,7 @@ def translate(phrase, verb_dic, noun_dic, phrase_dic, stanza_cachedir=None):
                                 w = word_esp
                             else:
                                 w = word_lad
-                            flag1 = 1
-                            verb = 0
+                            flag1, verb = 1, 0
                             break           
             if flag1 == 0:
                 if word.upos == "PROPN" or word.upos == "DET":
