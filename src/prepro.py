@@ -109,7 +109,7 @@ def main():
                 la.append(translate(sentences_es[a], dic_verb, dic_noun, dic_phrase))
                 s.append(name)
                 flag = flag + 1
-                if flag % 10 == 0:
+                if flag % 100000 == 0:
                     p = {'Source': s, language: en, 'Spanish': es, 'Ladino': la}
                     df_1 = pd.DataFrame(p)
                     df_1.to_csv(outfilepath, sep='\t', index=False)
