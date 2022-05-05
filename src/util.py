@@ -3,11 +3,13 @@ import mlconjug3
 import unicodedata
 import unidecode
 import stanza
+import json
 
 default_conjugator = mlconjug3.Conjugator(language='es')
 nlp = None
 perf_veb = ["he","has","ha","hemos","habéis","han"]
 pro_next_verb = ["se","me","le","lo"]
+pref_verb_chaing = ["había","habías","había","habíamos","habíais","habían","habré","habrás","habrá","habremos","habréis","habrán","habría","habrías","habría","habríamos","habríais","habrían","haya","hayas","haya","hayamos","hayáis","hayan","hubiera","hubiese","hubieras","hubieses","hubiéramos","hubiésemos","hubierais","hubieseis","hubieran","hubieses"]
 
 def load_stanza_nlp(cachedir=None):
     global nlp
@@ -17,6 +19,9 @@ def load_stanza_nlp(cachedir=None):
         nlp = stanza.Pipeline(lang='es')
 
 def translate(phrase, verb_dic, noun_dic, phrase_dic, stanza_cachedir=None):
+    if phrase == "" or str(phrase) == "None":
+        return ""
+        
     if not nlp:
         load_stanza_nlp(stanza_cachedir)
     
@@ -44,6 +49,32 @@ def translate(phrase, verb_dic, noun_dic, phrase_dic, stanza_cachedir=None):
                 pro_verb, flag1 = 1, 1
             if word.upos in ["VERB","AUX"] and flag1 == 0:
                 #TODO: Make this work with verb_dic.get(word_esp.lower())
+                if str(verb_dic.get(word_esp.lower())) != "None":
+                    word_lad = str(verb_dic.get(word_esp.lower()))
+                    if word_esp.lower() in perf_veb and word.upos in ["AUX"]:
+                        index = perf_veb.index(word_esp.lower())
+                        pers = word_esp.lower()
+                        w = ""
+                        aux = 1
+                    elif word_esp.lower() in pref_verb_chaing and word.upos in ["AUX"]:    
+                        w = word_lad
+                        aux = 2
+                    elif aux == 1:
+                        if word_lad.find("/") != -1:
+                            w = word_lad.split("/")[index]                            
+                        else:
+                            w = word_lad
+                        aux = 0
+                    elif aux == 2:
+                        if word_lad.find("/") != -1:
+                            w = word_lad.split("/")[6]
+                        else:
+                            w = word_lad
+                        aux = 0
+                    else:
+                        w = word_lad
+                    verb, flag1, pro_verb= 1, 1, 0
+                '''
                 for d in verb_dic:
                     if word_esp.lower() == d or word_esp.lower() == elimina_tildes(d):
                         word_lad = verb_dic[d]
@@ -52,7 +83,7 @@ def translate(phrase, verb_dic, noun_dic, phrase_dic, stanza_cachedir=None):
                             pers = word_esp.lower()
                             w = ""
                             aux = 1
-                        elif word_esp.lower() in ["había","habías","había","habíamos","habíais","habían","habré","habrás","habrá","habremos","habréis","habrán","habría","habrías","habría","habríamos","habríais","habrían","haya","hayas","haya","hayamos","hayáis","hayan","hubiera","hubiese","hubieras","hubieses","hubiéramos","hubiésemos","hubierais","hubieseis","hubieran","hubieses"] and word.upos in ["AUX"]:    
+                        elif word_esp.lower() in pref_verb_chaing and word.upos in ["AUX"]:    
                             w = verb_dic[d]
                             aux = 2
                         elif aux == 1:
@@ -71,20 +102,35 @@ def translate(phrase, verb_dic, noun_dic, phrase_dic, stanza_cachedir=None):
                             w = word_lad
                         verb, flag1, pro_verb= 1, 1, 0
                         break #TODO: Check if it breaks anything
+                 '''
             elif flag1 == 0:
                 #TODO: Make this work with noun_dic.get(word_esp.lower())
+                if str(noun_dic.get(word_esp.lower())) != "None":
+                        w = str(noun_dic.get(word_esp.lower()))
+                        flag1, verb = 1, 0
+                '''
                 for d in noun_dic:
                     if word_esp.lower() == d or word_esp.lower() == elimina_tildes(d):
                         word_lad = noun_dic[d]
                         w = word_lad
                         flag1, verb = 1, 0
                         break #TODO: Check if it breaks anything
+                '''
             if word.upos in ["VERB","AUX"] and (word.lemma)[-2:] not in ["ar","er","ir","ír"] and flag1 == 0:
                 w = judeo_parse(word.text)
                 flag1, flag2, verb, pro_verb= 1, 0, 1, 0
             if flag1 == 0:
                 if word.upos in ["VERB","AUX"]: 
                     #TODO: Make this work with verb_dic.get(word_esp.lower())
+                    if str(verb_dic.get(word.lemma)) != "None":
+                        word_lad = str(verb_dic.get(word.lemma))
+                        w = conj_verb(word, word_lad,aux, pers)
+                        aux, flag1, verb, pro_verb = 0, 1, 1, 0
+                    if flag1 == 0:
+                        w = conj_verb(word, word.lemma,aux, pers)
+                        w = judeo_parse(w)
+                        aux, flag1, verb, pro_verb = 0, 1, 1, 0
+                    '''
                     for d in verb_dic:
                         if word.lemma == d or word.lemma == elimina_tildes(d):
                             word_lad = verb_dic[d]
@@ -95,8 +141,21 @@ def translate(phrase, verb_dic, noun_dic, phrase_dic, stanza_cachedir=None):
                         w = conj_verb(word, word.lemma,aux, pers)
                         w = judeo_parse(w)
                         aux, flag1, verb, pro_verb = 0, 1, 1, 0
+                    '''
                 else: 
                     #TODO: Make this work with noun_dic.get(word_esp.lower())
+                    if str(noun_dic.get(word.lemma)) != "None":
+                        word_lad = str(noun_dic.get(word.lemma))
+                        if word.lemma == word_lad or word_esp.lower() == word_lad:
+                            w = word_esp
+                        elif word.upos in ["NOUN", "ADJ"]:
+                            w = conj_adj_noun(word, word_lad)
+                        elif word.upos == "DET":
+                            w = word_esp
+                        else:
+                            w = word_lad
+                        flag1, verb = 1, 0
+                    '''
                     for d in noun_dic:
                         if word.lemma == d or word.lemma == elimina_tildes(d):
                             word_lad = noun_dic[d]
@@ -109,7 +168,8 @@ def translate(phrase, verb_dic, noun_dic, phrase_dic, stanza_cachedir=None):
                             else:
                                 w = word_lad
                             flag1, verb = 1, 0
-                            break           
+                            break
+                    '''
             if flag1 == 0:
                 if word.upos == "PROPN" or word.upos == "DET":
                     w = judeo_parse(word.text)
@@ -121,13 +181,13 @@ def translate(phrase, verb_dic, noun_dic, phrase_dic, stanza_cachedir=None):
                 jud_phrase += w.capitalize() + " "
             else:
                 if pro_verb == 1 and verb == 1:
-                    jud_phrase = jud_phrase[:-1] + w + " "
+                    jud_phrase = "".join([jud_phrase[:-1], w, " "]) 
                     pro_verb = 0
                 else:
                     jud_phrase += w + " "
     jud_phrase = unidecode.unidecode(fix_phrase(jud_phrase, phrase_dic))
     if up == 1:
-        jud_phrase = jud_phrase[0].capitalize()+ jud_phrase[1:]
+        jud_phrase = "".join([jud_phrase[0].capitalize(), jud_phrase[1:]]) 
     return jud_phrase
 
 
@@ -150,7 +210,7 @@ def judeo_parse(word):
     if word.find("co") != -1:
         word = word.replace("co", "ko")
     if word.find("cu") != -1:
-        word = word.replace("cu", "ku")
+        word = word.replace("cu", "ku") 
     if word.find("ñ") != -1:
         word = word.replace("ñ", "ny")
     if word.find("qu") != -1:
