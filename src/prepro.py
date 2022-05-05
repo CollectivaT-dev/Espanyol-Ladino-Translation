@@ -14,16 +14,12 @@ PATH_VERB_DICT = os.path.join(SCRIPT_DIR, "../resource/lista_verbos_ladino_conju
 PATH_NOUN_DICT = os.path.join(SCRIPT_DIR, "../resource/lista_palabras_ladino.txt")
 PATH_PHRASE_DICT = os.path.join("", "resource/dic_esp_lad_phr_v2.txt")
 
-'''
+
 def get_dataset(url):
     with open(url, 'r', encoding="utf8", errors='ignore') as lines:
         value = [line.replace("\n","") for line in lines]
     return dict(zip(range(len(value)), value))
-'''
 
-def get_dataset(url):
-    with open(url, 'r', encoding="utf8", errors='ignore') as lines:
-        return [line.replace("\n","") for line in lines]
 
 def find_all(name, path):
     result = []
@@ -105,15 +101,6 @@ def main():
     count = 1
     translate_iter = zip(sentences_es, sentences_en)
     total = min(len(sentences_es), len(sentences_en))
-    
-    dic_verb = [dic_verb for i in range(len(sentences_es))]
-    dic_noun = [dic_noun for i in range(len(sentences_es))]
-    dic_phrase = [dic_phrase for i in range(len(sentences_es))]
-    
-    
-    la = map(translate,tqdm(sentences_es[counter:]), dic_verb[counter:], dic_noun[counter:], dic_phrase[counter:])
-    
-    '''
     with tqdm(total=total) as pbar:
         for a, b in translate_iter:
             if count > counter:
@@ -130,7 +117,6 @@ def main():
             count = count + 1
             pbar.update(1)
         pbar.close()
-    '''
     
     p = {'Source': s, language: sentences_en, 'Spanish': sentences_es, 'Ladino': list(la)}
     df_1 = pd.DataFrame(p)
