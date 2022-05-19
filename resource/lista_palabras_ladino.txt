@@ -3580,6 +3580,8 @@ sed;ser
 sediento;ser
 seducí;seduci
 seducías;seducias
+sefardi;sefaradi
+sefardí;sefaradi
 segaí;segai
 segregaí;segregai
 segue;sege
